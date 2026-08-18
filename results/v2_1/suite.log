@@ -1,0 +1,202 @@
+[v2_1] 200 units, jobs=4
+[v2_1 1/200] done v1floors roll main s0 in 18s (p95 mismatches: 0) | 0.3m elapsed, eta 60m
+[v2_1 2/200] done v1floors roll nocore s0 in 18s (p95 mismatches: 0) | 0.3m elapsed, eta 30m
+[v2_1 3/200] done v1floors roll scramble s0 in 17s (p95 mismatches: 0) | 0.3m elapsed, eta 20m
+[v2_1 4/200] done c3floors roll s0 in 14s | 0.3m elapsed, eta 15m
+[v2_1 5/200] done calib roll s0 in 11s | 0.4m elapsed, eta 17m
+[v2_1 6/200] done v1floors transition main s0 in 137s (p95 mismatches: -) | 2.6m elapsed, eta 83m
+[v2_1 7/200] done v1floors transition nocore s0 in 135s (p95 mismatches: -) | 2.6m elapsed, eta 71m
+[v2_1 8/200] done v1floors transition scramble s0 in 133s (p95 mismatches: -) | 2.6m elapsed, eta 62m
+[v2_1 9/200] done c3floors transition s0 in 29s | 2.6m elapsed, eta 55m
+[v2_1 10/200] done calib transition s0 in 48s | 2.6m elapsed, eta 49m
+[v2_1 11/200] done v1floors roll main s1 in 17s (p95 mismatches: 0) | 2.6m elapsed, eta 44m
+[v2_1 12/200] done v1floors roll nocore s1 in 17s (p95 mismatches: 0) | 2.6m elapsed, eta 40m
+[v2_1 13/200] done v1floors roll scramble s1 in 17s (p95 mismatches: 0) | 2.6m elapsed, eta 37m
+[v2_1 14/200] done c3floors roll s1 in 14s | 2.8m elapsed, eta 37m
+[v2_1 15/200] done calib roll s1 in 11s | 2.8m elapsed, eta 34m
+[v2_1 16/200] done v1floors transition main s1 in 135s (p95 mismatches: -) | 4.8m elapsed, eta 56m
+[v2_1 17/200] done v1floors transition nocore s1 in 133s (p95 mismatches: -) | 4.8m elapsed, eta 52m
+[v2_1 18/200] done v1floors transition scramble s1 in 130s (p95 mismatches: -) | 4.9m elapsed, eta 50m
+[v2_1 19/200] done c3floors transition s1 in 28s | 4.9m elapsed, eta 47m
+[v2_1 20/200] done calib transition s1 in 46s | 4.9m elapsed, eta 44m
+[v2_1 21/200] done v1floors roll main s2 in 17s (p95 mismatches: 0) | 4.9m elapsed, eta 42m
+[v2_1 22/200] done v1floors roll nocore s2 in 17s (p95 mismatches: 0) | 4.9m elapsed, eta 40m
+[v2_1 23/200] done v1floors roll scramble s2 in 17s (p95 mismatches: 0) | 4.9m elapsed, eta 38m
+[v2_1 24/200] done c3floors roll s2 in 14s | 5.0m elapsed, eta 37m
+[v2_1 25/200] done calib roll s2 in 11s | 5.0m elapsed, eta 35m
+[v2_1 26/200] done v1floors transition main s2 in 132s (p95 mismatches: -) | 7.1m elapsed, eta 47m
+[v2_1 27/200] done v1floors transition nocore s2 in 132s (p95 mismatches: -) | 7.1m elapsed, eta 46m
+[v2_1 28/200] done v1floors transition scramble s2 in 131s (p95 mismatches: -) | 7.2m elapsed, eta 44m
+[v2_1 29/200] done c3floors transition s2 in 28s | 7.2m elapsed, eta 42m
+[v2_1 30/200] done calib transition s2 in 47s | 7.2m elapsed, eta 41m
+[v2_1 31/200] done v1floors roll main s3 in 17s (p95 mismatches: 0) | 7.2m elapsed, eta 39m
+[v2_1 32/200] done v1floors roll nocore s3 in 17s (p95 mismatches: 0) | 7.2m elapsed, eta 38m
+[v2_1 33/200] done v1floors roll scramble s3 in 17s (p95 mismatches: 0) | 7.2m elapsed, eta 36m
+[v2_1 34/200] done c3floors roll s3 in 14s | 7.3m elapsed, eta 36m
+[v2_1 35/200] done calib roll s3 in 11s | 7.3m elapsed, eta 35m
+[v2_1 36/200] done v1floors transition main s3 in 133s (p95 mismatches: -) | 9.4m elapsed, eta 43m
+[v2_1 37/200] done v1floors transition nocore s3 in 132s (p95 mismatches: -) | 9.4m elapsed, eta 41m
+[v2_1 38/200] done v1floors transition scramble s3 in 131s (p95 mismatches: -) | 9.5m elapsed, eta 41m
+[v2_1 39/200] done c3floors transition s3 in 28s | 9.5m elapsed, eta 39m
+[v2_1 40/200] done calib transition s3 in 46s | 9.5m elapsed, eta 38m
+[v2_1 41/200] done v1floors roll main s4 in 17s (p95 mismatches: 0) | 9.5m elapsed, eta 37m
+[v2_1 42/200] done v1floors roll nocore s4 in 17s (p95 mismatches: 0) | 9.5m elapsed, eta 36m
+[v2_1 43/200] done v1floors roll scramble s4 in 17s (p95 mismatches: 0) | 9.5m elapsed, eta 35m
+[v2_1 44/200] done c3floors roll s4 in 13s | 9.6m elapsed, eta 34m
+[v2_1 45/200] done calib roll s4 in 11s | 9.6m elapsed, eta 33m
+[v2_1 46/200] done v1floors transition main s4 in 132s (p95 mismatches: -) | 11.7m elapsed, eta 39m
+[v2_1 47/200] done v1floors transition nocore s4 in 133s (p95 mismatches: -) | 11.7m elapsed, eta 38m
+[v2_1 48/200] done v1floors transition scramble s4 in 132s (p95 mismatches: -) | 11.8m elapsed, eta 37m
+[v2_1 49/200] done c3floors transition s4 in 28s | 11.8m elapsed, eta 36m
+[v2_1 50/200] done calib transition s4 in 47s | 11.8m elapsed, eta 35m
+[v2_1 51/200] done v1floors roll main s5 in 17s (p95 mismatches: 0) | 11.8m elapsed, eta 35m
+[v2_1 52/200] done v1floors roll nocore s5 in 17s (p95 mismatches: 0) | 11.8m elapsed, eta 34m
+[v2_1 53/200] done v1floors roll scramble s5 in 17s (p95 mismatches: 0) | 11.8m elapsed, eta 33m
+[v2_1 54/200] done c3floors roll s5 in 14s | 11.9m elapsed, eta 32m
+[v2_1 55/200] done calib roll s5 in 11s | 11.9m elapsed, eta 31m
+[v2_1 56/200] done v1floors transition main s5 in 132s (p95 mismatches: -) | 14.0m elapsed, eta 36m
+[v2_1 57/200] done v1floors transition nocore s5 in 131s (p95 mismatches: -) | 14.0m elapsed, eta 35m
+[v2_1 58/200] done v1floors transition scramble s5 in 131s (p95 mismatches: -) | 14.1m elapsed, eta 34m
+[v2_1 59/200] done c3floors transition s5 in 28s | 14.1m elapsed, eta 34m
+[v2_1 60/200] done calib transition s5 in 47s | 14.1m elapsed, eta 33m
+[v2_1 61/200] done v1floors roll main s6 in 17s (p95 mismatches: 0) | 14.1m elapsed, eta 32m
+[v2_1 62/200] done v1floors roll nocore s6 in 17s (p95 mismatches: 0) | 14.1m elapsed, eta 31m
+[v2_1 63/200] done v1floors roll scramble s6 in 17s (p95 mismatches: 0) | 14.1m elapsed, eta 31m
+[v2_1 64/200] done c3floors roll s6 in 14s | 14.2m elapsed, eta 30m
+[v2_1 65/200] done calib roll s6 in 11s | 14.2m elapsed, eta 29m
+[v2_1 66/200] done v1floors transition main s6 in 130s (p95 mismatches: -) | 16.2m elapsed, eta 33m
+[v2_1 67/200] done v1floors transition nocore s6 in 130s (p95 mismatches: -) | 16.3m elapsed, eta 32m
+[v2_1 68/200] done v1floors transition scramble s6 in 129s (p95 mismatches: -) | 16.4m elapsed, eta 32m
+[v2_1 69/200] done c3floors transition s6 in 28s | 16.4m elapsed, eta 31m
+[v2_1 70/200] done calib transition s6 in 46s | 16.4m elapsed, eta 30m
+[v2_1 71/200] done v1floors roll main s7 in 17s (p95 mismatches: 0) | 16.4m elapsed, eta 30m
+[v2_1 72/200] done v1floors roll nocore s7 in 17s (p95 mismatches: 0) | 16.4m elapsed, eta 29m
+[v2_1 73/200] done v1floors roll scramble s7 in 16s (p95 mismatches: 0) | 16.4m elapsed, eta 28m
+[v2_1 74/200] done c3floors roll s7 in 13s | 16.5m elapsed, eta 28m
+[v2_1 75/200] done calib roll s7 in 10s | 16.5m elapsed, eta 27m
+[v2_1 76/200] done v1floors transition main s7 in 125s (p95 mismatches: -) | 18.4m elapsed, eta 30m
+[v2_1 77/200] done v1floors transition nocore s7 in 125s (p95 mismatches: -) | 18.4m elapsed, eta 29m
+[v2_1 78/200] done v1floors transition scramble s7 in 125s (p95 mismatches: -) | 18.5m elapsed, eta 29m
+[v2_1 79/200] done c3floors transition s7 in 27s | 18.5m elapsed, eta 28m
+[v2_1 80/200] done calib transition s7 in 44s | 18.5m elapsed, eta 28m
+[v2_1 81/200] done v1floors roll main s8 in 17s (p95 mismatches: 0) | 18.5m elapsed, eta 27m
+[v2_1 82/200] done v1floors roll nocore s8 in 17s (p95 mismatches: 0) | 18.5m elapsed, eta 27m
+[v2_1 83/200] done v1floors roll scramble s8 in 16s (p95 mismatches: 0) | 18.5m elapsed, eta 26m
+[v2_1 84/200] done c3floors roll s8 in 13s | 18.6m elapsed, eta 26m
+[v2_1 85/200] done calib roll s8 in 10s | 18.6m elapsed, eta 25m
+[v2_1 86/200] done v1floors transition main s8 in 126s (p95 mismatches: -) | 20.6m elapsed, eta 27m
+[v2_1 87/200] done v1floors transition nocore s8 in 126s (p95 mismatches: -) | 20.6m elapsed, eta 27m
+[v2_1 88/200] done v1floors transition scramble s8 in 125s (p95 mismatches: -) | 20.7m elapsed, eta 26m
+[v2_1 89/200] done c3floors transition s8 in 27s | 20.7m elapsed, eta 26m
+[v2_1 90/200] done calib transition s8 in 44s | 20.7m elapsed, eta 25m
+[v2_1 91/200] done v1floors roll main s9 in 17s (p95 mismatches: 0) | 20.7m elapsed, eta 25m
+[v2_1 92/200] done v1floors roll nocore s9 in 17s (p95 mismatches: 0) | 20.7m elapsed, eta 24m
+[v2_1 93/200] done v1floors roll scramble s9 in 16s (p95 mismatches: 0) | 20.7m elapsed, eta 24m
+[v2_1 94/200] done c3floors roll s9 in 13s | 20.8m elapsed, eta 23m
+[v2_1 95/200] done calib roll s9 in 10s | 20.8m elapsed, eta 23m
+[v2_1 96/200] done v1floors transition main s9 in 126s (p95 mismatches: -) | 22.8m elapsed, eta 25m
+[v2_1 97/200] done v1floors transition nocore s9 in 126s (p95 mismatches: -) | 22.8m elapsed, eta 24m
+[v2_1 98/200] done v1floors transition scramble s9 in 124s (p95 mismatches: -) | 22.9m elapsed, eta 24m
+[v2_1 99/200] done c3floors transition s9 in 27s | 22.9m elapsed, eta 23m
+[v2_1 100/200] done calib transition s9 in 44s | 22.9m elapsed, eta 23m
+[v2_1 101/200] done v1floors roll main s10 in 17s (p95 mismatches: 0) | 22.9m elapsed, eta 22m
+[v2_1 102/200] done v1floors roll nocore s10 in 17s (p95 mismatches: 0) | 22.9m elapsed, eta 22m
+[v2_1 103/200] done v1floors roll scramble s10 in 16s (p95 mismatches: 0) | 22.9m elapsed, eta 22m
+[v2_1 104/200] done c3floors roll s10 in 13s | 23.0m elapsed, eta 21m
+[v2_1 105/200] done calib roll s10 in 10s | 23.0m elapsed, eta 21m
+[v2_1 106/200] done v1floors transition main s10 in 126s (p95 mismatches: -) | 25.0m elapsed, eta 22m
+[v2_1 107/200] done v1floors transition nocore s10 in 125s (p95 mismatches: -) | 25.0m elapsed, eta 22m
+[v2_1 108/200] done v1floors transition scramble s10 in 125s (p95 mismatches: -) | 25.1m elapsed, eta 21m
+[v2_1 109/200] done c3floors transition s10 in 27s | 25.1m elapsed, eta 21m
+[v2_1 110/200] done calib transition s10 in 44s | 25.1m elapsed, eta 21m
+[v2_1 111/200] done v1floors roll main s11 in 17s (p95 mismatches: 0) | 25.1m elapsed, eta 20m
+[v2_1 112/200] done v1floors roll nocore s11 in 17s (p95 mismatches: 0) | 25.1m elapsed, eta 20m
+[v2_1 113/200] done v1floors roll scramble s11 in 16s (p95 mismatches: 0) | 25.1m elapsed, eta 19m
+[v2_1 114/200] done c3floors roll s11 in 13s | 25.2m elapsed, eta 19m
+[v2_1 115/200] done calib roll s11 in 10s | 25.2m elapsed, eta 19m
+[v2_1 116/200] done v1floors transition main s11 in 126s (p95 mismatches: -) | 27.1m elapsed, eta 20m
+[v2_1 117/200] done v1floors transition nocore s11 in 125s (p95 mismatches: -) | 27.2m elapsed, eta 19m
+[v2_1 118/200] done v1floors transition scramble s11 in 126s (p95 mismatches: -) | 27.3m elapsed, eta 19m
+[v2_1 119/200] done c3floors transition s11 in 27s | 27.3m elapsed, eta 19m
+[v2_1 120/200] done calib transition s11 in 44s | 27.3m elapsed, eta 18m
+[v2_1 121/200] done v1floors roll main s12 in 17s (p95 mismatches: 0) | 27.3m elapsed, eta 18m
+[v2_1 122/200] done v1floors roll nocore s12 in 17s (p95 mismatches: 0) | 27.3m elapsed, eta 17m
+[v2_1 123/200] done v1floors roll scramble s12 in 16s (p95 mismatches: 0) | 27.3m elapsed, eta 17m
+[v2_1 124/200] done c3floors roll s12 in 13s | 27.4m elapsed, eta 17m
+[v2_1 125/200] done calib roll s12 in 10s | 27.4m elapsed, eta 16m
+[v2_1 126/200] done v1floors transition main s12 in 126s (p95 mismatches: -) | 29.3m elapsed, eta 17m
+[v2_1 127/200] done v1floors transition nocore s12 in 126s (p95 mismatches: -) | 29.4m elapsed, eta 17m
+[v2_1 128/200] done v1floors transition scramble s12 in 125s (p95 mismatches: -) | 29.4m elapsed, eta 17m
+[v2_1 129/200] done c3floors transition s12 in 27s | 29.4m elapsed, eta 16m
+[v2_1 130/200] done calib transition s12 in 44s | 29.4m elapsed, eta 16m
+[v2_1 131/200] done v1floors roll main s13 in 17s (p95 mismatches: 0) | 29.4m elapsed, eta 16m
+[v2_1 132/200] done v1floors roll nocore s13 in 17s (p95 mismatches: 0) | 29.4m elapsed, eta 15m
+[v2_1 133/200] done v1floors roll scramble s13 in 16s (p95 mismatches: 0) | 29.4m elapsed, eta 15m
+[v2_1 134/200] done c3floors roll s13 in 13s | 29.6m elapsed, eta 15m
+[v2_1 135/200] done calib roll s13 in 10s | 29.6m elapsed, eta 14m
+[v2_1 136/200] done v1floors transition main s13 in 126s (p95 mismatches: -) | 31.5m elapsed, eta 15m
+[v2_1 137/200] done v1floors transition nocore s13 in 126s (p95 mismatches: -) | 31.5m elapsed, eta 15m
+[v2_1 138/200] done v1floors transition scramble s13 in 126s (p95 mismatches: -) | 31.7m elapsed, eta 14m
+[v2_1 139/200] done c3floors transition s13 in 27s | 31.7m elapsed, eta 14m
+[v2_1 140/200] done calib transition s13 in 44s | 31.7m elapsed, eta 14m
+[v2_1 141/200] done v1floors roll main s14 in 17s (p95 mismatches: 0) | 31.7m elapsed, eta 13m
+[v2_1 142/200] done v1floors roll nocore s14 in 17s (p95 mismatches: 0) | 31.7m elapsed, eta 13m
+[v2_1 143/200] done v1floors roll scramble s14 in 16s (p95 mismatches: 0) | 31.7m elapsed, eta 13m
+[v2_1 144/200] done c3floors roll s14 in 13s | 31.7m elapsed, eta 12m
+[v2_1 145/200] done calib roll s14 in 10s | 31.7m elapsed, eta 12m
+[v2_1 146/200] done v1floors transition main s14 in 126s (p95 mismatches: -) | 33.7m elapsed, eta 12m
+[v2_1 147/200] done v1floors transition nocore s14 in 128s (p95 mismatches: -) | 33.8m elapsed, eta 12m
+[v2_1 148/200] done v1floors transition scramble s14 in 126s (p95 mismatches: -) | 33.8m elapsed, eta 12m
+[v2_1 149/200] done c3floors transition s14 in 27s | 33.8m elapsed, eta 12m
+[v2_1 150/200] done calib transition s14 in 45s | 33.8m elapsed, eta 11m
+[v2_1 151/200] done v1floors roll main s15 in 17s (p95 mismatches: 0) | 33.8m elapsed, eta 11m
+[v2_1 152/200] done v1floors roll nocore s15 in 17s (p95 mismatches: 0) | 33.8m elapsed, eta 11m
+[v2_1 153/200] done v1floors roll scramble s15 in 16s (p95 mismatches: 0) | 33.8m elapsed, eta 10m
+[v2_1 154/200] done c3floors roll s15 in 13s | 33.9m elapsed, eta 10m
+[v2_1 155/200] done calib roll s15 in 10s | 34.0m elapsed, eta 10m
+[v2_1 156/200] done v1floors transition main s15 in 126s (p95 mismatches: -) | 35.9m elapsed, eta 10m
+[v2_1 157/200] done v1floors transition nocore s15 in 126s (p95 mismatches: -) | 35.9m elapsed, eta 10m
+[v2_1 158/200] done v1floors transition scramble s15 in 125s (p95 mismatches: -) | 36.0m elapsed, eta 10m
+[v2_1 159/200] done c3floors transition s15 in 27s | 36.0m elapsed, eta 9m
+[v2_1 160/200] done calib transition s15 in 44s | 36.0m elapsed, eta 9m
+[v2_1 161/200] done v1floors roll main s16 in 17s (p95 mismatches: 0) | 36.0m elapsed, eta 9m
+[v2_1 162/200] done v1floors roll nocore s16 in 17s (p95 mismatches: 0) | 36.0m elapsed, eta 8m
+[v2_1 163/200] done v1floors roll scramble s16 in 16s (p95 mismatches: 0) | 36.0m elapsed, eta 8m
+[v2_1 164/200] done c3floors roll s16 in 13s | 36.1m elapsed, eta 8m
+[v2_1 165/200] done calib roll s16 in 10s | 36.1m elapsed, eta 8m
+[v2_1 166/200] done v1floors transition main s16 in 125s (p95 mismatches: -) | 38.1m elapsed, eta 8m
+[v2_1 167/200] done v1floors transition nocore s16 in 125s (p95 mismatches: -) | 38.1m elapsed, eta 8m
+[v2_1 168/200] done v1floors transition scramble s16 in 125s (p95 mismatches: -) | 38.2m elapsed, eta 7m
+[v2_1 169/200] done c3floors transition s16 in 27s | 38.2m elapsed, eta 7m
+[v2_1 170/200] done calib transition s16 in 44s | 38.2m elapsed, eta 7m
+[v2_1 171/200] done v1floors roll main s17 in 17s (p95 mismatches: 0) | 38.2m elapsed, eta 6m
+[v2_1 172/200] done v1floors roll nocore s17 in 17s (p95 mismatches: 0) | 38.2m elapsed, eta 6m
+[v2_1 173/200] done v1floors roll scramble s17 in 16s (p95 mismatches: 0) | 38.2m elapsed, eta 6m
+[v2_1 174/200] done c3floors roll s17 in 13s | 38.3m elapsed, eta 6m
+[v2_1 175/200] done calib roll s17 in 10s | 38.3m elapsed, eta 5m
+[v2_1 176/200] done v1floors transition main s17 in 125s (p95 mismatches: -) | 40.2m elapsed, eta 5m
+[v2_1 177/200] done v1floors transition nocore s17 in 126s (p95 mismatches: -) | 40.3m elapsed, eta 5m
+[v2_1 178/200] done v1floors transition scramble s17 in 125s (p95 mismatches: -) | 40.4m elapsed, eta 5m
+[v2_1 179/200] done c3floors transition s17 in 27s | 40.4m elapsed, eta 5m
+[v2_1 180/200] done calib transition s17 in 45s | 40.4m elapsed, eta 4m
+[v2_1 181/200] done v1floors roll main s18 in 17s (p95 mismatches: 0) | 40.4m elapsed, eta 4m
+[v2_1 182/200] done v1floors roll nocore s18 in 17s (p95 mismatches: 0) | 40.4m elapsed, eta 4m
+[v2_1 183/200] done v1floors roll scramble s18 in 16s (p95 mismatches: 0) | 40.4m elapsed, eta 4m
+[v2_1 184/200] done c3floors roll s18 in 13s | 40.5m elapsed, eta 4m
+[v2_1 185/200] done calib roll s18 in 10s | 40.5m elapsed, eta 3m
+[v2_1 186/200] done v1floors transition main s18 in 126s (p95 mismatches: -) | 42.5m elapsed, eta 3m
+[v2_1 187/200] done v1floors transition nocore s18 in 126s (p95 mismatches: -) | 42.5m elapsed, eta 3m
+[v2_1 188/200] done v1floors transition scramble s18 in 125s (p95 mismatches: -) | 42.6m elapsed, eta 3m
+[v2_1 189/200] done c3floors transition s18 in 27s | 42.6m elapsed, eta 2m
+[v2_1 190/200] done calib transition s18 in 44s | 42.6m elapsed, eta 2m
+[v2_1 191/200] done v1floors roll main s19 in 17s (p95 mismatches: 0) | 42.6m elapsed, eta 2m
+[v2_1 192/200] done v1floors roll nocore s19 in 17s (p95 mismatches: 0) | 42.6m elapsed, eta 2m
+[v2_1 193/200] done v1floors roll scramble s19 in 16s (p95 mismatches: 0) | 42.6m elapsed, eta 2m
+[v2_1 194/200] done c3floors roll s19 in 13s | 42.7m elapsed, eta 1m
+[v2_1 195/200] done calib roll s19 in 10s | 42.7m elapsed, eta 1m
+[v2_1 196/200] done v1floors transition main s19 in 124s (p95 mismatches: -) | 44.6m elapsed, eta 1m
+[v2_1 197/200] done v1floors transition nocore s19 in 124s (p95 mismatches: -) | 44.6m elapsed, eta 1m
+[v2_1 198/200] done v1floors transition scramble s19 in 124s (p95 mismatches: -) | 44.7m elapsed, eta 0m
+[v2_1 199/200] done c3floors transition s19 in 27s | 44.7m elapsed, eta 0m
+[v2_1 200/200] done calib transition s19 in 44s | 44.7m elapsed, eta 0m
+CALIBRATION SUITE COMPLETE in 44.7 min

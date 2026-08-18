@@ -1,0 +1,8 @@
+# Exact package versions for the value-discovery environment.
+# Both Macs install from this file so they run identical software.
+# Recreate the environment with setup_env.command (double-click it in Finder).
+numpy==2.0.2
+pandas==2.3.3
+matplotlib==3.9.4
+pytest==8.4.2
+scikit-learn==1.6.1

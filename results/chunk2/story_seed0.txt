@@ -1,0 +1,155 @@
+Story of steps 0 to 20 (each block is one tick of the loop):
+
+
+Step 0 -> 1
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 1 + goal 0 -> expected 1) -- noisy (action readout noise)
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 1 -> 2
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 0 + goal 0 -> expected 0) -- ok
+  Act:    environment 1 -> 1  (action line 0 pushes it toward 1) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 2 -> 3
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 3 -> 4
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 4 -> 5
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 0 + goal 0 -> expected 0) -- noisy (action readout noise)
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 5 -> 6
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 6 -> 7
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 0 + goal 0 -> expected 0) -- noisy (action readout noise)
+  Act:    environment 1 -> 1  (action line 0 pushes it toward 1) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 7 -> 8
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 1 + goal 0 -> expected 1) -- noisy (action readout noise)
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 8 -> 9
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 9 -> 10
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 10 -> 11
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 11 -> 12
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 0 + goal 0 -> expected 0) -- ok
+  Act:    environment 1 -> 1  (action line 0 pushes it toward 1) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 12 -> 13
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 13 -> 14
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 1 + goal 0 -> expected 1) -- noisy (action readout noise)
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 14 -> 15
+  Goal:   held at 0 (its internal coin did not flip).
+  Decide: action A=0  (belief 0 + goal 0 -> expected 0) -- ok
+  Act:    environment 1 -> 1  (action line 0 pushes it toward 1) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 15 -> 16
+  GOAL:   flipped 0 -> 1 entirely on its own (internal coin). *** value-core event ***
+  Decide: action A=1  (belief 1 + goal 0 -> expected 1) -- ok
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 1 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 16 -> 17
+  Goal:   held at 1 (its internal coin did not flip).
+  Decide: action A=0  (belief 1 + goal 1 -> expected 0) -- ok
+  Act:    environment 0 -> 0  (action line 0 pushes it toward 0) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=1).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 17 -> 18
+  Goal:   held at 1 (its internal coin did not flip).
+  Decide: action A=0  (belief 0 + goal 1 -> expected 1) -- noisy (action readout noise)
+  Act:    environment 0 -> 1  (action line 1 pushes it toward 1) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 0 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Step 18 -> 19
+  Goal:   held at 1 (its internal coin did not flip).
+  Decide: action A=1  (belief 0 + goal 1 -> expected 1) -- ok
+  Act:    environment 1 -> 0  (action line 1 pushes it toward 0) -- ok
+  Sense:  sensor read environment=1 (clean copy S_alias=1, noisy readout S=1).
+  Update: belief 0 -> 1  (tracks the sensed environment, expected 1) -- ok
+
+Step 19 -> 20
+  Goal:   held at 1 (its internal coin did not flip).
+  Decide: action A=0  (belief 1 + goal 1 -> expected 0) -- ok
+  Act:    environment 0 -> 0  (action line 0 pushes it toward 0) -- ok
+  Sense:  sensor read environment=0 (clean copy S_alias=0, noisy readout S=0).
+  Update: belief 1 -> 0  (tracks the sensed environment, expected 0) -- ok
+
+Goal-flip events: 26 in 2000 steps (1.30% of steps; the world's designed rate is 1.50%).
+These are the value-core's defining moments: the goal changes only from its own internal coin, never because the environment pushed it.
+
+  * step 15->16: goal 0->1; the decision now combines the new goal with belief 1 (belief XOR goal -> 0).
+  * step 31->32: goal 1->0; the decision now combines the new goal with belief 1 (belief XOR goal -> 1).
+  * step 33->34: goal 0->1; the decision now combines the new goal with belief 0 (belief XOR goal -> 1).
+  * step 94->95: goal 1->0; the decision now combines the new goal with belief 1 (belief XOR goal -> 1).
+  * step 98->99: goal 0->1; the decision now combines the new goal with belief 0 (belief XOR goal -> 1).
+  * step 416->417: goal 1->0; the decision now combines the new goal with belief 0 (belief XOR goal -> 0).
+  * step 429->430: goal 0->1; the decision now combines the new goal with belief 0 (belief XOR goal -> 1).
+  * step 534->535: goal 1->0; the decision now combines the new goal with belief 0 (belief XOR goal -> 0).
+  ... and 18 more.

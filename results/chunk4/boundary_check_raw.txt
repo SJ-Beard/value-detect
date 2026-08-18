@@ -1,0 +1,54 @@
+===== N_AGENTS = 2 =====
+Active variables: 9 out of 9
+Variables with variance > 0: ['B', 'S', 'A', 'E', 'G', 'S_alias', 'A_alias', 'D', 'W']
+Initial clusters: {np.int64(0): ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D', 'W'], np.int64(1): ['G']}
+Filtered clusters: {np.int64(0): ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D']}
+Environment variables: ['W']
+
+=== Classifying cluster: ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D'] ===
+Environment MI: [('B', np.float64(6.417290139082432e-05)), ('S', np.float64(6.543995625407639e-05)), ('A', np.float64(0.000264018869691629)), ('E', np.float64(5.599224806751568e-05)), ('S_alias', np.float64(8.241320813989761e-05)), ('A_alias', np.float64(0.0002842075850996717)), ('D', np.float64(1.4951216633307673e-05))]
+Future MI: [('B', np.float64(0.0005181823971535104)), ('S', np.float64(0.3956142266138782)), ('A', np.float64(0.0006295614348945655)), ('E', np.float64(0.425568544042721)), ('S_alias', np.float64(0.5626367592597638)), ('A_alias', np.float64(0.000834389746724562)), ('D', np.float64(0.3126762509065149))]
+Env threshold: 6.543995625407639e-05, Future threshold: 0.3126762509065149
+Processing B: env_mi=0.000, future_mi=0.001
+  -> Will be internal
+Processing S: env_mi=0.000, future_mi=0.396
+  -> Added to actions (future MI threshold)
+Processing A: env_mi=0.000, future_mi=0.001
+  -> Added to sensors (env MI threshold)
+Processing E: env_mi=0.000, future_mi=0.426
+  -> Added to actions (future MI threshold)
+Processing S_alias: env_mi=0.000, future_mi=0.563
+  -> Added to sensors (env MI threshold)
+Processing A_alias: env_mi=0.000, future_mi=0.001
+  -> Added to sensors (env MI threshold)
+Processing D: env_mi=0.000, future_mi=0.313
+  -> Will be internal
+Final classification: S=['A', 'S_alias', 'A_alias'], A=['S', 'E'], I=['B', 'D']
+
+
+===== N_AGENTS = 3 =====
+Active variables: 9 out of 9
+Variables with variance > 0: ['B', 'S', 'A', 'E', 'G', 'S_alias', 'A_alias', 'D', 'W']
+Initial clusters: {np.int64(0): ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D'], np.int64(1): ['G'], np.int64(2): ['W']}
+Filtered clusters: {np.int64(0): ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D']}
+Environment variables: []
+
+=== Classifying cluster: ['B', 'S', 'A', 'E', 'S_alias', 'A_alias', 'D'] ===
+Environment MI: [('B', np.float64(6.417290139082432e-05)), ('S', np.float64(6.543995625407639e-05)), ('A', np.float64(0.000264018869691629)), ('E', np.float64(5.599224806751568e-05)), ('S_alias', np.float64(8.241320813989761e-05)), ('A_alias', np.float64(0.0002842075850996717)), ('D', np.float64(1.4951216633307673e-05))]
+Future MI: [('B', np.float64(0.0005181823971535104)), ('S', np.float64(0.3956142266138782)), ('A', np.float64(0.0006295614348945655)), ('E', np.float64(0.425568544042721)), ('S_alias', np.float64(0.5626367592597638)), ('A_alias', np.float64(0.000834389746724562)), ('D', np.float64(0.3126762509065149))]
+Env threshold: 6.543995625407639e-05, Future threshold: 0.3126762509065149
+Processing B: env_mi=0.000, future_mi=0.001
+  -> Will be internal
+Processing S: env_mi=0.000, future_mi=0.396
+  -> Added to actions (future MI threshold)
+Processing A: env_mi=0.000, future_mi=0.001
+  -> Added to sensors (env MI threshold)
+Processing E: env_mi=0.000, future_mi=0.426
+  -> Added to actions (future MI threshold)
+Processing S_alias: env_mi=0.000, future_mi=0.563
+  -> Added to sensors (env MI threshold)
+Processing A_alias: env_mi=0.000, future_mi=0.001
+  -> Added to sensors (env MI threshold)
+Processing D: env_mi=0.000, future_mi=0.313
+  -> Will be internal
+Final classification: S=['A', 'S_alias', 'A_alias'], A=['S', 'E'], I=['B', 'D']

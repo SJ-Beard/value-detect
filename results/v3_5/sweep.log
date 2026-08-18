@@ -1,0 +1,342 @@
+[v3] 340 units, jobs=4
+[v3 1/340] done puppetfast main s0 (dial 10) in 28.2m | 28m
+[v3 2/340] done puppetfast nocore s0 (dial 11) in 17.5m | 28m
+[v3 3/340] done puppetfast scramble s0 (dial 11) in 33.5m | 33m
+[v3 4/340] done puppetslow main s0 (dial 14) in 35.8m | 36m
+[v3 5/340] done puppetslow nocore s0 (dial 10) in 15.7m | 36m
+[v3 6/340] done puppetslow scramble s0 (dial 15) in 30.8m | 59m
+[v3 7/340] done alias000 main s0 (dial 11) in 46.5m | 80m
+[v3 8/340] done alias005 main s0 (dial 7) in 48.6m | 82m
+[v3 9/340] done alias010 main s0 (dial 11) in 46.7m | 83m
+[v3 10/340] done alias020 main s0 (dial 7) in 49.2m | 108m
+[v3 11/340] done alias050 main s0 (dial 12) in 47.5m | 127m
+[v3 12/340] done alias010 nocore s0 (dial 12) in 19.2m | 127m
+[v3 13/340] done alias010 scramble s0 (dial 15) in 34.0m | 127m
+[v3 14/340] done yardstick puppetfast s0 in 0.2m | 127m
+[v3 15/340] done yardstick puppetslow s0 in 0.6m | 127m
+[v3 16/340] done yardstick alias000 s0 in 0.2m | 127m
+[v3 17/340] done yardstick alias050 s0 in 0.2m | 127m
+[v3 18/340] done puppetfast main s1 (dial 8) in 27.6m | 130m
+[v3 19/340] done puppetfast nocore s1 (dial 12) in 18.5m | 130m
+[v3 20/340] done puppetfast scramble s1 (dial 10) in 23.3m | 140m
+[v3 21/340] done puppetslow main s1 (dial 12) in 36.5m | 163m
+[v3 22/340] done puppetslow nocore s1 (dial 13) in 21.8m | 163m
+[v3 23/340] done puppetslow scramble s1 (dial 11) in 25.7m | 163m
+[v3 24/340] done alias000 main s1 (dial 8) in 35.7m | 175m
+[v3 25/340] done alias005 main s1 (dial 8) in 38.5m | 188m
+[v3 26/340] done alias010 main s1 (dial 8) in 36.1m | 192m
+[v3 27/340] done alias020 main s1 (dial 8) in 38.8m | 202m
+[v3 28/340] done alias050 main s1 (dial 9) in 43.0m | 219m
+[v3 29/340] done alias010 nocore s1 (dial 13) in 28.6m | 219m
+[v3 30/340] done alias010 scramble s1 (dial 15) in 50.1m | 242m
+[v3 31/340] done yardstick puppetfast s1 in 0.2m | 242m
+[v3 32/340] done yardstick puppetslow s1 in 0.6m | 242m
+[v3 33/340] done yardstick alias000 s1 in 0.2m | 242m
+[v3 34/340] done yardstick alias050 s1 in 0.2m | 242m
+[v3 35/340] done puppetfast main s2 (dial 10) in 30.0m | 242m
+[v3 36/340] done puppetfast nocore s2 (dial 12) in 18.2m | 242m
+[v3 37/340] done puppetfast scramble s2 (dial 14) in 33.3m | 252m
+[v3 38/340] done puppetslow main s2 (dial 8) in 36.2m | 270m
+[v3 39/340] done puppetslow nocore s2 (dial 12) in 16.4m | 270m
+[v3 40/340] done puppetslow scramble s2 (dial 14) in 24.9m | 270m
+[v3 41/340] done alias000 main s2 (dial 10) in 38.1m | 289m
+[v3 42/340] done alias005 main s2 (dial 10) in 40.9m | 293m
+[v3 43/340] done alias010 main s2 (dial 15) in 45.4m | 312m
+[v3 44/340] done alias020 main s2 (dial 10) in 38.6m | 312m
+[v3 45/340] done alias050 main s2 (dial 15) in 45.7m | 335m
+[v3 46/340] done alias010 nocore s2 (dial 14) in 24.6m | 335m
+[v3 47/340] done alias010 scramble s2 (dial 15) in 33.4m | 342m
+[v3 48/340] done yardstick puppetfast s2 in 0.2m | 342m
+[v3 49/340] done yardstick puppetslow s2 in 0.6m | 342m
+[v3 50/340] done yardstick alias000 s2 in 0.2m | 342m
+[v3 51/340] done yardstick alias050 s2 in 0.2m | 342m
+[v3 52/340] done puppetfast main s3 (dial 12) in 26.0m | 342m
+[v3 53/340] done puppetfast nocore s3 (dial 11) in 16.9m | 342m
+[v3 54/340] done puppetfast scramble s3 (dial 14) in 34.7m | 369m
+[v3 55/340] done puppetslow main s3 (dial 12) in 53.2m | 388m
+[v3 56/340] done puppetslow nocore s3 (dial 12) in 16.5m | 388m
+[v3 57/340] done puppetslow scramble s3 (dial 12) in 29.8m | 388m
+[v3 58/340] done alias000 main s3 (dial 10) in 44.6m | 401m
+[v3 59/340] done alias005 main s3 (dial 10) in 53.2m | 422m
+[v3 60/340] done alias010 main s3 (dial 10) in 53.2m | 425m
+[v3 61/340] done alias020 main s3 (dial 10) in 53.3m | 441m
+[v3 62/340] done alias050 main s3 (dial 11) in 44.4m | 445m
+[v3 63/340] done alias010 nocore s3 (dial 12) in 26.1m | 448m
+[v3 64/340] done alias010 scramble s3 (dial 14) in 37.4m | 462m
+[v3 65/340] done yardstick puppetfast s3 in 0.2m | 462m
+[v3 66/340] done yardstick puppetslow s3 in 0.6m | 462m
+[v3 67/340] done yardstick alias000 s3 in 0.2m | 462m
+[v3 68/340] done yardstick alias050 s3 in 0.2m | 462m
+[v3 69/340] done puppetfast main s4 (dial 13) in 27.2m | 470m
+[v3 70/340] done puppetfast nocore s4 (dial 12) in 18.4m | 470m
+[v3 71/340] done puppetfast scramble s4 (dial 11) in 28.4m | 477m
+[v3 72/340] done puppetslow main s4 (dial 14) in 37.0m | 499m
+[v3 73/340] done puppetslow nocore s4 (dial 12) in 16.5m | 499m
+[v3 74/340] done puppetslow scramble s4 (dial 16) in 40.4m | 510m
+[v3 75/340] done alias000 main s4 (dial 13) in 42.1m | 519m
+[v3 76/340] done alias005 main s4 (dial 10) in 50.7m | 531m
+[v3 77/340] done alias010 main s4 (dial 13) in 50.7m | 550m
+[v3 78/340] done alias020 main s4 (dial 13) in 53.6m | 564m
+[v3 79/340] done alias050 main s4 (dial 10) in 37.8m | 564m
+[v3 80/340] done alias010 nocore s4 (dial 11) in 24.0m | 564m
+[v3 81/340] done alias010 scramble s4 (dial 15) in 43.7m | 593m
+[v3 82/340] done yardstick puppetfast s4 in 0.2m | 593m
+[v3 83/340] done yardstick puppetslow s4 in 0.6m | 593m
+[v3 84/340] done yardstick alias000 s4 in 0.2m | 593m
+[v3 85/340] done yardstick alias050 s4 in 0.2m | 593m
+[v3 86/340] done puppetfast main s5 (dial 15) in 31.2m | 593m
+[v3 87/340] done puppetfast nocore s5 (dial 10) in 27.0m | 593m
+[v3 88/340] done puppetfast scramble s5 (dial 13) in 33.4m | 597m
+[v3 89/340] done puppetslow main s5 (dial 12) in 42.3m | 626m
+[v3 90/340] done puppetslow nocore s5 (dial 11) in 15.1m | 626m
+[v3 91/340] done puppetslow scramble s5 (dial 11) in 34.6m | 628m
+[v3 92/340] done alias000 main s5 (dial 9) in 37.6m | 635m
+[v3 93/340] done alias005 main s5 (dial 9) in 40.5m | 643m
+[v3 94/340] done alias010 main s5 (dial 9) in 38.0m | 664m
+[v3 95/340] done alias020 main s5 (dial 9) in 38.2m | 666m
+[v3 96/340] done alias050 main s5 (dial 9) in 36.2m | 671m
+[v3 97/340] done alias010 nocore s5 (dial 13) in 22.2m | 671m
+[v3 98/340] done alias010 scramble s5 (dial 15) in 38.2m | 702m
+[v3 99/340] done yardstick puppetfast s5 in 0.2m | 702m
+[v3 100/340] done yardstick puppetslow s5 in 0.6m | 702m
+[v3 101/340] done yardstick alias000 s5 in 0.2m | 702m
+[v3 102/340] done yardstick alias050 s5 in 0.2m | 702m
+[v3 103/340] done puppetfast main s6 (dial 14) in 43.1m | 709m
+[v3 104/340] done puppetfast nocore s6 (dial 12) in 18.3m | 709m
+[v3 105/340] done puppetfast scramble s6 (dial 15) in 35.4m | 709m
+[v3 106/340] done puppetslow main s6 (dial 8) in 30.0m | 715m
+[v3 107/340] done puppetslow nocore s6 (dial 13) in 17.8m | 720m
+[v3 108/340] done puppetslow scramble s6 (dial 12) in 34.6m | 741m
+[v3 109/340] done alias000 main s6 (dial 9) in 46.8m | 756m
+[v3 110/340] done alias005 main s6 (dial 9) in 52.4m | 767m
+[v3 111/340] done alias010 main s6 (dial 9) in 52.9m | 773m
+[v3 112/340] done alias020 main s6 (dial 9) in 52.5m | 793m
+[v3 113/340] done alias050 main s6 (dial 9) in 49.9m | 806m
+[v3 114/340] done alias010 nocore s6 (dial 13) in 25.9m | 806m
+[v3 115/340] done alias010 scramble s6 (dial 13) in 31.2m | 806m
+[v3 116/340] done yardstick puppetfast s6 in 0.2m | 806m
+[v3 117/340] done yardstick puppetslow s6 in 0.6m | 806m
+[v3 118/340] done yardstick alias000 s6 in 0.2m | 806m
+[v3 119/340] done yardstick alias050 s6 in 0.2m | 806m
+[v3 120/340] done puppetfast main s7 (dial 9) in 27.9m | 822m
+[v3 121/340] done puppetfast nocore s7 (dial 11) in 15.4m | 822m
+[v3 122/340] done puppetfast scramble s7 (dial 14) in 26.4m | 830m
+[v3 123/340] done puppetslow main s7 (dial 9) in 30.0m | 836m
+[v3 124/340] done puppetslow nocore s7 (dial 12) in 16.5m | 836m
+[v3 125/340] done puppetslow scramble s7 (dial 14) in 41.1m | 863m
+[v3 126/340] done alias000 main s7 (dial 6) in 41.8m | 868m
+[v3 127/340] done alias005 main s7 (dial 6) in 41.9m | 872m
+[v3 128/340] done alias010 main s7 (dial 6) in 44.5m | 881m
+[v3 129/340] done alias020 main s7 (dial 6) in 37.3m | 900m
+[v3 130/340] done alias050 main s7 (dial 6) in 42.2m | 910m
+[v3 131/340] done alias010 nocore s7 (dial 13) in 26.2m | 910m
+[v3 132/340] done alias010 scramble s7 (dial 12) in 25.9m | 910m
+[v3 133/340] done yardstick puppetfast s7 in 0.2m | 910m
+[v3 134/340] done yardstick puppetslow s7 in 0.6m | 910m
+[v3 135/340] done yardstick alias000 s7 in 0.2m | 910m
+[v3 136/340] done yardstick alias050 s7 in 0.2m | 910m
+[v3 137/340] done puppetfast main s8 (dial 6) in 33.8m | 934m
+[v3 138/340] done puppetfast nocore s8 (dial 11) in 16.9m | 934m
+[v3 139/340] done puppetfast scramble s8 (dial 16) in 32.9m | 939m
+[v3 140/340] done puppetslow main s8 (dial 10) in 32.0m | 942m
+[v3 141/340] done puppetslow nocore s8 (dial 13) in 22.7m | 942m
+[v3 142/340] done puppetslow scramble s8 (dial 16) in 30.9m | 964m
+[v3 143/340] done alias000 main s8 (dial 9) in 37.9m | 977m
+[v3 144/340] done alias005 main s8 (dial 9) in 45.9m | 986m
+[v3 145/340] done alias010 main s8 (dial 9) in 38.1m | 986m
+[v3 146/340] done alias020 main s8 (dial 9) in 38.2m | 1003m
+[v3 147/340] done alias050 main s8 (dial 9) in 38.4m | 1016m
+[v3 148/340] done alias010 nocore s8 (dial 11) in 23.9m | 1016m
+[v3 149/340] done alias010 scramble s8 (dial 14) in 31.5m | 1017m
+[v3 150/340] done yardstick puppetfast s8 in 0.2m | 1017m
+[v3 151/340] done yardstick puppetslow s8 in 0.6m | 1017m
+[v3 152/340] done yardstick alias000 s8 in 0.2m | 1017m
+[v3 153/340] done yardstick alias050 s8 in 0.2m | 1017m
+[v3 154/340] done puppetfast main s9 (dial 13) in 52.0m | 1056m
+[v3 155/340] done puppetfast nocore s9 (dial 12) in 16.8m | 1056m
+[v3 156/340] done puppetfast scramble s9 (dial 15) in 30.7m | 1056m
+[v3 157/340] done puppetslow main s9 (dial 12) in 45.1m | 1062m
+[v3 158/340] done puppetslow nocore s9 (dial 11) in 17.9m | 1062m
+[v3 159/340] done puppetslow scramble s9 (dial 15) in 48.7m | 1087m
+[v3 160/340] done alias000 main s9 (dial 7) in 38.4m | 1087m
+[v3 161/340] done alias005 main s9 (dial 7) in 38.6m | 1094m
+[v3 162/340] done alias010 main s9 (dial 7) in 38.5m | 1101m
+[v3 163/340] done alias020 main s9 (dial 7) in 40.5m | 1125m
+[v3 164/340] done alias050 main s9 (dial 7) in 48.6m | 1136m
+[v3 165/340] done alias010 nocore s9 (dial 13) in 26.1m | 1136m
+[v3 166/340] done alias010 scramble s9 (dial 16) in 45.8m | 1146m
+[v3 167/340] done yardstick puppetfast s9 in 0.2m | 1146m
+[v3 168/340] done yardstick puppetslow s9 in 0.6m | 1146m
+[v3 169/340] done yardstick alias000 s9 in 0.2m | 1146m
+[v3 170/340] done yardstick alias050 s9 in 0.2m | 1146m
+[v3 171/340] done puppetfast main s10 (dial 13) in 41.2m | 1163m
+[v3 172/340] done puppetfast nocore s10 (dial 11) in 15.4m | 1163m
+[v3 173/340] done puppetfast scramble s10 (dial 16) in 35.2m | 1171m
+[v3 174/340] done puppetslow main s10 (dial 11) in 42.2m | 1183m
+[v3 175/340] done puppetslow nocore s10 (dial 12) in 16.4m | 1183m
+[v3 176/340] done puppetslow scramble s10 (dial 16) in 35.9m | 1199m
+[v3 177/340] done alias000 main s10 (dial 6) in 37.7m | 1201m
+[v3 178/340] done alias005 main s10 (dial 6) in 37.8m | 1209m
+[v3 179/340] done alias010 main s10 (dial 6) in 38.0m | 1221m
+[v3 180/340] done alias020 main s10 (dial 7) in 33.6m | 1232m
+[v3 181/340] done alias050 main s10 (dial 7) in 43.1m | 1244m
+[v3 182/340] done alias010 nocore s10 (dial 11) in 20.5m | 1244m
+[v3 183/340] done alias010 scramble s10 (dial 14) in 34.9m | 1256m
+[v3 184/340] done yardstick puppetfast s10 in 0.2m | 1256m
+[v3 185/340] done yardstick puppetslow s10 in 0.6m | 1256m
+[v3 186/340] done yardstick alias000 s10 in 0.2m | 1256m
+[v3 187/340] done yardstick alias050 s10 in 0.2m | 1256m
+[v3 188/340] done puppetfast main s11 (dial 12) in 43.5m | 1274m
+[v3 189/340] done puppetfast nocore s11 (dial 10) in 15.5m | 1274m
+[v3 190/340] done puppetfast scramble s11 (dial 14) in 33.3m | 1277m
+[v3 191/340] done puppetslow main s11 (dial 10) in 26.6m | 1277m
+[v3 192/340] done puppetslow nocore s11 (dial 12) in 16.6m | 1277m
+[v3 193/340] done puppetslow scramble s11 (dial 12) in 25.7m | 1298m
+[v3 194/340] done alias000 main s11 (dial 11) in 48.0m | 1322m
+[v3 195/340] done alias005 main s11 (dial 11) in 48.1m | 1322m
+[v3 196/340] done alias010 main s11 (dial 11) in 48.1m | 1325m
+[v3 197/340] done alias020 main s11 (dial 11) in 48.2m | 1346m
+[v3 198/340] done alias050 main s11 (dial 9) in 47.3m | 1370m
+[v3 199/340] done alias010 nocore s11 (dial 12) in 24.2m | 1370m
+[v3 200/340] done alias010 scramble s11 (dial 11) in 33.5m | 1370m
+[v3 201/340] done yardstick puppetfast s11 in 0.2m | 1370m
+[v3 202/340] done yardstick puppetslow s11 in 0.6m | 1370m
+[v3 203/340] done yardstick alias000 s11 in 0.2m | 1370m
+[v3 204/340] done yardstick alias050 s11 in 0.2m | 1370m
+[v3 205/340] done puppetfast main s12 (dial 9) in 22.5m | 1370m
+[v3 206/340] done puppetfast nocore s12 (dial 10) in 23.6m | 1371m
+[v3 207/340] done puppetfast scramble s12 (dial 12) in 29.2m | 1388m
+[v3 208/340] done puppetslow main s12 (dial 11) in 28.1m | 1398m
+[v3 209/340] done puppetslow nocore s12 (dial 13) in 18.0m | 1398m
+[v3 210/340] done puppetslow scramble s12 (dial 13) in 23.5m | 1398m
+[v3 211/340] done alias000 main s12 (dial 9) in 33.3m | 1421m
+[v3 212/340] done alias005 main s12 (dial 9) in 33.4m | 1421m
+[v3 213/340] done alias010 main s12 (dial 9) in 33.5m | 1428m
+[v3 214/340] done alias020 main s12 (dial 9) in 33.6m | 1431m
+[v3 215/340] done alias050 main s12 (dial 9) in 33.7m | 1455m
+[v3 216/340] done alias010 nocore s12 (dial 13) in 20.5m | 1455m
+[v3 217/340] done alias010 scramble s12 (dial 12) in 55.3m | 1483m
+[v3 218/340] done yardstick puppetfast s12 in 0.2m | 1483m
+[v3 219/340] done yardstick puppetslow s12 in 0.6m | 1483m
+[v3 220/340] done yardstick alias000 s12 in 0.2m | 1483m
+[v3 221/340] done yardstick alias050 s12 in 0.2m | 1483m
+[v3 222/340] done puppetfast main s13 (dial 12) in 33.3m | 1483m
+[v3 223/340] done puppetfast nocore s13 (dial 12) in 27.1m | 1483m
+[v3 224/340] done puppetfast scramble s13 (dial 16) in 47.9m | 1503m
+[v3 225/340] done puppetslow main s13 (dial 12) in 39.7m | 1505m
+[v3 226/340] done puppetslow nocore s13 (dial 11) in 15.2m | 1505m
+[v3 227/340] done puppetslow scramble s13 (dial 14) in 31.6m | 1515m
+[v3 228/340] done alias000 main s13 (dial 9) in 41.7m | 1526m
+[v3 229/340] done alias005 main s13 (dial 9) in 44.5m | 1547m
+[v3 230/340] done alias010 main s13 (dial 9) in 42.0m | 1547m
+[v3 231/340] done alias020 main s13 (dial 9) in 42.1m | 1557m
+[v3 232/340] done alias050 main s13 (dial 9) in 44.8m | 1571m
+[v3 233/340] done alias010 nocore s13 (dial 11) in 26.1m | 1573m
+[v3 234/340] done alias010 scramble s13 (dial 12) in 31.0m | 1579m
+[v3 235/340] done yardstick puppetfast s13 in 0.2m | 1579m
+[v3 236/340] done yardstick puppetslow s13 in 0.6m | 1579m
+[v3 237/340] done yardstick alias000 s13 in 0.2m | 1579m
+[v3 238/340] done yardstick alias050 s13 in 0.2m | 1579m
+[v3 239/340] done puppetfast main s14 (dial 8) in 37.6m | 1596m
+[v3 240/340] done puppetfast nocore s14 (dial 12) in 18.3m | 1596m
+[v3 241/340] done puppetfast scramble s14 (dial 15) in 26.6m | 1600m
+[v3 242/340] done puppetslow main s14 (dial 9) in 35.4m | 1614m
+[v3 243/340] done puppetslow nocore s14 (dial 11) in 21.1m | 1614m
+[v3 244/340] done puppetslow scramble s14 (dial 14) in 30.5m | 1626m
+[v3 245/340] done alias000 main s14 (dial 9) in 36.6m | 1636m
+[v3 246/340] done alias005 main s14 (dial 9) in 39.1m | 1649m
+[v3 247/340] done alias010 main s14 (dial 9) in 36.7m | 1651m
+[v3 248/340] done alias020 main s14 (dial 9) in 39.2m | 1665m
+[v3 249/340] done alias050 main s14 (dial 11) in 42.6m | 1679m
+[v3 250/340] done alias010 nocore s14 (dial 11) in 24.0m | 1679m
+[v3 251/340] done alias010 scramble s14 (dial 16) in 42.0m | 1693m
+[v3 252/340] done yardstick puppetfast s14 in 0.2m | 1693m
+[v3 253/340] done yardstick puppetslow s14 in 0.6m | 1693m
+[v3 254/340] done yardstick alias000 s14 in 0.2m | 1693m
+[v3 255/340] done yardstick alias050 s14 in 0.2m | 1693m
+[v3 256/340] done puppetfast main s15 (dial 9) in 46.7m | 1713m
+[v3 257/340] done puppetfast nocore s15 (dial 11) in 27.1m | 1713m
+[v3 258/340] done puppetfast scramble s15 (dial 12) in 35.1m | 1714m
+[v3 259/340] done puppetslow main s15 (dial 8) in 27.7m | 1720m
+[v3 260/340] done puppetslow nocore s15 (dial 12) in 21.2m | 1721m
+[v3 261/340] done puppetslow scramble s15 (dial 13) in 24.1m | 1737m
+[v3 262/340] done alias000 main s15 (dial 13) in 39.7m | 1754m
+[v3 263/340] done alias005 main s15 (dial 13) in 42.4m | 1763m
+[v3 264/340] done alias010 main s15 (dial 10) in 40.3m | 1763m
+[v3 265/340] done alias020 main s15 (dial 10) in 40.5m | 1778m
+[v3 266/340] done alias050 main s15 (dial 13) in 40.0m | 1794m
+[v3 267/340] done alias010 nocore s15 (dial 12) in 26.1m | 1794m
+[v3 268/340] done alias010 scramble s15 (dial 13) in 38.2m | 1801m
+[v3 269/340] done yardstick puppetfast s15 in 0.2m | 1801m
+[v3 270/340] done yardstick puppetslow s15 in 0.6m | 1801m
+[v3 271/340] done yardstick alias000 s15 in 0.2m | 1801m
+[v3 272/340] done yardstick alias050 s15 in 0.2m | 1801m
+[v3 273/340] done puppetfast main s16 (dial 10) in 36.1m | 1815m
+[v3 274/340] done puppetfast nocore s16 (dial 11) in 18.3m | 1815m
+[v3 275/340] done puppetfast scramble s16 (dial 15) in 42.7m | 1836m
+[v3 276/340] done puppetslow main s16 (dial 10) in 30.0m | 1836m
+[v3 277/340] done puppetslow nocore s16 (dial 12) in 16.3m | 1836m
+[v3 278/340] done puppetslow scramble s16 (dial 15) in 33.8m | 1849m
+[v3 279/340] done alias000 main s16 (dial 7) in 39.9m | 1862m
+[v3 280/340] done alias005 main s16 (dial 7) in 40.0m | 1871m
+[v3 281/340] done alias010 main s16 (dial 7) in 40.1m | 1877m
+[v3 282/340] done alias020 main s16 (dial 7) in 42.7m | 1892m
+[v3 283/340] done alias050 main s16 (dial 7) in 40.4m | 1903m
+[v3 284/340] done alias010 nocore s16 (dial 13) in 24.1m | 1903m
+[v3 285/340] done alias010 scramble s16 (dial 12) in 33.3m | 1910m
+[v3 286/340] done yardstick puppetfast s16 in 0.2m | 1910m
+[v3 287/340] done yardstick puppetslow s16 in 0.6m | 1910m
+[v3 288/340] done yardstick alias000 s16 in 0.2m | 1910m
+[v3 289/340] done yardstick alias050 s16 in 0.2m | 1910m
+[v3 290/340] done puppetfast main s17 (dial 14) in 41.4m | 1934m
+[v3 291/340] done puppetfast nocore s17 (dial 10) in 15.4m | 1934m
+[v3 292/340] done puppetfast scramble s17 (dial 16) in 35.4m | 1938m
+[v3 293/340] done puppetslow main s17 (dial 10) in 24.7m | 1938m
+[v3 294/340] done puppetslow nocore s17 (dial 12) in 16.6m | 1938m
+[v3 295/340] done puppetslow scramble s17 (dial 11) in 23.8m | 1951m
+[v3 296/340] done alias000 main s17 (dial 13) in 35.0m | 1969m
+[v3 297/340] done alias005 main s17 (dial 12) in 35.1m | 1970m
+[v3 298/340] done alias010 main s17 (dial 13) in 35.1m | 1973m
+[v3 299/340] done alias020 main s17 (dial 14) in 37.6m | 1988m
+[v3 300/340] done alias050 main s17 (dial 12) in 37.6m | 2007m
+[v3 301/340] done alias010 nocore s17 (dial 12) in 20.5m | 2007m
+[v3 302/340] done alias010 scramble s17 (dial 15) in 35.2m | 2008m
+[v3 303/340] done yardstick puppetfast s17 in 0.2m | 2008m
+[v3 304/340] done yardstick puppetslow s17 in 0.6m | 2008m
+[v3 305/340] done yardstick alias000 s17 in 0.2m | 2008m
+[v3 306/340] done yardstick alias050 s17 in 0.2m | 2008m
+[v3 307/340] done puppetfast main s18 (dial 14) in 36.2m | 2026m
+[v3 308/340] done puppetfast nocore s18 (dial 12) in 18.3m | 2026m
+[v3 309/340] done puppetfast scramble s18 (dial 13) in 25.4m | 2032m
+[v3 310/340] done puppetslow main s18 (dial 14) in 25.9m | 2034m
+[v3 311/340] done puppetslow nocore s18 (dial 12) in 16.5m | 2034m
+[v3 312/340] done puppetslow scramble s18 (dial 10) in 29.6m | 2055m
+[v3 313/340] done alias000 main s18 (dial 14) in 44.8m | 2071m
+[v3 314/340] done alias005 main s18 (dial 14) in 50.4m | 2083m
+[v3 315/340] done alias010 main s18 (dial 14) in 44.8m | 2083m
+[v3 316/340] done alias020 main s18 (dial 14) in 50.3m | 2105m
+[v3 317/340] done alias050 main s18 (dial 14) in 47.7m | 2118m
+[v3 318/340] done alias010 nocore s18 (dial 12) in 25.9m | 2118m
+[v3 319/340] done alias010 scramble s18 (dial 14) in 26.7m | 2118m
+[v3 320/340] done yardstick puppetfast s18 in 0.2m | 2118m
+[v3 321/340] done yardstick puppetslow s18 in 0.6m | 2118m
+[v3 322/340] done yardstick alias000 s18 in 0.2m | 2118m
+[v3 323/340] done yardstick alias050 s18 in 0.2m | 2118m
+[v3 324/340] done puppetfast main s19 (dial 15) in 40.7m | 2146m
+[v3 325/340] done puppetfast nocore s19 (dial 10) in 23.4m | 2146m
+[v3 326/340] done puppetfast scramble s19 (dial 15) in 28.4m | 2146m
+[v3 327/340] done puppetslow main s19 (dial 9) in 24.2m | 2146m
+[v3 328/340] done puppetslow nocore s19 (dial 10) in 16.4m | 2146m
+[v3 329/340] done puppetslow scramble s19 (dial 15) in 33.5m | 2171m
+[v3 330/340] done alias000 main s19 (dial 10) in 53.8m | 2196m
+[v3 331/340] done alias005 main s19 (dial 10) in 53.9m | 2199m
+[v3 332/340] done alias010 main s19 (dial 10) in 54.0m | 2200m
+[v3 333/340] done alias020 main s19 (dial 10) in 51.3m | 2223m
+[v3 334/340] done alias050 main s19 (dial 10) in 50.7m | 2247m
+[v3 335/340] done alias010 nocore s19 (dial 10) in 20.4m | 2247m
+[v3 336/340] done alias010 scramble s19 (dial 15) in 37.7m | 2247m
+[v3 337/340] done yardstick puppetfast s19 in 0.2m | 2247m
+[v3 338/340] done yardstick puppetslow s19 in 0.6m | 2247m
+[v3 339/340] done yardstick alias000 s19 in 0.2m | 2247m
+[v3 340/340] done yardstick alias050 s19 in 0.2m | 2247m
+V3 SWEEP COMPLETE in 37.5 h

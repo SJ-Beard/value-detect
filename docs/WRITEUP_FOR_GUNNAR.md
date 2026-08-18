@@ -1,0 +1,132 @@
+# Unsupervised value discovery inside an agent — v1 results
+
+**SJ Beard, with Claude (implementation & analysis) · 2026-08-10 · for Gunnar Zarncke**
+
+## What we did
+
+Your UAD finds *agents* — variable-sets that hold an approximate Markov blanket against
+their environment. This project points the same plant-and-recover style one level inward:
+finding **value-like structure inside an agent** from passive data alone. The claim under
+test: values have a *directional* signature — they are the parts that most strongly drive
+their surroundings while being least driven in return (motivated by the
+empowerment/plasticity trade-off, arXiv:2505.10361, and the resulting pressure to
+specialise internally toward plastic belief-like and protected value-like poles).
+
+v1 is an **instrument test, not a theory test**: we planted structure and asked whether a
+passive directional measure recovers it. The world is your `uad_handles`
+`SyntheticHandleWorld`, used exactly as-is (passive rollouts; your repo untouched; our
+code imports it from a sibling package `value_detect/`). It was built by you, before this
+project existed, for a different question — so nobody tuned the world to flatter the
+measure. G (goal, self-flipping at 1.5%) is the planted value-core; B (belief) the
+planted intake pole.
+
+## The instrument
+
+Per variable, two directed quantities (transfer-entropy style, your discrete plug-in CMI
+conventions: Laplace α = 0.1, nats): **push-in** (what everything else's past adds about
+its next step) and **push-out** (what its past adds about everything else's next step;
+also an environment-only flavour). Three "Rest" conventions were run as co-equal tests,
+because their disagreements turned out to be findings:
+
+- **pairwise** — one-at-a-time flows, summed;
+- **fused mega-state** — both directions against the fused joint state of all others
+  (2M-step runs; the fused outbound needs the data);
+- **fused + best-key** — fused intake; outbound takes the best reading over "no key" and
+  each single extra conditioning variable (an automatic decryption device, same rule for
+  every variable).
+
+Every score is gated by **noise floors**: ≥200 circular-shift nulls per variable
+mirroring the exact scoring procedure (fused: 50/seed pooled across seeds), 95th
+percentile. Success criteria were **pre-registered and locked before the sweep**
+(`docs/SUCCESS_CRITERIA.md`): the headline construct is the **value signature** — drive
+above floor, rankable, and net intake at floor *or* net drive ≥ 9× net intake — with
+required uniqueness (nothing but G may hold it), G-above-B, controls (no-core variant,
+scrambles, and your `goal_progress` as a must-reject contrast), 20 seeds, 80/90%
+thresholds.
+
+## Results (20 seeds; full tables in `results/chunk5/CRITERIA_VERDICT_FINAL.md`)
+
+| Test | G's signature | Uniquely G | G > B | T1 (drives world) |
+|---|---|---|---|---|
+| fused, both configs | **100%** | **95% / 100%** | **100%** | — |
+| fused+best-key, both configs | **100%** | **95%** | **100%** | **100%** |
+| pairwise, both configs | 5% | 0% (wires 20/20) | 5% | — |
+
+- **The signature finds the planted value and only it** wherever the convention can see
+  through the world's XOR composition. Controls all pass for those conventions: the
+  no-core variant strips G of the signature; scrambled data shows above-floor readings at
+  ≈ the designed 5% chance rate; the sole intruders across all fused/best-key tests were
+  1-in-20-seed blips by the pure-noise variable — the false-positive rate the floors
+  admit by construction.
+- **XOR composition acts as a cipher.** Each input of `A = B ⊕ G` is invisible to
+  pairwise measures unless the other input (the "key") is conditioned on; measured
+  readings match hand-derived values to ~3 decimals (`results/chunk4/DIAGNOSIS.md`).
+  Pairwise's failure is therefore structural — it cannot tell your goal from your action
+  wire, and with floors in place G's pairwise signal is indistinguishable from nothing.
+  We kept it as the documented baseline; re-timing the world would not rescue it (tested).
+- **The fused outbound auto-screens duplicates and mediators** (conditioning on the joint
+  past of everything else): under it, G is literally the *only* variable in the drive
+  half of the intake/output map. Your aliases behave exactly as your handles paper
+  predicts: passively, the clean logs read ≥ their noisy readouts; under pairwise the
+  action-log shares the "value" verdict — the passive-limit boundary, quantified.
+- **Your own `AgentDetector` on our trace** finds the agent's body as one blanket-valid
+  cluster (leakage 0.001 vs tolerance 1.0), sets W outside — and drops G as an invisible
+  singleton (symmetric MI ≈ 0: the cipher again, and your "rarely-changing variables are
+  the hard cases"). Boundary-finding and value-finding are complementary axes.
+- **One pre-registered control failed, informatively: your `goal_progress`** (1 solar + 1
+  steel world) is correctly rejected under pairwise (100%) but steals the signature in
+  30% of seeds under best-key: slow cumulative meters have autocorrelation-inflated
+  shuffle-floors, so their net intake reads zero while witness-like drive clears floor.
+  **Best-key's blind spot is slow meters.** (Block-preserving nulls are the known fix to
+  try.)
+
+## Conclusion (SJ)
+
+The experiment shows the **theoretical possibility of detecting goals this way** — but
+none of the tests as built is good enough yet to carry the program forward alone. The
+fused mega-state cannot expand to worlds at the scale of your multi-agent simulator
+(state count doubles per variable; ~50 variables is hopeless). Fused + best-key fails
+twice over: a single key cannot decrypt compositions with more than two inputs (two
+sensors → two beliefs + goal → action re-raises the cipher; sharpest for parity-like
+rules — graded rules leak more, so where the cliff sits in realistic worlds is an
+empirical question), and the `goal_progress` failure warns of slow-meter effects in
+richer environments. These are **soft failures**: both conventions pass this
+experiment's locked conditions, so the theory stands — but the instruments will likely
+fail in the experiments we want to run next. **Next step: build at least one more test —
+"fused agents + fused environment" (run your agent detection first, fuse within each
+detected agent plus an environment bucket, reducing elements to #agents + 1) — and
+re-run this benchmark with it.** That is also the natural bridge to your 50-variable
+world, where the `goal_progress` contrast lives.
+
+## Follow-ups beyond that
+
+Block-shift (autocorrelation-preserving) nulls; a G_alias variant to map the passive
+breaking point for the goal role (joint follow-up to your handles paper); hidden-G;
+richer/graded decision rules; and the real question the instrument now makes askable —
+whether value/belief polarisation *emerges* in evolved systems rather than being planted.
+
+## Reproduce
+
+Environment: double-click `setup_env.command` (once per machine). Then:
+
+```
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk2_wrap_world.py
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk3_estimator_report.py
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk4_directional_scores.py
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk5_sweep.py --seeds 20 --jobs 4
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk5_fused_pooled_floors.py
+~/.venvs/value-detect/bin/python value_detect/scripts/chunk5_aggregate_final.py
+```
+
+(~40 min + ~25 min on an M-series laptop.) Figures: `docs/writeup_figures/`
+(signature-rate heatmap; six-panel intake/output maps; change-frequency chart). Design
+history and every decision, dated: `docs/DECISIONS.md`; pre-registration:
+`docs/SUCCESS_CRITERIA.md`; drop-in log entry: `docs/ELOG_E21.md`.
+
+*Honesty notes: the protocol was soft-blind (the implementing model had read the world's
+source; protection = independent origin of the world, pre-registration, controls,
+multi-seed). Two calibration amendments were made to the locked criteria pre-sweep, both
+documented in place (multiple-comparisons handling for scrambles; floor-adjusted ratio).
+A small quirk in your older simulator, flagged in passing: several "dynamic" thresholds
+are sinusoids of a constant (fixed memory length), so their intended time-variation never
+happens; agent-specific offsets still differ, so your results stand.*

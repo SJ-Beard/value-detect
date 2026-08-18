@@ -4,7 +4,7 @@ Locating agents **value structures**, the parts of their information structure t
 empowerment–plasticity asymmetry: values are the components that most strongly drive
 the world while being least driven by it. Extends Gunnar Zarncke's
 [Unsupervised Agent Discovery](https://github.com/GunnarZarncke/agency-detect) one level
-inward — from finding *agents* to finding *what drives them*.
+inward — from finding *agents* to finding *their drivers*.
 
 This repository is the **complete, stable record of the first experiment class (v1–v3)**:
 three pre-registered experiments on planted-structure worlds built on the UAD handle

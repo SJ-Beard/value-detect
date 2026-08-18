@@ -8,6 +8,5 @@
 | [`V3_REGISTRATION.md`](V3_REGISTRATION.md) · [`V3_PLAN.md`](V3_PLAN.md) | The locked registration and the design |
 | [`DEFINITIONS.md`](DEFINITIONS.md) | The governing glossary |
 | [`DECISIONS.md`](DECISIONS.md) | Every decision, deviation, defect and finding, dated, v1→v4 |
-| [`VALUE_DISCOVERY_DESIGN.md`](VALUE_DISCOVERY_DESIGN.md) · [`TECHNICAL_ADDENDUM.md`](TECHNICAL_ADDENDUM.md) | The original v1 design documents |
 | [`conversations/`](conversations/) | Session summaries |
 | [`writeup_figures/`](writeup_figures/) | All figures v1–v3 |

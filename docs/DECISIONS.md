@@ -588,3 +588,14 @@ an agent concealing its objectives via decision noise weakens the behavioural si
 but the most-driving component remains structurally locatable and can be isolated.
 Not compiled locally (no TeX); structurally verified. Two bib placeholders flagged.
 Not for submission (disclosed in-paper).
+
+---
+
+## 2026-08-18 — Design documents retired from the repository (SJ)
+
+`VALUE_DISCOVERY_DESIGN.md` and `TECHNICAL_ADDENDUM.md` were written as scaffolding for
+the implementing model at the start of v1 and are not part of the final project: the
+theoretical basis lives in the paper draft and every design decision is dated in this
+log. Removed from the public repository; earlier entries in this log that cite "the
+design document" or "the addendum" refer to those retired files and are left as written.
+Both files remain in SJ's private project folder.

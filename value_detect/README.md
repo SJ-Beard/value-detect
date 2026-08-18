@@ -4,8 +4,8 @@ Unsupervised **value** discovery (directional UAD), extending Gunnar Zarncke's
 Unsupervised Agent Discovery. Standalone package living at the project root, a sibling
 of the read-only `agency-detect-master/` repository.
 
-See the project-root plan documents `VALUE_DISCOVERY_DESIGN.md` and `TECHNICAL_ADDENDUM.md`
-for the full design, and `CLAUDE.md` for house rules.
+For the theory and design see the paper draft (`paper/value_discovery.tex`) and the dated
+decisions log (`docs/DECISIONS.md`).
 
 ## What is here (Chunk 2 — wrap the world)
 

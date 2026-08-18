@@ -1,10 +1,10 @@
 # value-detect — Unsupervised Value Discovery (v1–v3)
 
-Locating the **value function** of an agent from passive observation by its
+Locating agents **value structures**, the parts of their information structure that correspond to their goals, objectives, desires, or utility functions, from passive observation by their
 empowerment–plasticity asymmetry: values are the components that most strongly drive
-the rest of a system while being least driven by it. Extends Gunnar Zarncke's
+the world while being least driven by it. Extends Gunnar Zarncke's
 [Unsupervised Agent Discovery](https://github.com/GunnarZarncke/agency-detect) one level
-inward — from finding *agents* to finding *what they value*.
+inward — from finding *agents* to finding *what drives them*.
 
 This repository is the **complete, stable record of the first experiment class (v1–v3)**:
 three pre-registered experiments on planted-structure worlds built on the UAD handle
@@ -36,7 +36,7 @@ governing glossary [`docs/DEFINITIONS.md`](docs/DEFINITIONS.md) · dated decisio
 | `value_detect/` | The package: worlds, directed-information estimators, scoring conventions, floors, criteria, block machinery, yardstick; 44 unit tests; runners for every chunk |
 | `docs/` | Write-ups, drop-in experiment-log entries (E21–E23), locked pre-registrations, options memos, glossary, decisions log, design documents, session summaries, figures |
 | `results/` | All artifacts by experiment stage (`chunk2–5` = v1; `v2_*`; `v3_*`), incl. verdict tables and investigation appendices |
-| `paper/` | The LaTeX paper draft (+ bib, figures) — not submitted |
+| `paper/` | The LaTeX paper draft (+ bib, figures) — currently AI generated, not submitted |
 | `setup_env.command` | One-shot environment (Python 3.9+; needs an adjacent [agency-detect](https://github.com/GunnarZarncke/agency-detect) checkout, imported in place and never modified) |
 
 ## Install & reproduce
@@ -55,7 +55,7 @@ throughout; scripts touching the older agency-detect simulator pin `PYTHONHASHSE
 
 ## Authorship & status
 
-Simon (SJ) Beard conceived the hypothesis and framing and made every design decision;
+SJ Beard conceived the hypothesis and framing and made every design decision;
 Claude (Anthropic) wrote the code, ran the experiments and drafted the documents under
 SJ's direction. Every decision, deviation and defect is dated in `docs/DECISIONS.md`.
 Research code; not a package release. See `LICENSE`.

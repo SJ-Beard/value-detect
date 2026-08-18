@@ -30,10 +30,10 @@
 \newcommand{\pkg}[1]{\texttt{#1}}
 
 \title{Unsupervised Value Discovery:\\
-Locating the Value Function of an Agent from Passive Observation\\
-by its Empowerment--Plasticity Asymmetry}
+Locating the Value Structures of an Agent from Passive Observation\\
+by their Empowerment--Plasticity Asymmetry}
 
-\author[1]{Simon Beard}
+\author[1]{SJ Beard}
 \author[2]{Claude (Anthropic)}
 \affil[1]{Independent researcher (philosophy \& AI safety)}
 \affil[2]{Implementation and analysis; see Author Contributions}
@@ -47,10 +47,11 @@ by its Empowerment--Plasticity Asymmetry}
 Unsupervised agent discovery (UAD) locates agents in raw multivariate time series by
 finding variable sets that approximately satisfy a Markov-blanket condition against
 their surroundings. We ask a question one level inward: within a discovered agent,
-which part plays the role of its \emph{value function}? We propose that this role has a
-directional information-theoretic signature: values are the components that most
-strongly drive the rest of the system while being least driven by it --- maximally
-empowered and minimally plastic. This inverts a familiar assumption due to Omohundro
+which parts are its \emph{value structures} --- the components of its informational
+structure that correspond to its goals, objectives, desires or utility functions? We
+propose that this role has a directional information-theoretic signature: values are
+the components that most strongly drive the world while being least driven by it ---
+maximally empowered and minimally plastic. This inverts a familiar assumption due to Omohundro
 that a system first has values and then acts to make them empowered and stable; we
 hypothesise instead that whatever is empowered and stable thereby \emph{serves as} the
 system's values, and that this structural property is passively detectable. We
@@ -82,7 +83,7 @@ non-identifiability, dependence on rationality assumptions --- and one that is r
 foregrounded: an agent may \emph{conceal} its objectives, for instance by injecting
 noise into its decisions, so that the behavioural signal is deliberately weakened.
 This paper explores a complementary route. Rather than inferring values from what a
-system does, we look for the value function in the \emph{informational structure} of
+system does, we look for its value structures in the \emph{informational structure} of
 the system itself: which internal component most drives behaviour beneath the noise?
 If such a component can be located structurally, it can be isolated and studied
 directly, recovering the signal that behavioural inference alone would lose.
@@ -91,8 +92,10 @@ Our starting point is unsupervised agent discovery (UAD) \citep{zarncke2026uad},
 finds agents in raw time series as variable clusters that approximately satisfy a
 Markov-blanket condition against their environment
 \citep{friston2013life,kirchhoff2018blankets}. UAD locates \emph{boundaries}. We ask
-what lies inside them, and specifically which part of a discovered agent plays the
-role of its values.
+what lies inside them, and specifically which parts of a discovered agent are its value
+structures --- the parts that \emph{drive} it. We deliberately say value \emph{structure}
+rather than value \emph{function}: locating the component that plays the value role does
+not tell us what that component does or prefers, and we have not built tools for that.
 
 \paragraph{The hypothesis: an inversion of Omohundro.}
 Omohundro's \emph{Basic AI Drives} \citep{omohundro2008drives} argues that an advanced
@@ -103,9 +106,9 @@ minimally \emph{plastic}. Omohundro's direction of explanation runs from values 
 structure. We hypothesise the reverse: whatever component of a system is maximally
 empowered and minimally plastic will, by that fact, \emph{serve as} the system's
 values. This is why we speak of \emph{value} discovery rather than \emph{goal}
-discovery: we are identifying the part that plays the value-function role. In the
-simple systems studied here that part is a single planted goal bit; the same structural
-signature could in principle locate richer value functions in richer systems.
+discovery: we are identifying the parts that play the value role, whatever they are. In
+the simple systems studied here that part is a single planted goal bit; the same
+structural signature could in principle locate richer value structures in richer systems.
 
 The empowerment--plasticity trade-off \citep{empowermentplasticity2025} makes the
 hypothesis non-trivial: across a boundary a system cannot be maximally both, so an
@@ -449,7 +452,7 @@ persist in the signature through its records alone.
 % =====================================================================
 
 \paragraph{What was established.}
-The empowerment--plasticity signature locates a planted value function from passive
+The empowerment--plasticity signature locates a planted value structure from passive
 observation, uniquely, across single- and multi-agent worlds, and refuses decoys,
 disconnected goals, scrambles and (with the right conditioning) meters; the block-level
 any-block convention is the only tested instrument whole at the scale of the UAD
@@ -473,7 +476,7 @@ it. Our results are a first indication that such structural location is possible
 \paragraph{Limitations.}
 (1)~\emph{Single-variable values.} The instrument scores individual variables. It has
 been tested on agents with multiple belief states but not with multiple goal or value
-states; a value function distributed over several components is beyond it as it stands.
+states; a value structure distributed over several components is beyond it as it stands.
 The grown-keys results suggest one route (deciphering interactions among several
 value-like variables); we conjecture a better one --- use UAD's boundary-detection
 machinery to identify sub-systems within an agent, then evaluate the empowerment and
@@ -492,7 +495,7 @@ supported by recoverability, not a demonstration that empowered-and-stable compo
 Systems-of-agents environments in which values may be held by coalitions rather than
 individuals (any-block requires no assumption about which agent owns a value, and so
 is structurally open to this); multi-horizon conditioning; sub-system-level scoring for
-distributed value functions; and the twin channel as a probe of value persistence
+distributed value structures; and the twin channel as a probe of value persistence
 through records.
 
 % =====================================================================
@@ -502,7 +505,9 @@ S.B.\ conceived the hypothesis and framing, made all design decisions, reviewed 
 audit and pre-registration in plain language, and directs the programme. Claude, an AI
 system, wrote all code, ran the experiments and analyses, and drafted this manuscript
 under S.B.'s direction; every decision, deviation and defect is dated in the project's
-decisions log. This draft is not being submitted for publication.
+decisions log. \textbf{This manuscript is, as it stands, AI-generated} --- S.B.\ intends
+to write the account in their own words when time allows --- and it is not being
+submitted for publication.
 
 \section*{Reproducibility}
 All code (\pkg{value\_detect}), world generators, audits, locked pre-registrations,

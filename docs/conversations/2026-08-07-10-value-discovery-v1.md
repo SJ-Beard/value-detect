@@ -49,7 +49,7 @@ communicating every step in plain English and touching nothing in his repository
 Instrument test: **success under the locked criteria** for the two synergy-aware
 conventions; theory untouched by the failures (all "soft" — this world passes, bigger
 worlds wouldn't). Verdict, heatmap, and short Gunnar-facing write-up shipped
-(`docs/WRITEUP_FOR_GUNNAR.md`, `docs/ELOG_E21.md`).
+(`docs/WRITEUP_V1.md`, `docs/ELOG_E21.md`).
 
 ## Follow-up ideas
 

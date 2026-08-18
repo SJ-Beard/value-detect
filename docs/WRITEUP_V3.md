@@ -1,25 +1,27 @@
 # Unsupervised value discovery — v3: can the instrument be fooled?
 
-**SJ Beard, with Claude (implementation & analysis) · 2026-08-14 · for Gunnar Zarncke**
-*(Closes the simple experiment class begun in v1. Terms per `DEFINITIONS.md`;
+**SJ Beard, with Claude (implementation & analysis) · 2026-08-14**
+*(Closes the simple experiment class begun in v1; `WRITEUP_V1.md` introduces UAD and
+the handle benchmark. Terms per `DEFINITIONS.md`;
 registration locked pre-sweep in `V3_REGISTRATION.md`; verdict tables in
 [`../results/v3_5/V3_VERDICT.md`](../results/v3_5/V3_VERDICT.md).)*
 
-## Open items for SJ
+## Open items
 
 1. The puppet-world thief rule was breached by the familiar V2 interference wires
    (worst: A6 at 5/20 — the same variable V2's partitioned contingency attributed to
-   ring interference). The attribution transfers; say the word if you want a fresh
-   partitioned confirmation run for V3 specifically.
+   ring interference). The attribution transfers; a fresh partitioned confirmation run for V3
+   specifically remains an option.
 2. The twin-channel discovery (below) suggests refining the no-core specification for
    any future world containing derived recordings.
-3. Grown keys' keep/cut decision remains open for V4 planning, as scheduled.
+3. The grown-keys keep/cut decision remains open (deferred at V4 planning).
 
 ## The question
 
 v1 showed the value signature finds a planted goal; v2 showed which tests survive
 foreign worlds. v3 planted **impostors** in colony-style worlds and asked whether they
-fool the surviving tests — with your goal-flip operation generalised into a
+fool the surviving tests — with the handle benchmark's goal-flip operation generalised
+into a
 two-direction **interventional yardstick** ("levers the world, unlevered by the world")
 standing alongside as the ceiling. Tests: fused-agents any-block (primary), own-block
 (diagnostic). 20 seeds, z=3 floors, registration locked before the sweep.
@@ -50,8 +52,8 @@ standing alongside as the ceiling. Tests: fused-agents any-block (primary), own-
    at 0–0.5% (both sign — the theorem case, exactly as it must be), transitional at 1%
    (separation in 3–7 of 20 seeds), and effectively complete separation at 2% (19/20
    under any-block) and 5% (20/20). Zero inversions anywhere; a scattering of
-   own-block deadlocks at low noise. This is the goal-role companion to your
-   access-model paper's sensor/action analysis, with the curve attached.
+   own-block deadlocks at low noise. This is the goal-role companion to the
+   sensor/action analysis in Zarncke's access-model (handles) paper, with the curve attached.
 5. **A discovery in the controls: the twin-channel.** In the alias no-core world the
    disconnected goals still signed, 20/20 — and they should: a goal stripped of its
    behavioural wiring **still causally drives its own recording**. "Drives without
@@ -73,12 +75,12 @@ standing alongside as the ceiling. Tests: fused-agents any-block (primary), own-
 | Twin at ≥2% noise | separated (19–20/20) | separated (100%) | none — passive suffices |
 
 Access buys exactly the two theorem-hard cases and nothing else — the sharpest
-quantitative form of your access-model thesis this project can produce, built from
-your own goal_flip operation (validated against your embedded implementation on the
-anchor before use; the do-style generalisation and both probes are in
+quantitative form of Zarncke's access-model thesis this project can produce, built from
+the benchmark's own goal_flip operation (validated against its embedded implementation on
+the anchor before use; the do-style generalisation and both probes are in
 `value_detect/src/value_detect/yardstick.py`, whose construction was itself instructive:
 the XOR cipher bit three times during building and was caught each time by the
-validation bench — the fix, each time, was the context-conditioning your own
+validation bench — the fix, each time, was the context-conditioning the benchmark's own
 interventional score already uses).
 
 ## Where this leaves the programme
@@ -92,9 +94,10 @@ multi-horizon conditioning (evidenced by the lag-2 diagnostic), coalition-held g
 as a probe of value persistence through records.
 
 **Next step, v4 (designed 2026-08-17; final residency step):** move the instrument
-onto *your* experiment class. Your deployment-pipeline simulator injects a
+onto Zarncke's richer experiment class. His deployment-pipeline simulator
+(https://github.com/GunnarZarncke/deployment-pipeline-simulator) injects a
 self-preserving utility (λ_Q·ΔQ + λ_Y·ΔY + λ_K·ΔK − λ_R·risk — Omohundro's drives as
-code) into a hidden group governing an event stream; your auditor detects it
+code) into a hidden group governing an event stream; its auditor detects it
 behaviourally (threat-response regression, AUROC ≈ 0.61). v4 builds the **adaptor**
 that turns the event log into a discrete time series in two views (auditor-visible
 proxies; hidden latent state) and runs a **probe**, not a benchmark: does the value

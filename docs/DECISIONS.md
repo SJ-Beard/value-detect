@@ -198,7 +198,7 @@ blind spot (C3). These are **soft failures** — this experiment's conditions pa
 theory stands — but they predict failure in the experiments we want next. **Next step:
 develop at least one more test, starting with SJ's "fused agents + fused environment",
 and repeat this benchmark with it.** Chunk 6 shipped as a short Gunnar-facing memo
-(SJ–Gunnar meeting this week): `docs/WRITEUP_FOR_GUNNAR.md` + `docs/ELOG_E21.md` (E21
+(SJ–Gunnar meeting this week): `docs/WRITEUP_V1.md` + `docs/ELOG_E21.md` (E21
 verified as the next free number) + session summary + figures.
 
 ---

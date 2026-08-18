@@ -48,5 +48,5 @@ goes in the write-up's "Open items for SJ", not a pause.
   mechanisms, not failures to fix.
 - Control failures ⇒ investigate estimators/floors before interpreting anything (house
   standard); document the investigation in the write-up.
-- The write-up (WRITEUP_V3_FOR_GUNNAR.md + ELOG_E23.md + session summary + figures)
+- The write-up (WRITEUP_V3.md + ELOG_E23.md + session summary + figures)
   is produced immediately after aggregation, same task, saved to docs/.

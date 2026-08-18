@@ -1,19 +1,19 @@
 # Unsupervised value discovery — v2: which tests survive outside their birth world?
 
-**SJ Beard, with Claude (implementation & analysis) · 2026-08-12 · for Gunnar Zarncke**
-*(Companion to the v1 write-up; terms per `DEFINITIONS.md`; every decision dated in
+**SJ Beard, with Claude (implementation & analysis) · 2026-08-12**
+*(Companion to `WRITEUP_V1.md`, which introduces UAD and the handle benchmark; terms per `DEFINITIONS.md`; every decision dated in
 `DECISIONS.md`; registration locked pre-sweep in `V2_5_PREREGISTRATION.md`.)*
 
 ## The question
 
 v1 showed the **value signature** — drives its system while being (nearly) undriven,
-scored against procedure-mirroring noise floors — recovers a planted goal in your
-handle-world. v2 asked the harder question: which *measurement conventions* survive in
+scored against procedure-mirroring noise floors — recovers a planted goal in Zarncke's UAD
+handle-world (`uad_handles`; see `WRITEUP_V1.md` for background). v2 asked the harder question: which *measurement conventions* survive in
 worlds they weren't born in? Six tests × four worlds × three conditions × 20 seeds,
 criteria locked before the sweep.
 
 **Tests:** pairwise (v1 baseline, already retired), fused, fused+best-key, grown keys
-(greedy 2-key growth), and two *block architectures* built on your detection stage
+(greedy 2-key growth), and two *block architectures* built on UAD's detection stage
 (SJ's "fused agents + fused environment"): **fused-agents own-block** (the candidate's
 own block standing in the conditioning) and **fused-agents any-block** (every block
 offered as a decryption key). **Worlds:** the v1 anchor; a
@@ -26,7 +26,7 @@ world (two-belief agents; one composes its action by parity, one by majority); a
 1. **Any-block recovered every planted goal in every world** — the only test that never
    missed (see `writeup_figures/v2_heatmap.png`). Mechanically: "target-block's past +
    one key element" is two-block conditioning, which decrypts three-way composition and
-   never needs the goal to belong to a detected agent. Since your clustering reliably
+   never needs the goal to belong to a detected agent. Since UAD's clustering reliably
    *orphans* goals (rare-flippers have ~no symmetric MI), that robustness is fitness for
    the real terrain, not luck. It also makes any-block structurally open to goals held by
    *systems* of agents rather than individuals — unplanned, and possibly its most
@@ -41,10 +41,10 @@ world (two-belief agents; one composes its action by parity, one by majority); a
    defeat greedy growth (unit-tested); graded composition is grown keys' niche
    (+43% over best-key).
 4. **Every variable-level convention hits a scale wall; only the block family survives
-   whole at your simulator's scale.** Fused's wall was known (state count doubles per
+   whole at the scale of UAD's multi-agent simulator.** Fused's wall was known (state count doubles per
    variable). The new finding: best-key/grown *intake* is fused-style too, and at 49
    variables it saturates outright — 19,999 distinct joint states in 20,000 samples,
-   so "intake" reads as bias for every variable. **Your no-core control caught it**
+   so "intake" reads as bias for every variable. **The no-core control caught it**
    (0% clean seeds — the collapse detector working exactly as designed), and the
    registration's locked interpretation rules converted it into a recorded
    infeasibility rather than a fake result.
@@ -65,11 +65,12 @@ world (two-belief agents; one composes its action by parity, one by majority); a
   only — it now checks joint dynamics); fixed with an exogenous weather channel and
   re-run. (b) The intake-saturation blind spot in the registered feasibility map, caught
   by no-core.
-- **Two things you may care about directly:** your simulator's traces are only
-  reproducible across processes with `PYTHONHASHSEED=0` (agents derive parameters via
-  `hash(name)`; within-run results are unaffected — question, not criticism: did
-  cross-session reproducibility matter to any of your comparisons?), and our early runs
-  needed a burn-in your `generate_passive` applies but our harness initially didn't —
+- **Two things users of UAD's older multi-agent simulator may care about:** its traces
+  are only reproducible across processes with `PYTHONHASHSEED=0` (agents derive
+  parameters via `hash(name)`; within-run results are unaffected — a question for its
+  author, not a criticism: did cross-session reproducibility matter to any published
+  comparison?), and our early runs needed a burn-in that UAD's own `generate_passive`
+  applies but our harness initially didn't —
   `Steel1_goal`'s transitions all occur in the first ~55 settling steps.
 - The v1-era slow-meter mechanism claim was retracted and replaced (near-frozen
   degeneracy, not slowness; the z=3 margin gate fixes it and was chosen deliberately
@@ -81,12 +82,13 @@ world (two-belief agents; one composes its action by parity, one by majority); a
 **grown keys** in reserve (graded-synergy sensitivity); **own-block** diagnostic; best-key and pairwise retired
 with documented causes of death; one world configuration (lookalikes present — raw data
 needs no pre-cleaning). v3 (designed 2026-08-12; colony-style worlds
-only, the closest setting to your simulator) turns from "what works where" to the
+only, the closest setting to UAD's multi-agent simulator) turns from "what works where" to the
 curve-balls — can we *defeat* the instrument: two puppet-colonies (a captured goal,
 wired into its agent's action but environment-driven — fast and slow variants, the slow
 one registered as likely to defeat lag-1 passive tests), an alias-colony (goal twins at
 noise {0, 0.5, 1, 2, 5}%, mapping the passive breaking point for the goal role), and
-your goal-flip operation generalised into a two-direction **interventional yardstick**
+the handle benchmark's goal-flip operation generalised into a two-direction
+**interventional yardstick**
 ("levers the world, unlevered by the world" — the signature's mirror under access),
 reported as an access-premium table: best passive verdict | interventional verdict |
 the gap. Roster: fused-agents any-block primary, own-block diagnostic. v4 (later):

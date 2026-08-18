@@ -2,7 +2,7 @@
 
 | Doc | Role |
 |-----|------|
-| [`WRITEUP_FOR_GUNNAR.md`](WRITEUP_FOR_GUNNAR.md) · [`WRITEUP_V2_FOR_GUNNAR.md`](WRITEUP_V2_FOR_GUNNAR.md) · [`WRITEUP_V3_FOR_GUNNAR.md`](WRITEUP_V3_FOR_GUNNAR.md) | The three per-experiment memos (v1, v2, v3) |
+| [`WRITEUP_V1.md`](WRITEUP_V1.md) · [`WRITEUP_V2.md`](WRITEUP_V2.md) · [`WRITEUP_V3.md`](WRITEUP_V3.md) | The three per-experiment memos (v1, v2, v3) |
 | [`ELOG_E21.md`](ELOG_E21.md) · [`ELOG_E22.md`](ELOG_E22.md) | Drop-in log entries for v1 and v2 |
 | [`ELOG_E23.md`](ELOG_E23.md) | Drop-in entry for `agency-detect/docs/EXPERIMENTS.md` |
 | [`V3_REGISTRATION.md`](V3_REGISTRATION.md) · [`V3_PLAN.md`](V3_PLAN.md) | The locked registration and the design |

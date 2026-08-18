@@ -13,9 +13,9 @@ live successor, [`deployment-pipeline-value-detect`](https://github.com/SJ-Beard
 builds on this package to run the instrument on the deployment-pipeline simulator.
 
 **Start here:** [`paper/value_discovery.tex`](paper/) (arXiv-style write-up of v1–v3) ·
-per-experiment memos [`docs/WRITEUP_FOR_GUNNAR.md`](docs/WRITEUP_FOR_GUNNAR.md) (v1),
-[`docs/WRITEUP_V2_FOR_GUNNAR.md`](docs/WRITEUP_V2_FOR_GUNNAR.md) (v2),
-[`docs/WRITEUP_V3_FOR_GUNNAR.md`](docs/WRITEUP_V3_FOR_GUNNAR.md) (v3) ·
+per-experiment memos [`docs/WRITEUP_V1.md`](docs/WRITEUP_V1.md) (v1),
+[`docs/WRITEUP_V2.md`](docs/WRITEUP_V2.md) (v2),
+[`docs/WRITEUP_V3.md`](docs/WRITEUP_V3.md) (v3) ·
 governing glossary [`docs/DEFINITIONS.md`](docs/DEFINITIONS.md) · dated decisions log
 [`docs/DECISIONS.md`](docs/DECISIONS.md).
 

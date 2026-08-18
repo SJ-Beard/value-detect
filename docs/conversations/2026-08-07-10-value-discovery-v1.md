@@ -43,7 +43,8 @@ communicating every step in plain English and touching nothing in his repository
 - **Chunk 5** locked sweep (20 seeds, 80 units, 37 min + pooled fused floors): verdict
   in E21 entry — fused and fused+best-key pass everything on the main world; pairwise
   fails structurally (wires 20/20); `goal_progress` control exposes best-key's slow-meter
-  blind spot (30% steal rate).
+  blind spot (30% steal rate) [corrected 2026-08-18: near-frozen-variable degeneracy,
+  not slowness — see the corrected control bullet in `WRITEUP_V1.md`].
 
 ## Current state
 
@@ -57,7 +58,8 @@ worlds wouldn't). Verdict, heatmap, and short Gunnar-facing write-up shipped
 - **Fused agents + fused environment** (SJ): detect agents first, fuse within each +
   environment bucket → #agents+1 elements; re-run this benchmark; scales toward the
   50-variable multi-agent world.
-- Block-preserving nulls for slow/cumulative variables (the C3 fix candidate).
+- Block-preserving nulls for slow/cumulative variables (the C3 fix candidate)
+  [superseded in v2 by z = 3 margin gates plus a 2,000-step burn-in].
 - G_alias breaking-point variant (bridge to the access-model paper); hidden-G; graded
   (non-parity) decision rules to locate the best-key cliff empirically; emergence of
   polarisation in evolved systems (the real v2 question).

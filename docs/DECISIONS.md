@@ -646,3 +646,25 @@ with a square-bracketed insertion at each mention reproducing the passage referr
 note at the top). The same treatment was given to the three other documents that cite
 them (`CHUNK4_OPTIONS_MEMO.md`, `SUCCESS_CRITERIA.md`, `V3_PLAN.md`). Both files remain
 in SJ's private project folder.
+
+---
+
+## 2026-08-18 — Publication review follow-ups (SJ): summaries labelled; v1 mechanism sentence corrected
+
+**Session summaries kept and labelled.** SJ queried whether `docs/conversations/` was
+model-facing scaffolding like the retired design documents. It is not: it is Gunnar's
+house convention (`PROJECT_INSTRUCTIONS.md` asks for a summary after each significant
+session, in his template — decisions and rationale, not a transcript), and the E23 pull
+request includes one. SJ chose to keep them and label them: each summary now opens with a
+one-line statement of what it is, the docs maps say the same, and the v4 summary moved
+into `docs/conversations/` to match.
+
+**v1 write-up corrected (reverses the 2026-08-10 choice to leave it unchanged).** The
+`goal_progress` bullet in `WRITEUP_V1.md` now says best-key's blind spot there was
+**near-frozen variables, not slow meters**, with the original sentence preserved in a
+dated bracket and the retracted mechanism spelled out (all six thefts by the ≈0%-change
+`Steel1_goal` inside the untrimmed settling period; the genuinely slow `Solar1_goal`
+rejected 20/20; fix = z = 3 gate + burn-in; best-key's residual 6/20 on the moving meter
+is a witness effect). The conclusion's "slow-meter effects" reworded to witness effects
+with the same bracket. Matching brackets in `ELOG_E21.md` and the v1 session summary.
+The shipped `value-detect-v1-master` bundle is left as it was (frozen snapshot).

@@ -79,11 +79,23 @@ thresholds.
   singleton (symmetric MI ≈ 0: the cipher again, and UAD's own observation that rarely-changing
   variables are the hard cases). Boundary-finding and value-finding are complementary axes.
 - **One pre-registered control failed, informatively: `goal_progress`** (UAD's older
-  multi-agent simulator, 1 solar + 1 steel world) is correctly rejected under pairwise (100%) but steals the signature in
-  30% of seeds under best-key: slow cumulative meters have autocorrelation-inflated
+  multi-agent simulator, 1 solar + 1 steel world) is correctly rejected under pairwise
+  (100%) but steals the signature in 30% of seeds under best-key. **Best-key's blind
+  spot here is near-frozen variables, not slow meters.** [Corrected 2026-08-18. This
+  bullet originally read: "slow cumulative meters have autocorrelation-inflated
   shuffle-floors, so their net intake reads zero while witness-like drive clears floor.
-  **Best-key's blind spot is slow meters.** (Block-preserving nulls are the known fix to
-  try.)
+  Best-key's blind spot is slow meters. (Block-preserving nulls are the known fix to
+  try.)" The v2 re-examination of the stored v1 records
+  (`results/v2_1/C3_MECHANISM.md`) retracted that mechanism: all six thefts were by
+  `Steel1_goal`, which changes in ≈ 0.0% of steps — a handful of transitions, all inside
+  the simulator's first ~55 settling steps, which the v1 harness had not trimmed — so
+  every one of its scores sat at its own unstable noise floor and the gates fired on
+  hair-thin residuals. The genuinely slow meter, `Solar1_goal` (~1.1% change rate), was
+  correctly rejected in 20/20 seeds under both conventions; the inflated-floor story
+  never occurred. The v2 fix was a z = 3 margin gate on the floors plus a 2,000-step
+  burn-in, not block-preserving nulls. After that fix, best-key alone still admits the
+  moving meter in 6/20 seeds — a witness effect of single-key conditioning, attributed in
+  v2 rather than patched (see `WRITEUP_V2.md`).]
 
 ## Conclusion (SJ)
 
@@ -94,8 +106,9 @@ fused mega-state cannot expand to worlds at the scale of UAD's multi-agent simul
 twice over: a single key cannot decrypt compositions with more than two inputs (two
 sensors → two beliefs + goal → action re-raises the cipher; sharpest for parity-like
 rules — graded rules leak more, so where the cliff sits in realistic worlds is an
-empirical question), and the `goal_progress` failure warns of slow-meter effects in
-richer environments. These are **soft failures**: both conventions pass this
+empirical question), and the `goal_progress` failure warns of witness effects — meters
+and other history-recording variables — in richer environments [originally "slow-meter
+effects"; corrected 2026-08-18, see the control bullet above]. These are **soft failures**: both conventions pass this
 experiment's locked conditions, so the theory stands — but the instruments will likely
 fail in the experiments we want to run next. **Next step: build at least one more test —
 "fused agents + fused environment" (run UAD's agent detection first, fuse within each

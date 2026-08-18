@@ -48,11 +48,15 @@ singleton — boundary-finding and value-finding are complementary.
 
 **Conclusion:** directional value detection is possible (all locked criteria pass under
 the two synergy-aware conventions), but no current test generalizes: fused cannot scale
-past ~10 variables; best-key fails >2-input composition and slow meters. Soft failures —
-this experiment passes; the next ones wouldn't. **Next:** agent-level fusion ("fused
-agents + fused environment": detect agents, fuse within each + environment bucket →
-#agents+1 elements) and re-run this benchmark; block-preserving nulls for slow meters;
-G_alias breaking-point variant.
+past ~10 variables; best-key fails >2-input composition and slow meters [corrected
+2026-08-18: the v1 `goal_progress` thefts were by a near-frozen variable, not slow
+meters — v2's re-examination of the stored records retracted the mechanism; best-key's
+residual limitation after the v2 fixes is the witness class; see the corrected control
+bullet in `WRITEUP_V1.md`]. Soft failures — this experiment passes; the next ones
+wouldn't. **Next:** agent-level fusion ("fused agents + fused environment": detect
+agents, fuse within each + environment bucket → #agents+1 elements) and re-run this
+benchmark; block-preserving nulls for slow meters [superseded in v2 by z = 3 margin gates
+plus a 2,000-step burn-in]; G_alias breaking-point variant.
 
 **Artifacts:** `results/chunk5/CRITERIA_VERDICT_FINAL.md`,
 `results/chunk5/signature_rate_heatmap_final.png`, `results/chunk4/` (maps, diagnosis),

@@ -132,6 +132,17 @@ agent-level-fusion idea logged in DECISIONS.md).
 
 ## Changes from the design document's §6 working criteria, with reasons
 
+[Square brackets mark an insertion made on 2026-08-18, when the v1 design document was
+retired from this repository. Its §6 "pre-registered success criteria (working figures —
+finalise numbers with SJ before the first full run, and do not adjust after)" were, in
+full: "G tops the asymmetry ranking in ≥ 80% of ≥ 20 seeds (and B vs G specifically: G
+above B in ≥ 90%)"; "B tops the intake ranking among the true loop variables in a
+comparable majority"; "the no-core control shows no variable above the noise floor on
+asymmetry in ≥ 80% of seeds"; and "the headline ordering holds across run lengths {2k, 5k,
+20k} and analysis lags {1, 2, 3}; the stability map is reported either way". The numbered
+list below records the changes to the first two; the no-core criterion became control C1
+above, and the run-length/lag sweeps became the reported stability maps.]
+
 1. "G tops the asymmetry ranking in ≥80% of seeds" → replaced by the **value signature**
    (V1) + **uniqueness** (V2). Reason: Chunk 4 showed rank-1 is convention-dependent for
    mechanistically documented reasons (cipher-blindness of pairwise), while the signature

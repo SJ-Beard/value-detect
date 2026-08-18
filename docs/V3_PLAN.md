@@ -19,8 +19,11 @@ otherwise. Floors and signature exactly as V2 (z=3, roll nulls, net-ratio 9×).
 
 The V2 colony (8 ring-coupled agents) with ONE agent's goal (agent 3) replaced by a
 puppet that remains **wired into its agent's action** (A = B ⊕ P as normal) but whose
-own update is environment-driven (the addendum's captured-goal design); seven agents
-keep true goals (within-world discrimination):
+own update is environment-driven (the addendum's captured-goal design) [square brackets
+mark an insertion made on 2026-08-18, when the v1 technical addendum was retired from this
+repository; its puppet variant read: "G(t+1) = E(t) ⊕ Bern(small) — the apparent goal is
+secretly environment-driven; the instrument must show high push-in for G and refuse the
+value label"]; seven agents keep true goals (within-world discrimination):
 
 - **A1, fast-puppet colony:** P(t+1) = own-patch E(t) ⊕ 3% — the goal-slot variable
   copies its environment. Changes ~50% of steps; intake large and visible.

@@ -91,7 +91,13 @@ vs. output) is always produced either way, so no information is hidden by this c
 
 **Transparency note:** the design document's working criterion said "G tops the asymmetry
 ranking" with asymmetry as the raw difference, while explicitly leaving normalisation open
-for this memo. Choosing polarity now, blind, *is* the completion of that pre-registration —
+for this memo [square brackets mark an insertion made on 2026-08-18, when the v1 design
+document was retired from this repository: its §6 defined "the asymmetry score is push-out
+minus push-in", listed the working criterion "G tops the asymmetry ranking in ≥ 80% of ≥ 20
+seeds (and B vs G specifically: G above B in ≥ 90%)", and its §7 said "the precise
+conditioning choices (and any normalisation of the asymmetry score) are genuine open design
+decisions: write a short plain-English options memo for SJ at the start of Chunk 4 rather
+than choosing silently"]. Choosing polarity now, blind, *is* the completion of that pre-registration —
 and the pre-registered criteria should be read with "asymmetry ranking" meaning the
 polarity ranking, raw difference reported alongside. If SJ prefers raw as primary, that is
 equally lockable today; what we must not do is decide after seeing the map.

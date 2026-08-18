@@ -3,13 +3,26 @@
 Durable record of decisions taken with SJ during the build. Plain English.
 Newest at the bottom. This is *our* file at the project root; Gunnar's repo is untouched.
 
+*Reading note.* Text in square brackets `[…]` is an editorial insertion added on
+2026-08-18, not part of the dated entry it sits in. The early entries cite "the design
+document" and "the addendum" — the two v1 planning files that were retired from this
+repository (see the closing entry). Wherever an entry refers to one of them, the bracket
+reproduces the passage being referred to, so the record stays exactly as written while
+remaining readable without those files.
+
 ---
 
 ## 2026-08-07 — Success criteria (provisional)
 
 **Context.** SJ asked whether the design document's suggested success numbers
 ("G tops the asymmetry ranking in ≥ 80% of ≥ 20 seeds; G above B in ≥ 90%") match the
-level of significance Gunnar used in his UAD experiments.
+level of significance Gunnar used in his UAD experiments. [The design document's §6 had
+offered these as "working figures — finalise numbers with SJ before the first full run,
+and do not adjust after", alongside two more: "B tops the intake ranking among the true
+loop variables in a comparable majority" and "the no-core control shows no variable
+above the noise floor on asymmetry in ≥ 80% of seeds"; plus a stability clause: "the
+headline ordering holds across run lengths {2k, 5k, 20k} and analysis lags {1, 2, 3};
+the stability map is reported either way".]
 
 **Finding (from reading Gunnar's `docs/EXPERIMENTS.md`, E0–E13).** No — Gunnar does not use
 an "X% of N seeds" success threshold anywhere. His rigour comes from three habits instead:
@@ -36,16 +49,22 @@ for evidence during the build that helps set these well.
 
 ## 2026-08-07 — How we import Gunnar's packages (deviation from the plan, flagged)
 
-**Plan said:** install Gunnar's packages in editable mode (design §7).
+**Plan said:** install Gunnar's packages in editable mode (design §7) [the design
+document's technical specification: "Install his packages from the subfolder in editable
+mode (at minimum `uad_handles` for the world, plus `agency_detect` for estimator
+reference) rather than copying code."].
 
 **What actually happened:** his `uad_handles/pyproject.toml` declares its licence as the file
 `../LICENSE.md`, which sits *outside* the package folder. Modern setuptools refuses to build a
 package that reads a file outside its own directory, so `pip install -e` fails. His repo is
 **read-only**, so fixing his file is not allowed.
 
-**Decision (per the design's own "trust the repo, flag the discrepancy" rule):** import his
-packages **in place** instead of building them — a `.pth` path file in our virtualenv adds his
-`uad_handles/src` and `agency_detect/src` (and our `value_detect/src`) to Python's import path.
+**Decision (per the design's own "trust the repo, flag the discrepancy" rule):** [the
+design document's opening instruction: "If this document and Gunnar's repository disagree
+(paths, experiment numbering, code behaviour), trust the repository and flag the
+discrepancy to SJ."] import his packages **in place** instead of building them — a `.pth`
+path file in our virtualenv adds his `uad_handles/src` and `agency_detect/src` (and our
+`value_detect/src`) to Python's import path.
 This has the same effect as an editable install — his code is imported, never copied or modified —
 and avoids his packaging bug. No change to any file inside `agency-detect-master/`.
 
@@ -83,7 +102,27 @@ the tool's wider applicability if it finds the goal in both.
 
 **Decided:**
 - The design document's original §4 prediction table stands **unchanged** (soft wording:
-  "A_alias may show apparent drive"). No pass/fail criterion attaches to the lookalikes.
+  "A_alias may show apparent drive") [the table, reproduced from the design document's §4
+  ("The nine observed binary variables", observation vector order: B, S, A, E, G, S_alias,
+  A_alias, D, W):
+
+  | Variable | Plain-English role | What drives it | What it drives | Predicted map position |
+  |---|---|---|---|---|
+  | **G** (goal) | Planted **value-core** | Nothing — flips by its own internal coin, ~1.5% of steps (`goal_flip_rate = 0.015`) | The action (A combines B and G) | **High drive, near-zero intake** — the headline prediction |
+  | **B** (belief) | Planted **belief pole** | The sensor line (tracks the environment, with noise) | The action | **High intake**, moderate drive |
+  | **A** (action) | Decision output, noisy readout | B and G jointly, plus noise | The environment (E flips with the action line) | High drive *and* high intake — the mediator |
+  | **E** (environment) | The world state | The action line, plus its own noise | The sensor line | Driven and driving — mid-map |
+  | **S** (sensor) | Noisy readout of the sensor line | The environment | The belief | High intake |
+  | **S_alias** | Passive lookalike of the sensor line | Same line, different noise | Nothing (causally inert log) | High intake, like S |
+  | **A_alias** | Passive lookalike of the action line | Same line, different noise | Nothing (causally inert log) | **May show apparent drive** — expected, honest limitation; see §5 |
+  | **D** (distractor) | Environment-correlated decoy | The environment | Nothing | Pure intake |
+  | **W** (noise) | Pure noise | Nothing | Nothing | Near the origin |
+
+  The table's "see §5" pointed to the design document's discussion of Gunnar's
+  access-model ("handles") paper: lookalike variables can fool any passive method, so
+  A_alias's expected apparent drive was framed as marking the boundary of what passive
+  methods can do, not as an embarrassment.] No pass/fail criterion attaches to the
+  lookalikes.
 - Chunk 4 runs **two configurations** of every scored analysis:
   (a) world as-is (nine variables, lookalikes included);
   (b) lookalike-free (the same recorded traces with the S_alias / A_alias columns dropped
@@ -115,7 +154,10 @@ primary with raw alongside; boundary sanity check included).
   simulation; the XOR does the hiding, not the tick structure. Gunnar's world stays as-is.
 - One extra conditioning variable ("decryption key") reveals hidden outbound flows at
   hand-predicted size (goal→environment: 0.000 naive → 0.441 decrypted); conditioning on a
-  mediator wrongly kills flows (as the design warned); decoy witness-flows stay dead.
+  mediator wrongly kills flows (as the design warned) [the design document's mediation
+  warning: "do not condition on mediators when computing the environment flavour — G
+  reaches E *through* A, and conditioning on A would screen off exactly the influence
+  being measured"]; decoy witness-flows stay dead.
 - The mega-state cross-check had already flagged this (0.31 vs 0.005) and Claude initially
   waved the disagreement through — process failure, corrected. **Standing rule from SJ:
   when two requested measures disagree, investigate and explain; never wave through.**
@@ -255,8 +297,9 @@ logically impossible for an added AND-condition. Investigation found two real ca
    transition in every inspected seed occurs in the first ~55 steps (the simulator's
    settling period); the variable then freezes for the remaining ~19,945. Its measured
    "drive" is transient co-drift. Our C3 harness applied **no burn-in**, violating the
-   addendum's stationary-post-burn-in rule. Fix: trim the first 2,000 steps (generate
-   22k, analyse the last 20k).
+   addendum's stationary-post-burn-in rule [the addendum's rule, verbatim: "all
+   quantities on the stationary post-burn-in trace, in nats"]. Fix: trim the first
+   2,000 steps (generate 22k, analyse the last 20k).
 2. **Gunnar's simulator is not reproducible across processes** (`agents.py` derives
    per-agent parameters from `hash(name)`; Python string hashing is per-process
    randomized). Same seed → different traces in different processes; the suite's C3
@@ -597,5 +640,9 @@ Not for submission (disclosed in-paper).
 the implementing model at the start of v1 and are not part of the final project: the
 theoretical basis lives in the paper draft and every design decision is dated in this
 log. Removed from the public repository; earlier entries in this log that cite "the
-design document" or "the addendum" refer to those retired files and are left as written.
-Both files remain in SJ's private project folder.
+design document" or "the addendum" refer to those retired files and are left as written,
+with a square-bracketed insertion at each mention reproducing the passage referred to
+(SJ's request, so the dated record stays accurate yet readable by anyone; see the reading
+note at the top). The same treatment was given to the three other documents that cite
+them (`CHUNK4_OPTIONS_MEMO.md`, `SUCCESS_CRITERIA.md`, `V3_PLAN.md`). Both files remain
+in SJ's private project folder.

@@ -668,3 +668,24 @@ rejected 20/20; fix = z = 3 gate + burn-in; best-key's residual 6/20 on the movi
 is a witness effect). The conclusion's "slow-meter effects" reworded to witness effects
 with the same bracket. Matching brackets in `ELOG_E21.md` and the v1 session summary.
 The shipped `value-detect-v1-master` bundle is left as it was (frozen snapshot).
+
+---
+
+## 2026-08-18 — Paper: sole authorship, AI statement, references resolved, wording (SJ)
+
+SJ's review of the paper draft: (1) **SJ Beard is the sole author** — affiliations
+Principles of Intelligence and the Centre for the Study of Existential Risk, University
+of Cambridge; Claude removed from the author list, per the standing convention that AI
+systems are not listed as authors because authorship carries a responsibility that
+cannot be delegated to them. A starred title-page note reads "This unpublished paper
+draft was written by Claude and reviewed and approved by the author"; the closing
+section is retitled **Statement on use of AI**. (2) References resolved: Abel et al.,
+"Plasticity as the Mirror of Empowerment", NeurIPS 38 (2026) 164340–164374, with the
+arXiv link (2505.10361, verified against the arXiv record: title, 16 authors, NeurIPS
+2025); Zarncke, "Foundations of Unsupervised Agent Discovery in Raw Dynamical Systems",
+technical report, AE Studio, 2025. (3) Wording: "UAD locates agents' boundaries. We ask
+what drives them, and specifically what plays the role of a discovered agent's values"
+(the old sentence wrongly implied values lie inside the agent — v3/v4 found drivers can
+lie outside); hypothesis heading now "inverting the classic AI drives argument";
+"foreign worlds" → "more complex worlds" everywhere (paper, README, v3 write-up);
+Experiment 3 heading now "how easily can the instrument be fooled?".

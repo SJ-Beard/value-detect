@@ -15,15 +15,17 @@ pdflatex value_discovery && bibtex value_discovery && pdflatex value_discovery &
 
 (or `latexmk -pdf value_discovery`).
 
-## Before any circulation — two placeholders to resolve
+## References
 
-1. `references.bib` → `empowermentplasticity2025`: the arXiv number 2505.10361 is the
-   one recorded in our technical addendum; the exact title/author list must be checked
-   against the arXiv record (marked in the entry's `note`).
-2. `references.bib` → `zarncke2026uad`: currently cites the codebase; replace with the
-   published references for the UAD paper and the access-model (handles) paper.
+Both former placeholders are resolved (2026-08-18): `abel2025plasticity` is Abel et al.,
+"Plasticity as the Mirror of Empowerment", *Advances in Neural Information Processing
+Systems* 38 (NeurIPS 2025), with the arXiv link (2505.10361) for ease of access;
+`zarncke2025uad` is Zarncke, "Foundations of Unsupervised Agent Discovery in Raw
+Dynamical Systems", technical report, AE Studio, 2025.
 
 ## Status
 
-Draft for SJ's review; not for submission (declared in the paper's disclosure section).
-Figures are the project's own artifacts (`docs/writeup_figures/`).
+Draft for SJ's review; not for submission. Sole author SJ Beard; the title-page note and
+the closing "Statement on use of AI" disclose that the draft was written by Claude and
+reviewed and approved by the author. Figures are the project's own artifacts
+(`docs/writeup_figures/`).

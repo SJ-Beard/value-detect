@@ -19,7 +19,7 @@ registration locked pre-sweep in `V3_REGISTRATION.md`; verdict tables in
 ## The question
 
 v1 showed the value signature finds a planted goal; v2 showed which tests survive
-foreign worlds. v3 planted **impostors** in colony-style worlds and asked whether they
+more complex worlds. v3 planted **impostors** in colony-style worlds and asked whether they
 fool the surviving tests — with the handle benchmark's goal-flip operation generalised
 into a
 two-direction **interventional yardstick** ("levers the world, unlevered by the world")

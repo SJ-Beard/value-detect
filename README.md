@@ -24,7 +24,7 @@ governing glossary [`docs/DEFINITIONS.md`](docs/DEFINITIONS.md) · dated decisio
 | | Question | Headline |
 |---|---|---|
 | **v1** | Does the *value signature* recover a planted goal? | Yes — uniquely, in every convention that sees through the world's XOR composition; naive pairwise fails structurally |
-| **v2** | Which measurement conventions survive foreign worlds (incl. a 49-variable colony)? | Only the block-level **fused-agents any-block** convention recovers every planted goal; all variable-level conventions hit a scale wall (caught by a control) |
+| **v2** | Which measurement conventions survive more complex worlds (incl. a 49-variable colony)? | Only the block-level **fused-agents any-block** convention recovers every planted goal; all variable-level conventions hit a scale wall (caught by a control) |
 | **v3** | Can the instrument be fooled? | Fast captured goal refused; **slow captured goal defeats lag-1 passivity** (registered); noiseless twin indistinguishable; an interventional yardstick resolves exactly those two cases |
 
 ![v2 heatmap](docs/writeup_figures/v2_heatmap.png)

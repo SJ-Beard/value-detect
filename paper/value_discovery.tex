@@ -33,10 +33,10 @@
 Locating the Value Structures of an Agent from Passive Observation\\
 by their Empowerment--Plasticity Asymmetry}
 
-\author[1]{SJ Beard}
-\author[2]{Claude (Anthropic)}
-\affil[1]{Independent researcher (philosophy \& AI safety)}
-\affil[2]{Implementation and analysis; see Author Contributions}
+\author[1,2]{SJ Beard\thanks{This unpublished paper draft was written by Claude and
+  reviewed and approved by the author.}}
+\affil[1]{Principles of Intelligence}
+\affil[2]{Centre for the Study of Existential Risk, University of Cambridge}
 
 \date{August 2026 \\ \small Draft --- not submitted}
 
@@ -88,20 +88,20 @@ the system itself: which internal component most drives behaviour beneath the no
 If such a component can be located structurally, it can be isolated and studied
 directly, recovering the signal that behavioural inference alone would lose.
 
-Our starting point is unsupervised agent discovery (UAD) \citep{zarncke2026uad}, which
+Our starting point is unsupervised agent discovery (UAD) \citep{zarncke2025uad}, which
 finds agents in raw time series as variable clusters that approximately satisfy a
 Markov-blanket condition against their environment
-\citep{friston2013life,kirchhoff2018blankets}. UAD locates \emph{boundaries}. We ask
-what lies inside them, and specifically which parts of a discovered agent are its value
-structures --- the parts that \emph{drive} it. We deliberately say value \emph{structure}
+\citep{friston2013life,kirchhoff2018blankets}. UAD locates agents' \emph{boundaries}.
+We ask what \emph{drives} them, and specifically what plays the role of a discovered
+agent's values. We deliberately say value \emph{structure}
 rather than value \emph{function}: locating the component that plays the value role does
 not tell us what that component does or prefers, and we have not built tools for that.
 
-\paragraph{The hypothesis: an inversion of Omohundro.}
+\paragraph{The hypothesis: inverting the classic AI drives argument.}
 Omohundro's \emph{Basic AI Drives} \citep{omohundro2008drives} argues that an advanced
 system's utility function ``will be precious'' to it, so the system will act to make
 that function maximally influential and maximally protected from change --- in the
-vocabulary of \citet{empowermentplasticity2025}, maximally \emph{empowered} and
+vocabulary of \citet{abel2025plasticity}, maximally \emph{empowered} and
 minimally \emph{plastic}. Omohundro's direction of explanation runs from values to
 structure. We hypothesise the reverse: whatever component of a system is maximally
 empowered and minimally plastic will, by that fact, \emph{serve as} the system's
@@ -110,7 +110,7 @@ discovery: we are identifying the parts that play the value role, whatever they 
 the simple systems studied here that part is a single planted goal bit; the same
 structural signature could in principle locate richer value structures in richer systems.
 
-The empowerment--plasticity trade-off \citep{empowermentplasticity2025} makes the
+The empowerment--plasticity trade-off \citep{abel2025plasticity} makes the
 hypothesis non-trivial: across a boundary a system cannot be maximally both, so an
 adaptive system has reason to specialise internally --- belief-like parts skewed
 towards plasticity, value-like parts towards empowerment, decision-making between.
@@ -180,7 +180,7 @@ mediators). ``Intake at floor'' is the special case $\net(\I_\vin)=0$.
 
 \paragraph{Worlds.}
 All worlds derive from the \pkg{SyntheticHandleWorld} of the UAD handle benchmark
-\citep{zarncke2026uad}: nine binary variables per agent forming the loop
+\citep{zarncke2025uad}: nine binary variables per agent forming the loop
 belief~$B$ $\to$ action~$A$ $\to$ environment~$E$ $\to$ sensor~$S$ $\to$ $B$, with a
 goal~$G$ entering the policy ($A = B\gplus G$ up to noise) and flipping by its own coin
 at rate $0.015$; plus a distractor~$D$ shadowing $E$, pure noise~$W$, and in the original
@@ -324,7 +324,7 @@ single conditioning key can screen --- and became a benchmark requirement for th
 conventions of Experiment~2.
 
 % =====================================================================
-\section{Experiment 2: which conventions survive foreign worlds?}\label{sec:v2}
+\section{Experiment 2: which conventions survive more complex worlds?}\label{sec:v2}
 % =====================================================================
 
 Two new conventions were qualified against the full anchor criteria before entering the
@@ -372,7 +372,7 @@ quasi-frozen and the parity silently collapsed (the audit checked marginals only
 checks joint dynamics), and the feasibility map had missed the intake wall.
 
 % =====================================================================
-\section{Experiment 3: can the instrument be fooled?}\label{sec:v3}
+\section{Experiment 3: how easily can the instrument be fooled?}\label{sec:v3}
 % =====================================================================
 
 Experiments~1--2 planted values and asked whether they could be found; Experiment~3
@@ -459,7 +459,7 @@ any-block convention is the only tested instrument whole at the scale of the UAD
 authors' multi-agent simulator. Its limits are now measured rather than conjectured ---
 history-triggered captured goals defeat lag-1 passivity; twins below $\approx 1$--$2\%$
 noise are passively indistinguishable --- and interventional access closes exactly these
-gaps, giving a quantitative form of the access-model thesis of \citet{zarncke2026uad}.
+gaps, giving a quantitative form of the access-model thesis of \citet{zarncke2025uad}.
 Several findings concern method rather than result: the XOR cipher; the self-penalising
 floors; the collapse-detector role of the no-core control; and the value of running
 disagreeing conventions in parallel rather than picking a primary early --- twice, the
@@ -499,15 +499,18 @@ distributed value structures; and the twin channel as a probe of value persisten
 through records.
 
 % =====================================================================
-\section*{Author contributions and disclosure}
+\section*{Statement on use of AI}
 % =====================================================================
-S.B.\ conceived the hypothesis and framing, made all design decisions, reviewed every
-audit and pre-registration in plain language, and directs the programme. Claude, an AI
-system, wrote all code, ran the experiments and analyses, and drafted this manuscript
-under S.B.'s direction; every decision, deviation and defect is dated in the project's
-decisions log. \textbf{This manuscript is, as it stands, AI-generated} --- S.B.\ intends
-to write the account in their own words when time allows --- and it is not being
-submitted for publication.
+The author conceived the hypothesis and framing, made all design decisions, reviewed
+every audit and pre-registration in plain language, and directs the programme. Claude
+(Anthropic), an AI system, wrote all code, ran the experiments and analyses, and drafted
+this manuscript under the author's direction; every decision, deviation and defect is
+dated in the project's decisions log. \textbf{This manuscript is, as it stands,
+AI-generated}: it was written by Claude and reviewed and approved by the author, who
+intends to write the account in their own words when time allows. In line with the
+standing convention that AI systems are not listed as authors --- authorship carries a
+responsibility that cannot be delegated to them --- the author takes full responsibility
+for the content. The manuscript is not being submitted for publication.
 
 \section*{Reproducibility}
 All code (\pkg{value\_detect}), world generators, audits, locked pre-registrations,

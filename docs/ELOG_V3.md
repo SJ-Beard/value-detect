@@ -1,11 +1,13 @@
-# Drop-in entry for `docs/EXPERIMENTS.md` (kept in our repo; Gunnar's log untouched)
+# Value-discovery v3 — experiment-log entry in the agency-detect `docs/EXPERIMENTS.md` format
+
+*This is the entry inserted into Gunnar's log by pull request, where it is numbered **E21** (the next free number there). Our own documents refer to it as the V3 entry.*
 
 ---
 
-## E23 — Value-discovery v3: curve-balls and the interventional yardstick (2026-08-14)
+## V3 — Value-discovery v3: curve-balls and the interventional yardstick (2026-08-14)
 
-**Why:** E21 validated the value signature; E22 found the surviving test (fused-agents
-any-block). E23 plants impostors in colony-style worlds and asks whether they fool it,
+**Why:** V1 validated the value signature; V2 found the surviving test (fused-agents
+any-block). V3 plants impostors in colony-style worlds and asks whether they fool it,
 with the goal_flip operation generalised into a two-direction interventional yardstick
 as the ceiling. Closes the simple experiment class.
 
@@ -32,7 +34,7 @@ softness). Exact true-goal selection by the yardstick: 80–85% ≥ the 80% bar 
 yardstick worlds. Zero zone-inversions. Scrambles pass everywhere.
 
 **Findings from anomaly investigation (standing rule):** (1) the puppet-world thief
-rule breach (worst 5/20) is the E22 interference wire A6 again — the V2 partitioned
+rule breach (worst 5/20) is the V2 interference wire A6 again — the V2 partitioned
 attribution transfers; (2) **twin-channel**: in the alias no-core world the
 disconnected goals sign 20/20 — correctly: a goal stripped of behavioural wiring still
 causally drives its own recording ("drives without being driven" via the record); the

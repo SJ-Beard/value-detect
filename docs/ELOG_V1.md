@@ -1,8 +1,10 @@
-# Drop-in entry for `docs/EXPERIMENTS.md` (kept in our repo; Gunnar's log untouched)
+# Value-discovery v1 — experiment-log entry in the agency-detect `docs/EXPERIMENTS.md` format
+
+*Kept here as the record; not inserted into Gunnar's log (only the v3 entry was, as E21).*
 
 ---
 
-## E21 — Unsupervised value discovery (directional UAD) (2026-08-10)
+## V1 — Unsupervised value discovery (directional UAD) (2026-08-10)
 
 **Why:** Test whether value-like structure inside an agent has a passively detectable
 *directional* signature — drives the system while being (nearly) undriven — extending

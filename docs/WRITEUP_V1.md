@@ -139,7 +139,7 @@ Environment: double-click `setup_env.command` (once per machine). Then:
 (~40 min + ~25 min on an M-series laptop.) Figures: `docs/writeup_figures/`
 (signature-rate heatmap; six-panel intake/output maps; change-frequency chart). Design
 history and every decision, dated: `docs/DECISIONS.md`; pre-registration:
-`docs/SUCCESS_CRITERIA.md`; drop-in log entry: `docs/ELOG_E21.md`.
+`docs/SUCCESS_CRITERIA.md`; drop-in log entry: `docs/ELOG_V1.md`.
 
 *Honesty notes: the protocol was soft-blind (the implementing model had read the world's
 source; protection = independent origin of the world, pre-registration, controls,

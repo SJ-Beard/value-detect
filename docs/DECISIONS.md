@@ -240,8 +240,10 @@ blind spot (C3). These are **soft failures** — this experiment's conditions pa
 theory stands — but they predict failure in the experiments we want next. **Next step:
 develop at least one more test, starting with SJ's "fused agents + fused environment",
 and repeat this benchmark with it.** Chunk 6 shipped as a short Gunnar-facing memo
-(SJ–Gunnar meeting this week): `docs/WRITEUP_V1.md` + `docs/ELOG_E21.md` (E21
-verified as the next free number) + session summary + figures.
+(SJ–Gunnar meeting this week): `docs/WRITEUP_V1.md` + `docs/ELOG_E21.md` [since renamed `ELOG_V1.md`: the v1
+entry was never inserted into Gunnar's log, and the number E21 went to the v3 entry
+instead — see the 2026-08-18 renumbering entry] (E21 verified as the next free number)
++ session summary + figures.
 
 ---
 
@@ -613,7 +615,8 @@ interpretation: puppet-world thief = the V2 interference wire A6 (attribution
 transfers; fresh partitioned confirmation = open item); alias no-core "failure" = the
 **twin-channel** (disconnected goals genuinely drive their recordings — instrument
 correct, control spec lesson); alias scrambles pass (appendix). own-block min 75–80%
-(partition softness; diagnostic role). Write-up + E23 + session summary shipped to
+(partition softness; diagnostic role). Write-up + E23 [the v3 log entry, now `ELOG_V3.md`; inserted into Gunnar's log as
+E21 — see 2026-08-18] + session summary shipped to
 docs/ per SJ's autonomous run+write-up instruction; open items listed in the write-up.
 Next: V4 planning with SJ (systems-of-agents environments).
 
@@ -654,7 +657,7 @@ in SJ's private project folder.
 **Session summaries kept and labelled.** SJ queried whether `docs/conversations/` was
 model-facing scaffolding like the retired design documents. It is not: it is Gunnar's
 house convention (`PROJECT_INSTRUCTIONS.md` asks for a summary after each significant
-session, in his template — decisions and rationale, not a transcript), and the E23 pull
+session, in his template — decisions and rationale, not a transcript), and the v3 (E21) pull
 request includes one. SJ chose to keep them and label them: each summary now opens with a
 one-line statement of what it is, the docs maps say the same, and the v4 summary moved
 into `docs/conversations/` to match.
@@ -666,7 +669,7 @@ dated bracket and the retracted mechanism spelled out (all six thefts by the ≈
 `Steel1_goal` inside the untrimmed settling period; the genuinely slow `Solar1_goal`
 rejected 20/20; fix = z = 3 gate + burn-in; best-key's residual 6/20 on the moving meter
 is a witness effect). The conclusion's "slow-meter effects" reworded to witness effects
-with the same bracket. Matching brackets in `ELOG_E21.md` and the v1 session summary.
+with the same bracket. Matching brackets in `ELOG_V1.md` and the v1 session summary.
 The shipped `value-detect-v1-master` bundle is left as it was (frozen snapshot).
 
 ---
@@ -689,3 +692,20 @@ what drives them, and specifically what plays the role of a discovered agent's v
 lie outside); hypothesis heading now "inverting the classic AI drives argument";
 "foreign worlds" → "more complex worlds" everywhere (paper, README, v3 write-up);
 Experiment 3 heading now "how easily can the instrument be fooled?".
+
+---
+
+## 2026-08-18 — Experiment-log numbering: E-numbers only where we insert into Gunnar's log (SJ)
+
+SJ spotted that the pull-request entry was labelled E23 although only the v3 entry is
+being inserted into `agency-detect/docs/EXPERIMENTS.md`, whose last entry is E20 (checked
+against Gunnar's live repository, unchanged since 24 June). **Decision (SJ):** E-numbers
+are used only where an entry actually enters Gunnar's numbering — so the inserted v3
+entry is **E21** — and our own documents use the programme's own numbering (V1–V4).
+Applied: the PR entry retitled E21, its "Why" reworded to cite v1/v2 by name rather than
+as log entries E21/E22, and the PR branch renamed `value-discovery-e21`; our files
+`ELOG_E21/E22/E23.md` renamed `ELOG_V1/V2/V3.md` (v1 and v2 marked "not inserted"; v3
+marked "inserted as E21"); the v4 file renamed `ELOG_V4.md` and left unnumbered, since
+Gunnar's deployment-pipeline repository has no experiment log (its adaptor note loses the
+E24 label likewise); every mention updated across both repositories, with brackets at the
+old numbers in this log's dated entries. Frozen bundles untouched.

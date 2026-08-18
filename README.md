@@ -34,7 +34,7 @@ governing glossary [`docs/DEFINITIONS.md`](docs/DEFINITIONS.md) · dated decisio
 | Item | Role |
 |------|------|
 | `value_detect/` | The package: worlds, directed-information estimators, scoring conventions, floors, criteria, block machinery, yardstick; 44 unit tests; runners for every chunk |
-| `docs/` | Write-ups, drop-in experiment-log entries (E21–E23), locked pre-registrations, options memos, glossary, decisions log, session summaries, figures |
+| `docs/` | Write-ups, experiment-log entries in the agency-detect format (V1–V3; the V3 entry is inserted into Gunnar's log as E21), locked pre-registrations, options memos, glossary, decisions log, session summaries, figures |
 | `results/` | All artifacts by experiment stage (`chunk2–5` = v1; `v2_*`; `v3_*`), incl. verdict tables and investigation appendices |
 | `paper/` | The LaTeX paper draft (+ bib, figures) — currently AI generated, not submitted |
 | `setup_env.command` | One-shot environment (Python 3.9+; needs an adjacent [agency-detect](https://github.com/GunnarZarncke/agency-detect) checkout, imported in place and never modified) |

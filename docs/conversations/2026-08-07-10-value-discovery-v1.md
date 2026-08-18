@@ -41,7 +41,7 @@ communicating every step in plain English and touching nothing in his repository
   `AgentDetector` finds the body (leakage 0.001) but drops G as an MI-invisible
   singleton.
 - **Chunk 5** locked sweep (20 seeds, 80 units, 37 min + pooled fused floors): verdict
-  in E21 entry — fused and fused+best-key pass everything on the main world; pairwise
+  in the V1 log entry — fused and fused+best-key pass everything on the main world; pairwise
   fails structurally (wires 20/20); `goal_progress` control exposes best-key's slow-meter
   blind spot (30% steal rate) [corrected 2026-08-18: near-frozen-variable degeneracy,
   not slowness — see the corrected control bullet in `WRITEUP_V1.md`].
@@ -51,7 +51,7 @@ communicating every step in plain English and touching nothing in his repository
 Instrument test: **success under the locked criteria** for the two synergy-aware
 conventions; theory untouched by the failures (all "soft" — this world passes, bigger
 worlds wouldn't). Verdict, heatmap, and short Gunnar-facing write-up shipped
-(`docs/WRITEUP_V1.md`, `docs/ELOG_E21.md`).
+(`docs/WRITEUP_V1.md`, `docs/ELOG_V1.md`).
 
 ## Follow-up ideas
 

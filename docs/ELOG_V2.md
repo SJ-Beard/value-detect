@@ -1,11 +1,13 @@
-# Drop-in entry for `docs/EXPERIMENTS.md` (kept in our repo; Gunnar's log untouched)
+# Value-discovery v2 — experiment-log entry in the agency-detect `docs/EXPERIMENTS.md` format
+
+*Kept here as the record; not inserted into Gunnar's log (only the v3 entry was, as E21).*
 
 ---
 
-## E22 — Value-discovery v2: convention benchmark across worlds (2026-08-12)
+## V2 — Value-discovery v2: convention benchmark across worlds (2026-08-12)
 
-**Why:** E21 validated the value signature on the handle-world but showed no single
-test generalizes. E22 benchmarks six tests across four worlds to find which measurement
+**Why:** V1 validated the value signature on the handle-world but showed no single
+test generalizes. V2 benchmarks six tests across four worlds to find which measurement
 philosophies survive outside their birth world, incl. two block-level architectures
 built on the E7/P1-style detection stage (agents fused into compressed macro-state
 blocks; environment never fused).

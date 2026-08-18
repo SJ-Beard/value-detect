@@ -3,8 +3,8 @@
 | Doc | Role |
 |-----|------|
 | [`WRITEUP_V1.md`](WRITEUP_V1.md) · [`WRITEUP_V2.md`](WRITEUP_V2.md) · [`WRITEUP_V3.md`](WRITEUP_V3.md) | The three per-experiment memos (v1, v2, v3) |
-| [`ELOG_E21.md`](ELOG_E21.md) · [`ELOG_E22.md`](ELOG_E22.md) | Drop-in log entries for v1 and v2 |
-| [`ELOG_E23.md`](ELOG_E23.md) | Drop-in entry for `agency-detect/docs/EXPERIMENTS.md` |
+| [`ELOG_V1.md`](ELOG_V1.md) · [`ELOG_V2.md`](ELOG_V2.md) | Log entries for v1 and v2 in the agency-detect `EXPERIMENTS.md` format (kept as the record; not inserted into Gunnar's log) |
+| [`ELOG_V3.md`](ELOG_V3.md) | The v3 entry — inserted into `agency-detect/docs/EXPERIMENTS.md` by pull request, numbered **E21** there |
 | [`V3_REGISTRATION.md`](V3_REGISTRATION.md) · [`V3_PLAN.md`](V3_PLAN.md) | The locked registration and the design |
 | [`DEFINITIONS.md`](DEFINITIONS.md) | The governing glossary |
 | [`DECISIONS.md`](DECISIONS.md) | Every decision, deviation, defect and finding, dated, v1→v3 |

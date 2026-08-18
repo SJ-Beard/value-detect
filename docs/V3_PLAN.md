@@ -85,6 +85,6 @@ minutes). Estimated total with SJ's picks (two puppet worlds; five alias levels)
 
 Audits before scoring (puppet stories showing each flip's trigger; alias audit showing
 designed disagreement rates); locked registration; sweep; verdict incl. defeat map +
-access-premium table; E23 + write-up; V4 handoff (systems-of-agents; coalition goals
+access-premium table; V3 log entry + write-up; V4 handoff (systems-of-agents; coalition goals
 via any-block). New glossary entries at build time: *yardstick*, *do-style flip*,
 *access premium*, *captured goal / puppet*, *interventional mirror*, zone names.

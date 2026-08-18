@@ -122,7 +122,7 @@ chart, mechanism-agreement table, and a pre-registered per-variable prediction t
   `goal_progress` contrast re-run under new nulls). Compute budgeted per chunk and
   reported before launch; parallel, resumable, background — the V1 machinery generalises.
 - **Write-up:** verdict tables, the V2 heatmap (tests × worlds), a short memo for
-  Gunnar, and a drop-in **E22** entry. The headline question V2 answers: *which
+  Gunnar, and a drop-in **V2** log entry. The headline question V2 answers: *which
   measurement philosophies survive outside the world they were born in?*
 
 ## Not in V2 (fenced, on the record)

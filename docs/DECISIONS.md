@@ -709,3 +709,18 @@ marked "inserted as E21"); the v4 file renamed `ELOG_V4.md` and left unnumbered,
 Gunnar's deployment-pipeline repository has no experiment log (its adaptor note loses the
 E24 label likewise); every mention updated across both repositories, with brackets at the
 old numbers in this log's dated entries. Frozen bundles untouched.
+
+---
+
+## 2026-08-18 — Pull requests opened (SJ's approval); account flag lifted
+
+With SJ's explicit go-ahead after review of the texts, two docs-only pull requests were
+opened: **GunnarZarncke/agency-detect#1** (E21 log entry + v3 session summary; branch
+`value-discovery-e21`) — https://github.com/GunnarZarncke/agency-detect/pull/1 — and
+**GunnarZarncke/deployment-pipeline-simulator#1** (adaptor note; branch
+`value-discovery-adaptor-note`) — https://github.com/GunnarZarncke/deployment-pipeline-simulator/pull/1.
+Earlier in the day the new SJ-Beard account had been auto-flagged by GitHub (profile,
+repos and images returned 404 to the public; SJ opened a support ticket); by the time the
+PRs were opened the flag had been lifted and everything was publicly visible. SJ has
+messaged Gunnar directly, since notifications from a flagged account may not have been
+sent. Publication complete; nothing pending. SJ away ~10 days from 2026-08-18.

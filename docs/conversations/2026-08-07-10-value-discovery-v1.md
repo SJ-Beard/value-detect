@@ -1,7 +1,8 @@
 # Value discovery v1 — design lock through verdict (2026-08-07 → 2026-08-10)
 
-Mirrors the `agency-detect-master/docs/conversations/` template; lives in our repo
-(Gunnar's is read-only).
+*Session summary in the [agency-detect](https://github.com/GunnarZarncke/agency-detect)
+house format (its `docs/conversations/` template): a compact record of the decisions
+taken in one stretch of work and the reasons for them — not a transcript.*
 
 ## Initial problem
 

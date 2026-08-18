@@ -7,6 +7,6 @@
 | [`ELOG_E23.md`](ELOG_E23.md) | Drop-in entry for `agency-detect/docs/EXPERIMENTS.md` |
 | [`V3_REGISTRATION.md`](V3_REGISTRATION.md) · [`V3_PLAN.md`](V3_PLAN.md) | The locked registration and the design |
 | [`DEFINITIONS.md`](DEFINITIONS.md) | The governing glossary |
-| [`DECISIONS.md`](DECISIONS.md) | Every decision, deviation, defect and finding, dated, v1→v4 |
-| [`conversations/`](conversations/) | Session summaries |
+| [`DECISIONS.md`](DECISIONS.md) | Every decision, deviation, defect and finding, dated, v1→v3 |
+| [`conversations/`](conversations/) | Session summaries, one per experiment version, in the agency-detect house format (Gunnar Zarncke's `docs/conversations/` template: initial problem, key decisions, experiment progression, current state, follow-up ideas). Compact records of decisions and rationale — **not transcripts** |
 | [`writeup_figures/`](writeup_figures/) | All figures v1–v3 |

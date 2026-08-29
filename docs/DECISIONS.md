@@ -724,3 +724,29 @@ repos and images returned 404 to the public; SJ opened a support ticket); by the
 PRs were opened the flag had been lifted and everything was publicly visible. SJ has
 messaged Gunnar directly, since notifications from a flagged account may not have been
 sent. Publication complete; nothing pending. SJ away ~10 days from 2026-08-18.
+
+---
+
+## 2026-08-29 — Gunnar's PR feedback: include the code, not pointers (SJ)
+
+Gunnar (via SJ): the agency-detect PR "does not include code even though it references
+code… seems inconsistent". Fair — and the v1 design had anticipated exactly this use
+("mirroring the house style of Gunnar's packages so the whole thing could later be
+dropped into a copy of his repo as a pull request"). Checked against his conventions
+first: packages are top-level folders (src/tests/scripts/pyproject), results are
+generated and gitignored, never committed; repo licence Apache-2.0.
+
+**Done (SJ's go-ahead):** (1) agency-detect PR #1 now ships the whole `value_detect/`
+package (360 KB, 39 files; MIT, contributed under Apache-2.0; pyproject given a
+self-contained licence field, avoiding the ../LICENSE editable-install bug his packages
+have). Its 44 tests pass run inside the fork against his `uad_handles`/`agency_detect`
+in place. E21 entry moved to its chronological place after E20; Code map row added;
+Artifacts/Reproduce sections now point in-repo, archived artifacts still in
+SJ-Beard/value-detect (matching his no-committed-results convention). Package README
+rewritten for the new home (the old one was stale v1-era text; the copy in our own repo
+rewritten to match, framed for the standalone repo). (2) deployment-pipeline PR #1 now
+ships `value_detect_pipeline/` (adaptor module + tests + README) — the adaptor needs
+only numpy/pandas plus his own simulator, so it is fully runnable in his repo (both
+tests pass inside the fork); the probe scripts, which need `value_detect`, stay in the
+canonical repo and the note says so. Both PR titles/bodies updated (no longer
+"docs-only"). Staging clones were re-created from GitHub (scratchpad had been cleaned).

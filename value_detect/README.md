@@ -1,33 +1,81 @@
-# value_detect
+# value_detect — Unsupervised value discovery (directional UAD)
 
-Unsupervised **value** discovery (directional UAD), extending Gunnar Zarncke's
-Unsupervised Agent Discovery. Standalone package living at the project root, a sibling
-of the read-only `agency-detect-master/` repository.
+**Status:** v1–v3 complete and wrapped up; this repository is the canonical record
+(write-ups, log entries, locked pre-registrations, dated decisions log, archived result
+artifacts, paper draft — see [`docs/README.md`](../docs/README.md)). The package is also
+offered to Gunnar Zarncke's agency-detect repository by pull request, where the v3 log
+entry is numbered E21. A live v4 line applies the same instrument to the
+deployment-pipeline simulator: https://github.com/SJ-Beard/deployment-pipeline-value-detect.
 
-For the theory and design see the paper draft (`paper/value_discovery.tex`) and the dated
-decisions log (`docs/DECISIONS.md`).
+UAD locates agents' boundaries; this package asks what *drives* them — which component
+plays the role of a discovered agent's **value structures**. Hypothesis (inverting the
+classic AI-drives direction of explanation): whatever is maximally empowered and
+minimally plastic thereby *serves as* the system's values, and that asymmetry is
+passively detectable. The operationalisation is the **value signature** on
+directed-information scores: system drive above a procedure-mirroring noise floor
+(circular-shift nulls, p95 + z≥3), rankable, and net intake at floor or net drive ≥ 9×
+net intake.
 
-## What is here (Chunk 2 — wrap the world)
+## Results summary
 
-The v1 world is Gunnar's `SyntheticHandleWorld` in `uad_handles`, used **as-is** via passive
-rollouts. This package imports it (never copies or modifies it) and adds:
+- **v1 (anchor):** on `uad_handles`' `SyntheticHandleWorld` (passive rollouts, world
+  untouched), the signature picks out the planted goal, and only it, in every
+  measurement convention able to see through the world's XOR composition (fused
+  mega-state and fused+best-key: 100% of 20 seeds, unique in ≥95%); naive pairwise
+  fails structurally (the XOR "cipher"). Controls: no-core, scrambles, decoys,
+  `goal_progress` contrast.
+- **v2 (which conventions survive more complex worlds):** across four worlds incl. an
+  eight-agent 49-variable colony, only the block-level **fused-agents any-block**
+  convention (fuse discovered agents; offer every block as a conditioning key) recovers
+  every planted goal; all variable-level conventions hit a scale wall, caught by the
+  no-core control.
+- **v3 (E21 — how easily can the instrument be fooled):** fast captured goal refused
+  20/20; a slow, history-triggered captured goal defeats every lag-1 passive test 20/20
+  and is unmasked by the interventional yardstick 20/20; goal twins are passively
+  indistinguishable below ~1–2% noise. The yardstick (a two-direction generalisation of
+  the handle benchmark's `goal_flip`) resolves exactly those two cases — the access
+  premium, quantified.
 
-- `world.py` — passive-rollout wrapper + recorder (saves the trace and its metadata).
-- `narrate.py` — the **story printout**: a few dozen timesteps narrated in plain English.
-- `changes.py` — the **change-frequency chart** and a mechanism-agreement check.
+## Layout
 
-Later chunks add the directed-information estimators (Chunk 3) and the directional scorer
-(Chunk 4).
+| Module (`src/value_detect/`) | Role |
+|------------------------------|------|
+| `world.py`, `narrate.py`, `changes.py` | Passive-rollout wrapper for `uad_handles`, plain-English story printout, change-frequency audit |
+| `directed.py` | Discrete plug-in directed-information estimators (α=0.1, nats; matches `agency_detect` conventions) |
+| `scorer.py` | The measurement conventions (pairwise, fused mega-state, fused+best-key, fused-agents own-block/any-block, grown keys) |
+| `floors.py`, `criteria.py` | Circular-shift noise floors (procedure-mirroring, p95, z-margin gates), signature evaluation |
+| `variants.py`, `worlds_v2.py` | No-core/scramble/alias variants; the v2/v3 worlds (colony, deep-synergy, slow-meter, puppet- and alias-colonies) |
+| `agentblocks.py` | Agent-block detection and fusion for the block-level conventions |
+| `yardstick.py` | The interventional yardstick (goal-role + autonomy probes, do-style flips) |
 
-## Environment
+Runners live in `value_detect/scripts/` (`chunk2–5*` = v1, `v2_*`, `v3_*`). Artifacts go
+to the repo-root `results/` (archived in this repository, with verdict tables and
+figures).
 
-A virtualenv lives **outside** iCloud at `~/.venvs/value-detect` (keeps package files from
-syncing). Editable installs point back at the source here and in the read-only repo.
+## Dependencies and tests
 
-Regenerate the Chunk 2 artifacts with one command:
+Python ≥3.9, `numpy`, `pandas`, `matplotlib` (see `pyproject.toml`); imports
+`uad_handles` and `agency_detect` from a local agency-detect checkout in place — nothing
+there is modified (see the repo-root README's Install section / `setup_env.command`). Set `PYTHONHASHSEED=0` for anything touching `agency_detect.agents` (its
+per-agent parameters derive from `hash(name)`, which is per-process randomised
+otherwise).
 
 ```bash
-~/.venvs/value-detect/bin/python "value_detect/scripts/chunk2_wrap_world.py"
+PYTHONHASHSEED=0 ~/.venvs/value-detect/bin/python -m pytest value_detect/tests -q
 ```
 
-Outputs land under the project-root `results/chunk2/`.
+Reproduce v3 (writes `results/v3_0/`, `results/v3_5/`; see the repo-root README for the
+full v1–v3 command list):
+
+```bash
+PY=~/.venvs/value-detect/bin/python
+$PY value_detect/scripts/v3_build_audits.py
+$PY value_detect/scripts/v3_sweep.py --seeds 20 --jobs 4   # ~37.5 h at 4 workers
+$PY value_detect/scripts/v3_aggregate.py
+```
+
+## Provenance and licence
+
+Written by SJ Beard's value-discovery programme (implementation and analysis by Claude
+under SJ's direction); MIT-licensed (see the repo-root `LICENSE`). Terminology follows
+[`docs/DEFINITIONS.md`](../docs/DEFINITIONS.md).

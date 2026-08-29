@@ -7,6 +7,7 @@ name = "value-detect"
 version = "0.1.0"
 description = "Unsupervised value discovery (directional UAD), extending Gunnar Zarncke's Unsupervised Agent Discovery"
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.9"
 dependencies = [
     "numpy>=1.20.0",

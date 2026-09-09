@@ -37,8 +37,17 @@ standing alongside as the ceiling. Tests: fused-agents any-block (primary), own-
    true goal's tempo (1.77%) with every flip triggered by a 6-step run of its patch
    (verified 353/353 in the audit), it **earned the value signature in 100% of seeds
    under both passive tests**. The registered defeat, delivered in full: one step of
-   conditioning cannot see a trigger that lives in run-history. The constructive
-   corollary: its intake becomes visible above the lag-1 floor at **lag 2 in 100% of
+   conditioning cannot see a trigger that lives in run-history. [Correction, 2026-09-09, from the v5 comparison: "one step of
+   conditioning cannot see a trigger that lives in run-history" turned out to be
+   wrong as a statement about passivity. The impostor's environment-intake WAS
+   measurable at lag 1 — our own stored tables show it above its floor (net intake
+   ≈ 0.028 nats, drive/intake ratio ≈ 14×) — and the signature stood because the
+   ratio cleared the leak-tolerant 9× clause, adopted (2026-08-10) so that real,
+   leaky value cores are not disqualified. A strictly-gated passive stability test
+   (v5's role-sufficiency comparison instrument) refuses this impostor 20/20 at
+   lag 1. So the defeat is a property of the signature's leak tolerance, not of
+   lag-1 passivity; see `WRITEUP_V5.md` and `results/v5_5/V5_INVESTIGATION.md`.]
+   The constructive corollary: its intake becomes visible above the lag-1 floor at **lag 2 in 100% of
    seeds** (indicative diagnostic) — multi-horizon conditioning would catch it, which
    promotes the parked multi-horizon idea from speculation to evidenced V4 candidate.
 3. **The yardstick unmasked the slow puppet in 100% of seeds** — role-effect yes
@@ -86,9 +95,12 @@ interventional score already uses).
 ## Where this leaves the programme
 
 The simple experiment class closes with: a validated passive instrument (fused-agents
-any-block), its measured limits (slow triggers defeat lag-1 passivity; twins below
-~1–2% noise are passively indistinguishable), and the interventional mirror that covers
-exactly those limits. Three evidenced directions are recorded for later work:
+any-block), its measured limits (slow triggers defeat lag-1 passivity [corrected
+2026-09-09: they defeat the signature's leak-tolerant clause at lag 1 — a strict
+passive stability gate refuses them; see the bracket above and `WRITEUP_V5.md`];
+twins below ~1–2% noise are passively indistinguishable), and the interventional
+mirror that covers exactly those limits [the twin case remains interventional-only;
+the slow-trigger case turned out to have a passive resolution as well]. Three evidenced directions are recorded for later work:
 multi-horizon conditioning (evidenced by the lag-2 diagnostic), coalition-held goals
 (any-block requires no assumption about which agent owns a value), and the twin-channel
 as a probe of value persistence through records.

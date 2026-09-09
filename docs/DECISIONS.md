@@ -750,3 +750,20 @@ only numpy/pandas plus his own simulator, so it is fully runnable in his repo (b
 tests pass inside the fork); the probe scripts, which need `value_detect`, stay in the
 canonical repo and the note says so. Both PR titles/bodies updated (no longer
 "docs-only"). Staging clones were re-created from GitHub (scratchpad had been cleaned).
+
+---
+
+## 2026-09-09 — v3 slow-puppet claim corrected (SJ); paper revised and built; v5 published
+
+The v5 comparison (published at
+https://github.com/SJ-Beard/active-v-passive-value-detect) showed that the slow
+captured goal's lag-1 intake leak was above floor in this repository's own stored v3
+tables (net ≈ 0.028 nats, drive/intake ≈ 14×) and that the v3 "defeat" ran through the
+signature's leak-tolerant 9× clause — a strictly gated passive stability test refuses
+the same impostor 20/20. **SJ approved the dated correction brackets** now in
+`WRITEUP_V3.md`, `ELOG_V3.md` and the v3 session summary ("defeats lag-1 passivity" →
+defeats the leak-tolerant clause; the twin case remains the only interventional-only
+gap). The paper is revised as flowing text per SJ (abstract, contributions,
+Experiment 3, Discussion incl. a new "Subsequent experiments (v4 and v5)" paragraph,
+limitations, future work) and now builds locally (MacTeX; 10 pages, no errors); the
+built PDF is committed alongside the source.

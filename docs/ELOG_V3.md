@@ -42,7 +42,10 @@ no-core expectation was mis-specified for twin-bearing worlds; (3) alias scrambl
 pass (omitted from the first aggregation pass, evaluated in the appendix).
 
 **Conclusions:** the passive instrument's limits are now measured, not conjectured —
-history-triggered captured goals defeat lag-1 passivity (and only lag-1: the lag-2
+history-triggered captured goals defeat lag-1 passivity [corrected 2026-09-09:
+they defeat the signature's leak-tolerant intake clause — the lag-1 leak was above
+floor (ratio ≈ 14×) and tolerated by the 9× rule; v5's strictly-gated passive
+stability test refuses them 20/20; see WRITEUP_V5.md] (and only lag-1: the lag-2
 diagnostic evidences the multi-horizon fix); twins below ~1–2% noise are passively
 indistinguishable; the interventional mirror covers exactly these two gaps and nothing
 else needs it. v4 (designed here; since carried out —

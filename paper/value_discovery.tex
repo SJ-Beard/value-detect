@@ -38,7 +38,7 @@ by their Empowerment--Plasticity Asymmetry}
 \affil[1]{Principles of Intelligence}
 \affil[2]{Centre for the Study of Existential Risk, University of Cambridge}
 
-\date{August 2026 \\ \small Draft --- not submitted}
+\date{September 2026 \\ \small Draft --- not submitted}
 
 \begin{document}
 \maketitle
@@ -65,10 +65,13 @@ including an eight-agent, 49-variable colony, only a block-level convention that
 discovered agents and offers every block as a conditioning ``key'' recovers every
 planted goal; all variable-level conventions hit a scale wall, caught by a control.
 (iii)~Against adversarial impostors, a fast environment-driven ``captured goal'' is
-refused, but a slow, history-triggered captured goal defeats every lag-1 passive test,
-and a noiseless goal twin is passively indistinguishable; an interventional yardstick
-generalising the benchmark's goal-flip operation resolves exactly these two cases and
-no others, quantifying the premium of interventional access. We report limitations
+refused, but a slow, history-triggered captured goal defeats the signature ---
+traceable, a follow-up comparison showed, to the signature's leak-tolerant intake
+clause rather than to any limit of passive observation: a strictly gated passive
+stability test refuses the same impostor --- and a noiseless goal twin is passively
+indistinguishable in principle; an interventional yardstick generalising the
+benchmark's goal-flip operation resolves both cases, and the twin case admits no
+passive resolution, locating the premium of interventional access precisely. We report limitations
 (single-variable values; lag-1 conditioning) and the directions they motivate.
 \end{abstract}
 
@@ -125,14 +128,16 @@ block-level convention (fuse discovered agents; offer every block as a condition
 that recovers every planted value at a scale where all variable-level conventions fail.
 (3)~A characterisation of the instrument's limits by adversarial impostors, together
 with an interventional yardstick that generalises the UAD benchmark's goal-flip
-operation and resolves exactly the two theorem-hard cases.
+operation and resolves both defeat cases --- one of which (the zero-noise twin) is
+provably beyond any passive method, while the other, a later comparison showed, is
+not (see the Discussion).
 (4)~Several mechanism-level findings (an XOR ``cipher'' that hides inputs from
 under-conditioned measures; the self-penalising property of procedure-mirroring
 floors; a ``twin channel'' by which a disconnected value persists in the signature
 through its own record).
 
 % =====================================================================
-\section{The value signature}
+\section{The value signature}\label{sec:sig}
 % =====================================================================
 
 \subsection{Directed measures}
@@ -202,7 +207,7 @@ World & Variables & Planted structure / probe \\
 \midrule
 Anchor (v1) & 9 & one goal at 1.5\%; two perfect lookalike logs \\
 Colony (v2) & 49 & eight goals; ring coupling; partitioned variant for attribution \\
-Deep-synergy (v2) & 17 & two agents, two driven beliefs each; parity vs.\ majority composition \\
+Deep-synergy (v2) & 17 & two agents, two beliefs each; parity vs.\ majority rule \\
 Slow-meter (v2) & 14 & goal slowed to 0.5\%; four causally inert meters \\
 Puppet colonies A1/A2 (v3) & 49 & one goal replaced by a \emph{captured} goal (fast / slow-triggered) \\
 Alias colony (v3) & 51 & goal twins for two agents at noise $\{0,0.5,1,2,5\}\%$ \\
@@ -403,16 +408,23 @@ and visible; the audit also recorded an emergent effect: copying the patch its a
 belief copies, it partially cancels the belief and \emph{pacifies its own environment}).
 The slow captured goal --- flipping at a true goal's tempo ($1.77\%$), every flip
 verified to follow a six-step run of its patch --- \textbf{earned the value signature in
-20/20 seeds under both passive tests}, exactly as pre-registered: one step of
-conditioning cannot see a trigger that lives in run history. Its intake surfaces above
-the lag-1 floor at lag~2 in 20/20 seeds (an indicative diagnostic), so multi-horizon
-conditioning is now an evidenced remedy. The yardstick unmasked it in 20/20 (role yes,
+20/20 seeds under both passive tests}, exactly as pre-registered. Our reading at the
+time --- that one step of conditioning cannot see a trigger living in run history ---
+turned out to be too strong. The impostor's environment-intake was in fact above its
+noise floor at lag~1 (net $\approx 0.03$ nats), but its drive-to-intake ratio
+($\approx 14\times$) passed the signature's leak-tolerant clause (\S\ref{sec:sig}),
+which was adopted so that real, leaky value cores are not disqualified; a subsequent
+comparison experiment (v5; Discussion) showed that a strictly gated passive stability
+test refuses this impostor at lag~1. Within the signature family, multi-horizon
+conditioning remains the evidenced remedy (the intake also surfaces above the lag-1
+floor at lag~2 in 20/20 seeds). The yardstick unmasked it in 20/20 (role yes,
 autonomy yes). Fig.~\ref{fig:v3} gives the passive breaking point for the goal role:
 twins are indistinguishable from their goals at $0$--$0.5\%$ noise (as they must be ---
 identical sequences cannot be separated by any passive method), transitional at 1\%,
 and separated at $\geq 2\%$ (19--20/20), with no inversions; the yardstick refuses the
 bit-identical twin at 0\% (a recording levers nothing) while its goal keeps the verdict.
-Interventional access buys exactly the two theorem-hard cases and nothing else.
+Interventional access resolves both defeat cases; only the zero-noise twin is,
+after the v5 comparison, known to \emph{require} it.
 
 \begin{table}[t]
 \centering\small
@@ -457,9 +469,12 @@ observation, uniquely, across single- and multi-agent worlds, and refuses decoys
 disconnected goals, scrambles and (with the right conditioning) meters; the block-level
 any-block convention is the only tested instrument whole at the scale of the UAD
 authors' multi-agent simulator. Its limits are now measured rather than conjectured ---
-history-triggered captured goals defeat lag-1 passivity; twins below $\approx 1$--$2\%$
-noise are passively indistinguishable --- and interventional access closes exactly these
-gaps, giving a quantitative form of the access-model thesis of \citet{zarncke2025uad}.
+history-triggered captured goals defeat the signature's leak-tolerant intake clause
+(not, as we first wrote, lag-1 passivity itself --- their intake leak is measurable and
+a stricter passive gate refuses them); twins below $\approx 1$--$2\%$ noise are
+passively indistinguishable --- and interventional access closes both gaps, with the
+twin gap admitting no passive closure, giving a quantitative form of the access-model
+thesis of \citet{zarncke2025uad}.
 Several findings concern method rather than result: the XOR cipher; the self-penalising
 floors; the collapse-detector role of the no-core control; and the value of running
 disagreeing conventions in parallel rather than picking a primary early --- twice, the
@@ -481,8 +496,10 @@ The grown-keys results suggest one route (deciphering interactions among several
 value-like variables); we conjecture a better one --- use UAD's boundary-detection
 machinery to identify sub-systems within an agent, then evaluate the empowerment and
 plasticity of those sub-systems rather than of single variables. (2)~\emph{Lag-1
-conditioning}, which the slow captured goal exploits; multi-horizon conditioning is the
-evidenced remedy. (3)~\emph{Planted structure.} All worlds are engineered; whether the
+conditioning together with the leak-tolerant intake clause}, which the slow captured
+goal jointly exploits; multi-horizon conditioning and a stricter stability gate are
+both evidenced remedies (the latter from the v5 comparison) --- what strictness costs
+on genuinely leaky value cores is untested. (3)~\emph{Planted structure.} All worlds are engineered; whether the
 polarisation \emph{emerges} in evolved or learned systems is the question the instrument
 now makes askable, not one it has answered. (4)~The protocol was soft-blind: the
 implementing system had read the world's source; protection came from the world's
@@ -491,12 +508,39 @@ independent origin, pre-registration, controls and multi-seed sweeps.
 supported by recoverability, not a demonstration that empowered-and-stable components
 \emph{function} as values in richer agents.
 
+\paragraph{Subsequent experiments (v4 and v5).}
+Two further experiments post-date the work reported above and inform the corrections
+woven into this text. \emph{v4} pointed the instrument at an event-log deployment
+simulator carrying an injected self-preserving utility: the value's structural
+footprint there is the drive-without-intake of the \emph{actions the utility selects
+for} (regime-graded, and visible in the auditor's log alone), not the outcome state the
+utility rewards --- in event-log worlds the mark of a value is on the choices, not the
+scoreboard.\footnote{\url{https://github.com/SJ-Beard/deployment-pipeline-value-detect}}
+\emph{v5} ran the signature side by side with a role-sufficiency formalism
+independently derived by another PIBBSS mentor (roles as minimal internal
+representations sufficient for named external targets; interventional at full
+strength).\footnote{\url{https://github.com/SJ-Beard/active-v-passive-value-detect}}
+The comparison converged wherever the formalisms overlap --- including an
+interventional battery identical to our yardstick --- and diverged instructively
+twice, in mirror image: a strict stability gate (theirs) passively unmasks the slow
+captured goal our leak-tolerant clause admits, while an evidence-only stability
+quantifier (theirs) lets the witness class steal the goal verdict our all-source
+intake refuses. A new world with the value structure \emph{outside} the agent it
+drives was found by the signature in 20/20 seeds while remaining invisible to any
+internal-only candidate scope; and on observation-only data the sufficiency tests
+cannot be stated at all, while the passive signature runs. The active-vs-passive
+contrast --- what needs a do-operator, what passivity recovers, and what can even be
+asked of data that only watches --- is, on this evidence, the load-bearing difference
+between the two routes to the same construct.
+
 \paragraph{Future work.}
 Systems-of-agents environments in which values may be held by coalitions rather than
 individuals (any-block requires no assumption about which agent owns a value, and so
 is structurally open to this); multi-horizon conditioning; sub-system-level scoring for
-distributed value structures; and the twin channel as a probe of value persistence
-through records.
+distributed value structures; the twin channel as a probe of value persistence
+through records; and a synthesis instrument combining the signature's world-directed,
+all-source intake with the strict stability gate and an explicit uniqueness pressure
+(the v5 reversals define its requirements).
 
 % =====================================================================
 \section*{Statement on use of AI}

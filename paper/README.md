@@ -1,13 +1,11 @@
 # Paper draft — "Unsupervised Value Discovery"
 
-`value_discovery.tex` + `references.bib` + `figures/`. Standard arXiv-style
-`article` class (11pt, 1in margins, natbib/plainnat, hyperref, booktabs, authblk).
-Structurally verified (braces, environments, citations, cross-refs, figures); **not
-compiled here** — this Mac has no LaTeX toolchain.
+`value_discovery.tex` + `references.bib` + `figures/` + the built
+`value_discovery.pdf`. Standard arXiv-style `article` class (11pt, 1in margins,
+natbib/plainnat, hyperref, booktabs, authblk). Compiled locally with MacTeX
+(2026-09-09; zero errors); the committed PDF is the current build.
 
 ## To compile
-
-Overleaf (easiest): upload the folder as a project; compile with pdfLaTeX. Locally:
 
 ```bash
 pdflatex value_discovery && bibtex value_discovery && pdflatex value_discovery && pdflatex value_discovery

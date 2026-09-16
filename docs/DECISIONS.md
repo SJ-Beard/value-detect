@@ -767,3 +767,29 @@ gap). The paper is revised as flowing text per SJ (abstract, contributions,
 Experiment 3, Discussion incl. a new "Subsequent experiments (v4 and v5)" paragraph,
 limitations, future work) and now builds locally (MacTeX; 10 pages, no errors); the
 built PDF is committed alongside the source.
+
+---
+
+## 2026-09-16 — Gunnar merged agency-detect PR #1; SJ's first review round on the paper applied
+
+**Gunnar merged GunnarZarncke/agency-detect#1 on 2026-09-14** — the E21 entry, v3
+session summary, and the whole `value_detect` package are now upstream in his
+repository. (The deployment-pipeline-simulator PR remains open.)
+
+**Paper, SJ's review round 1** (SJ supplied itemised changes A–F and asked for the
+patterns to be generalised): exposition added (contributions preview sentence and an
+instrument-first contribution 2; section roadmaps for §§2–3; "Table X summarises the
+results of this experiment" openers for all three experiments; the C3 paragraph now
+states the registered expectation and the falsified first story and explains the
+z-margin gate / burn-in rule / hash-seed fix; the access premium is defined at first
+use); over-specifics trimmed (Omohundro out of the abstract's assumption line;
+"beneath the noise" → "stably drives behaviour and impact"; the corrected-claim
+parenthetical cut from the Discussion; pre-registration de-emphasised per SJ with the
+exp-3 registered-reading story moved to a footnote); tense fixes (SJ's four + the
+audit-extension sentence); **new §8 "Further work"** with subsections "Experiment 4/5"
+(SJ's v4 paragraph verbatim with three grammar smoothings; Jobst Heitzig now named)
+and "Possible lines for future inquiry"; phrasing points E1–E5; style: Oxford
+-ize/-yze spellings, serial commas, and **every em dash removed** (colons, brackets,
+commas, splits; table placeholders → n/a); "the signature" → "the value signature"
+throughout, with §2.3 and Experiment 1's title renamed to match. Rebuilt clean:
+12 pages, zero errors/overfull. Further-edit suggestions sent to SJ for round 2.

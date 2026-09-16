@@ -38,7 +38,7 @@ by their Empowerment--Plasticity Asymmetry}
 \affil[1]{Principles of Intelligence}
 \affil[2]{Centre for the Study of Existential Risk, University of Cambridge}
 
-\date{September 2026 \\ \small Draft --- not submitted}
+\date{September 2026 \\ \small Draft (not submitted)}
 
 \begin{document}
 \maketitle
@@ -47,29 +47,29 @@ by their Empowerment--Plasticity Asymmetry}
 Unsupervised agent discovery (UAD) locates agents in raw multivariate time series by
 finding variable sets that approximately satisfy a Markov-blanket condition against
 their surroundings. We ask a question one level inward: within a discovered agent,
-which parts are its \emph{value structures} --- the components of its informational
-structure that correspond to its goals, objectives, desires or utility functions? We
+which parts are its \emph{value structures}, the components of its informational
+structure that correspond to its goals, objectives, desires, or utility functions? We
 propose that this role has a directional information-theoretic signature: values are
-the components that most strongly drive the world while being least driven by it ---
-maximally empowered and minimally plastic. This inverts a familiar assumption due to Omohundro
-that a system first has values and then acts to make them empowered and stable; we
-hypothesise instead that whatever is empowered and stable thereby \emph{serves as} the
+the components that most strongly drive the world while being least driven by it:
+maximally empowered and minimally plastic. This inverts a familiar AI safety assumption
+that a system first develops values and then acts to make them empowered and stable; we
+hypothesize instead that whatever is empowered and stable thereby \emph{serves as} the
 system's values, and that this structural property is passively detectable. We
-operationalise the hypothesis as a \emph{value signature} on directed-information
+operationalize the hypothesis as a \emph{value signature} on directed-information
 scores gated by procedure-mirroring noise floors, and evaluate it in three
-pre-registered experiments on planted-structure worlds built on an existing UAD
-benchmark. (i)~In a single-agent world, the signature recovers the planted goal, and
-only it, in every measurement convention able to see through the world's XOR-style
+experiments on planted-structure worlds built on an existing UAD
+benchmark. (i)~In a single-agent world, the value signature recovers the planted goal,
+and only it, in every measurement convention that can see through the world's XOR-style
 composition; a naive pairwise convention fails structurally. (ii)~Across four worlds
 including an eight-agent, 49-variable colony, only a block-level convention that fuses
 discovered agents and offers every block as a conditioning ``key'' recovers every
 planted goal; all variable-level conventions hit a scale wall, caught by a control.
 (iii)~Against adversarial impostors, a fast environment-driven ``captured goal'' is
-refused, but a slow, history-triggered captured goal defeats the signature ---
-traceable, a follow-up comparison showed, to the signature's leak-tolerant intake
-clause rather than to any limit of passive observation: a strictly gated passive
-stability test refuses the same impostor --- and a noiseless goal twin is passively
-indistinguishable in principle; an interventional yardstick generalising the
+refused, but a slow, history-triggered captured goal defeats the value signature
+(traceable, a follow-up comparison showed, to its leak-tolerant intake clause rather
+than to any limit of passive observation: a strictly gated passive stability test
+refuses the same impostor), and a noiseless goal twin is passively
+indistinguishable in principle; an interventional yardstick generalizing the
 benchmark's goal-flip operation resolves both cases, and the twin case admits no
 passive resolution, locating the premium of interventional access precisely. We report limitations
 (single-variable values; lag-1 conditioning) and the directions they motivate.
@@ -80,14 +80,14 @@ passive resolution, locating the premium of interventional access precisely. We 
 % =====================================================================
 
 The standard route to an agent's objectives runs through its behaviour: observe
-choices, infer the utility or reward that rationalises them
-\citep{ng2000irl,russell1998learning}. This route has well-known difficulties ---
-non-identifiability, dependence on rationality assumptions --- and one that is rarely
+choices, infer the utility or reward that rationalizes them
+\citep{ng2000irl,russell1998learning}. This route has well-known difficulties (non-identifiability, dependence on
+rationality assumptions) and one that is rarely
 foregrounded: an agent may \emph{conceal} its objectives, for instance by injecting
 noise into its decisions, so that the behavioural signal is deliberately weakened.
 This paper explores a complementary route. Rather than inferring values from what a
 system does, we look for its value structures in the \emph{informational structure} of
-the system itself: which internal component most drives behaviour beneath the noise?
+the system itself: which internal component most stably drives behaviour and impact?
 If such a component can be located structurally, it can be isolated and studied
 directly, recovering the signal that behavioural inference alone would lose.
 
@@ -103,10 +103,10 @@ not tell us what that component does or prefers, and we have not built tools for
 \paragraph{The hypothesis: inverting the classic AI drives argument.}
 Omohundro's \emph{Basic AI Drives} \citep{omohundro2008drives} argues that an advanced
 system's utility function ``will be precious'' to it, so the system will act to make
-that function maximally influential and maximally protected from change --- in the
-vocabulary of \citet{abel2025plasticity}, maximally \emph{empowered} and
-minimally \emph{plastic}. Omohundro's direction of explanation runs from values to
-structure. We hypothesise the reverse: whatever component of a system is maximally
+that function maximally influential and maximally protected from change. In the
+vocabulary of \citet{abel2025plasticity}, it would seek to make them maximally
+\emph{empowered} and minimally \emph{plastic}. Omohundro's direction of explanation
+runs from values to structure. We hypothesize the reverse: whatever component of a system is maximally
 empowered and minimally plastic will, by that fact, \emph{serve as} the system's
 values. This is why we speak of \emph{value} discovery rather than \emph{goal}
 discovery: we are identifying the parts that play the value role, whatever they are. In
@@ -115,30 +115,39 @@ structural signature could in principle locate richer value structures in richer
 
 The empowerment--plasticity trade-off \citep{abel2025plasticity} makes the
 hypothesis non-trivial: across a boundary a system cannot be maximally both, so an
-adaptive system has reason to specialise internally --- belief-like parts skewed
-towards plasticity, value-like parts towards empowerment, decision-making between.
-Our claim is that this specialisation is passively detectable.
+adaptive system has reason to specialize internally: belief-like parts skewed
+towards plasticity, value-like parts towards empowerment, decision-making parts sit
+between.
+Our claim is that this specialization is passively detectable.
 
 \paragraph{Contributions.}
-(1)~A pre-registered operationalisation --- the \emph{value signature} --- with
+This paper contributes four things towards testing this hypothesis: an
+operationalization of it, an instrument built around that operationalization, a map of
+the instrument's limits, and a set of mechanism-level findings made along the way.
+(1)~An operationalization of our hypothesis, the \emph{value signature}, with
 procedure-mirroring noise floors and controls, designed so a non-technical
 collaborator could audit every step in plain English.
-(2)~A benchmark of measurement conventions across four worlds identifying a
-block-level convention (fuse discovered agents; offer every block as a conditioning key)
-that recovers every planted value at a scale where all variable-level conventions fail.
-(3)~A characterisation of the instrument's limits by adversarial impostors, together
-with an interventional yardstick that generalises the UAD benchmark's goal-flip
-operation and resolves both defeat cases --- one of which (the zero-noise twin) is
-provably beyond any passive method, while the other, a later comparison showed, is
-not (see the Discussion).
+(2)~An instrument for unsupervised value discovery: directed-information scores
+computed under a menu of measurement conventions and gated by those floors. A
+benchmark across four worlds identified a block-level convention (fuse discovered
+agents; offer every block as a conditioning key) that recovers every planted value at
+a scale where all variable-level conventions fail.
+(3)~A characterization of the instrument's limits by adversarial impostors, together
+with an interventional yardstick that generalizes the UAD benchmark's goal-flip
+operation and resolves both defeat cases: one (the zero-noise twin) is provably beyond
+any passive method, while the other, a later comparison showed, is not
+(Section~\ref{sec:further}).
 (4)~Several mechanism-level findings (an XOR ``cipher'' that hides inputs from
-under-conditioned measures; the self-penalising property of procedure-mirroring
-floors; a ``twin channel'' by which a disconnected value persists in the signature
-through its own record).
+under-conditioned measures; the self-penalizing property of procedure-mirroring
+floors; a ``twin channel'' by which a disconnected value persists in the value
+signature through its own record).
 
 % =====================================================================
 \section{The value signature}\label{sec:sig}
 % =====================================================================
+
+This section defines the two directed measures the instrument computes, the noise
+floors that every score must beat, and the value signature itself.
 
 \subsection{Directed measures}
 Let $X$ be a candidate variable in a multivariate discrete time series and $R$ ``the
@@ -160,21 +169,21 @@ interest (verified analytically in Section~\ref{sec:v1}).
 \subsection{Floors}
 Every score is compared to its own null distribution: the candidate's column is
 circularly shifted against the fixed remainder ($\geq 200$ shifts, pooled across seeds
-where registered), and the \emph{identical} scoring procedure is re-run --- including any
-maximisation over conditioning sets, so that search-induced bias is priced into the
+where registered), and the \emph{identical} scoring procedure is re-run, including any
+maximization over conditioning sets, so that search-induced bias is priced into the
 floor. A score counts as \emph{above floor} if it exceeds the 95th null percentile
 \emph{and} clears the null mean by $z\geq 3$ null standard deviations (the margin gate
 was added after a near-frozen variable was found to pass hair-thin residuals; see
 Section~\ref{sec:v2}). We write $\net(\cdot)=\max(0,\ \text{score}-\text{floor}_{95})$.
 
-\subsection{The signature}
+\subsection{The value signature}
 \begin{definition}[Value signature]
 A variable $X$ exhibits the value signature if (i)~its drive is above floor,
 (ii)~its total flow $\I_\vin+\I_\vout$ is above floor (it is \emph{rankable}), and
 (iii)~$\net(\I_\vout)>0$ and $\net(\I_\vout)\geq 9\,\net(\I_\vin)$.
 \end{definition}
 Clause~(iii) is deliberately leak-tolerant: real components are all affected by their
-environment, so a value must not be disqualified for measurable intake --- only for
+environment, so a value must not be disqualified for measurable intake, only for
 failing to be overwhelmingly a driver (the $9\times$ ratio corresponds to polarity
 $\geq 0.8$ and sits well above the $\approx 3$--$4\times$ observed for genuine
 mediators). ``Intake at floor'' is the special case $\net(\I_\vin)=0$.
@@ -183,18 +192,21 @@ mediators). ``Intake at floor'' is the special case $\net(\I_\vin)=0$.
 \section{Experimental design}
 % =====================================================================
 
+This section describes the worlds the experiments run in, the conditions and
+controls attached to every run, and the menu of measurement conventions under test.
+
 \paragraph{Worlds.}
 All worlds derive from the \pkg{SyntheticHandleWorld} of the UAD handle benchmark
 \citep{zarncke2025uad}: nine binary variables per agent forming the loop
 belief~$B$ $\to$ action~$A$ $\to$ environment~$E$ $\to$ sensor~$S$ $\to$ $B$, with a
 goal~$G$ entering the policy ($A = B\gplus G$ up to noise) and flipping by its own coin
 at rate $0.015$; plus a distractor~$D$ shadowing $E$, pure noise~$W$, and in the original
-world two perfect ``lookalike'' logs of the sensor and action lines. The world was built
-by its author before this project existed and for a different purpose, so it could not
-have been tuned to flatter our measure. Table~\ref{tab:worlds} lists the worlds; each of
-ours ships with an audit --- change-frequency chart, a mechanism table comparing observed
-disagreement rates against those predicted from the designed noise (agreement to
-$\lesssim 0.1$\%), and a plain-language ``story'' --- reviewed before any scoring.
+world two perfect ``lookalike'' logs of the sensor and action lines. The conventions of these worlds were built
+by someone else before this project existed and for a different purpose, so were not
+tuned to flatter our measure. Table~\ref{tab:worlds} lists the worlds; each of
+ours ships with an audit (a change-frequency chart, a mechanism table comparing observed
+disagreement rates against those predicted from the designed noise, with agreement to
+$\lesssim 0.1$\%, and a plain-language ``story''), reviewed before any scoring.
 
 \begin{table}[t]
 \centering\small
@@ -217,19 +229,19 @@ Alias colony (v3) & 51 & goal twins for two agents at noise $\{0,0.5,1,2,5\}\%$ 
 
 \paragraph{Conditions and controls.}
 Each world runs in three conditions: \emph{main}; \emph{no-core} (goals present but
-disconnected from the policy --- nothing may exhibit the signature); and \emph{scramble}
-(every column independently time-shuffled --- the count of above-floor scores must sit in
+disconnected from the policy: nothing may exhibit the value signature); and \emph{scramble}
+(every column independently time-shuffled: the count of above-floor scores must sit in
 the 5\% chance band, which doubles as a calibration check on the floors). A contrast
 world from the UAD authors' older multi-agent simulator supplies a variable literally
-named \pkg{goal\_progress} --- a causally inert progress meter --- that the instrument
+named \pkg{goal\_progress}, a causally inert progress meter, that the instrument
 must refuse.
 
 \paragraph{Pre-registration and discipline.}
 Success criteria (thresholds $\geq 80\%$ of 20 seeds; $\geq 90\%$ for goal-above-belief;
-uniqueness = no non-goal variable holding the signature in more than 2 of 20 seeds) were
+uniqueness = no non-goal variable holding the value signature in more than 2 of 20 seeds) were
 locked before each sweep; every calibration amendment made before a sweep is dated in a
 decisions log. Two working rules shaped the analysis: when two requested measures
-disagree, the disagreement is investigated and mechanistically explained rather than
+disagree, the disagreement was investigated and mechanistically explained rather than
 averaged; and conventions were run in parallel as co-equal tests rather than a primary
 being chosen early. Ground-truth labels were used only to evaluate outcomes, never inside
 any measurement.
@@ -240,9 +252,9 @@ variable-level conventions differ in how $R$ is instantiated; the block-level
 conventions first run the UAD detector to partition variables into agents (its
 cluster-count dial swept, the dial chosen by blanket-valid coverage as in the UAD
 authors' own selection procedure), fuse each agent's variables into a compressed
-macro-state block (top-64 states; lost mass reported), and never fuse the environment
---- agent blocks respect a \emph{discovered} coherence, the environment has none to
-respect. Orphaned variables (those the detector drops --- characteristically the goals,
+macro-state block (top-64 states; lost mass reported), and never fuse the environment:
+agent blocks respect a \emph{discovered} coherence; the environment has none to
+respect. Orphaned variables (those the detector drops: characteristically the goals,
 whose rare flips carry almost no symmetric mutual information) remain individually
 scoreable.
 
@@ -266,20 +278,20 @@ fused-agents any-block & block & target block's past + best single key element \
 \end{table}
 
 % =====================================================================
-\section{Experiment 1: does the signature recover a planted value?}\label{sec:v1}
+\section{Experiment 1: does the value signature recover a planted value?}\label{sec:v1}
 % =====================================================================
 
 The anchor world was scored under pairwise, fused, and fused+best-key, in the world
 as-is and with the lookalike columns removed, on 20 seeds. Before any scoring, the
 estimator was verified against analytic targets (a delayed copy reads $\ln 2$ nats; a
 chain $X\to Y\to Z$ shows $\I(Z_{t+1};X_t\mid Y_t)\approx 0$ while the unconditioned
-lag-2 dependence is positive --- the mediation exhibit; the Marko--Massey conservation
+lag-2 dependence is positive, the mediation exhibit; the Marko--Massey conservation
 identity holds on analytic cases).
 
 \paragraph{The cipher.}
 A first pass showed the action's intake reading $\approx 0.005$ nats pairwise while a
 pre-planned fused cross-check read $0.31$. Investigation, prompted by the disagreement
-rule, revealed the mechanism: XOR composition ($A=B\gplus G$) is a perfect cipher ---
+rule, revealed the mechanism: XOR composition ($A=B\gplus G$) is a perfect cipher:
 each input is invisible to a measure conditioning on too little unless the other input
 (the ``key'') is conditioned on. Measured readings matched hand-derived values to three
 decimals; re-timing the world did not help (tested), and a single extra conditioning
@@ -288,11 +300,12 @@ variable restored the goal's drive on the environment from $0.000$ to $0.441$ na
 block-level ones.
 
 \paragraph{Results.}
-Table~\ref{tab:v1} summarises. Under fused and fused+best-key the goal exhibits the
-signature in 100\% of seeds, uniquely in $\geq 95\%$, and lies above the belief in
+Table~\ref{tab:v1} summarizes the results of this experiment. Under fused and
+fused+best-key the goal exhibits the value signature in 100\% of seeds, uniquely in
+$\geq 95\%$, and lies above the belief in
 polarity in 100\%; all controls pass; the only intruder anywhere was pure noise $W$ in
-one seed in twenty --- the false-positive rate the floors are designed to admit. Under
-pairwise the action wires share the signature in 20/20 seeds (as pre-registered) and,
+one seed in twenty, the false-positive rate the floors are designed to admit. Under
+pairwise the action wires share the value signature in 20/20 seeds (as pre-registered) and,
 with honest floors, the goal's own pairwise signal is indistinguishable from nothing:
 pairwise measurement cannot tell a value from a wire in a world with encrypted
 composition, and was retired with its cause of death documented. Removing the lookalike
@@ -304,13 +317,14 @@ and value-finding are complementary axes.
 \begin{table}[t]
 \centering\small
 \caption{Experiment 1 (anchor, 20 seeds). Rates are fractions of seeds. Uniqueness =
-nothing but $G$ holds the signature. C3 = \pkg{goal\_progress} refused.}
+nothing but $G$ holds the value signature; shown as-is\,/\,lookalike-free where the two
+configurations differ. C3 = \pkg{goal\_progress} refused; n/a = not run.}
 \label{tab:v1}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 Convention & $G$ signature & unique & $G>B$ & controls & C3 refused \\
 \midrule
-fused & 1.00 & 0.95 / 1.00 & 1.00 & pass & --- \\
+fused & 1.00 & 0.95 / 1.00 & 1.00 & pass & n/a \\
 fused + best-key & 1.00 & 0.95 & 1.00 & pass & 0.70 \\
 pairwise & 0.05 & 0.00 & 0.05 & pass & 1.00 \\
 \bottomrule
@@ -318,14 +332,23 @@ pairwise & 0.05 & 0.00 & 0.05 & pass & 1.00 \\
 \end{table}
 
 \paragraph{The C3 residual and the floor standard.}
-Best-key refused \pkg{goal\_progress} in only 70\% of seeds. Reading the stored records
-falsified our first mechanism story: the thief was a \emph{near-frozen} column (change
+Best-key refused \pkg{goal\_progress} in only 70\% of seeds, where the registered
+expectation was refusal outright (the contrast exists solely to be refused). Our first
+mechanism story blamed slowness: cumulative meters, we reasoned, would have
+autocorrelation-inflated shuffle floors, letting witness-like drive clear the floor
+while intake read as zero. Reading the stored records
+falsified that story: the thief was a \emph{near-frozen} column (change
 rate $\approx 0.000$) whose every score sat at its own unstable floor, plus initial
-transients from an un-burned-in simulator. This produced the $z$-margin gate, a burn-in
-rule, and a reproducibility fix for the older simulator (its traces are cross-process
-reproducible only with a pinned hash seed). A residual 30\% theft by a genuinely moving
-meter is real Granger flow with no causation --- diffuse shared-history witnessing that no
-single conditioning key can screen --- and became a benchmark requirement for the
+transients from an un-burned-in simulator. The repair became the floor standard used in
+every later experiment: the $z$-margin gate of Section~\ref{sec:sig} (a score must
+clear its null mean by three null standard deviations, so hair-thin residuals over an
+unstable floor cannot pass), a burn-in rule (the first 2{,}000 steps of every trace are
+discarded, so a simulator's settling-in transients cannot masquerade as structure), and
+a reproducibility fix for the older simulator (its traces are cross-process
+reproducible only with a pinned hash seed, without which floors and scores can silently
+come from different worlds). A residual 30\% theft by a genuinely moving
+meter is real Granger flow with no causation, diffuse shared-history witnessing that no
+single conditioning key can screen, and became a benchmark requirement for the
 conventions of Experiment~2.
 
 % =====================================================================
@@ -334,31 +357,32 @@ conventions of Experiment~2.
 
 Two new conventions were qualified against the full anchor criteria before entering the
 benchmark. \emph{Grown keys} exposed its own limit during its justifying unit test:
-greedy growth cannot climb a flat plateau --- in pure three-way parity every single key
-has zero marginal gain --- while excelling on graded composition (majority rules,
+greedy growth cannot climb a flat plateau (in pure three-way parity every single key
+has zero marginal gain) while excelling on graded composition (majority rules,
 $+43\%$ over best-key); it passed C3 at 100\%, falsifying our prediction that it would
 inherit best-key's witness blindness, because \emph{procedure-mirroring floors
-self-penalise search depth}: a deeper maximisation must find real structure to outrun
+self-penalize search depth}: a deeper maximization must find real structure to outrun
 its own inflated null. The two block-level conventions also qualified (100\% on every
 criterion including C3; the block context absorbed even the chance blips seen elsewhere).
 
-Fig.~\ref{fig:v2} shows goal-recovery rates across the four worlds.
-\textbf{Any-block recovered every planted goal in every world} --- the only convention
+Fig.~\ref{fig:v2} summarizes the results of this experiment: goal-recovery rates
+across the four worlds under every convention.
+\textbf{Any-block recovered every planted goal in every world}: the only convention
 that never missed. Mechanistically, ``target block's past plus one key element'' is
 two-block conditioning, which decrypts three-way composition and, crucially, does not
 require the goal to belong to a detected agent: since the detector orphans goals, this
 robustness is fitness for the terrain. Own-block, conditioning only on the candidate's
 own block, has no ring for an orphaned goal (0\% on the parity goal; 70\% worst-goal in
-the coupled colony); the divergence between the two is now our partition-quality
+the coupled colony); the divergence between the two thus became our partition-quality
 diagnostic. Every variable-level convention hit a scale wall: fused's is
 combinatorial (state count doubles per variable), and best-key/grown's fused-style
 \emph{intake} saturates outright at 49 variables (19{,}999 distinct joint states in
-20{,}000 samples), so intake reads as bias for every variable --- a defect the
+20{,}000 samples), so intake reads as bias for every variable: a defect the
 \emph{no-core control caught} (0\% clean seeds), which the locked interpretation rules
 converted into a recorded infeasibility rather than a spurious result. The synergy cliff
 was measured on the parity goal (best-key 0\%, grown 45\%, any-block 100\%; the majority
-goal 100\% for all), and a pre-registered contingency --- re-running colony failures with
-coupling removed --- attributed both own-block's shortfall ($70\%\to 90\%$) and the
+goal 100\% for all), and a pre-registered contingency (re-running colony failures with
+coupling removed) attributed both own-block's shortfall ($70\%\to 90\%$) and the
 single systematic thief (an action wire, $6/20\to 2/20$) to ring interference, not scale.
 
 \begin{figure}[t]
@@ -373,8 +397,8 @@ scale). Any-block is the only column without a miss.}
 
 Two defects of our own were found and fixed mid-programme by the same discipline: an
 early deep-synergy world drove both belief channels from one action, so their XOR was
-quasi-frozen and the parity silently collapsed (the audit checked marginals only; it now
-checks joint dynamics), and the feasibility map had missed the intake wall.
+quasi-frozen and the parity silently collapsed (the audit had checked marginals only; it was
+extended to check joint dynamics), and the feasibility map had missed the intake wall.
 
 % =====================================================================
 \section{Experiment 3: how easily can the instrument be fooled?}\label{sec:v3}
@@ -386,56 +410,65 @@ planted impostors and asked whether they could fool the surviving conventions
 yardstick alongside.
 
 \paragraph{The yardstick.}
-The UAD benchmark embeds a \pkg{goal\_flip} operation --- a \emph{handle}, not an ideal
-intervention: applied to the true goal it changes the action within the tick; applied to
-anything else it does nothing. We generalised it to a \emph{do-style flip} of any
+The UAD benchmark embeds a \pkg{goal\_flip} operation (a \emph{handle}, not an ideal
+intervention): applied to the true goal it changes the action within the tick; applied to
+anything else it does nothing. We generalized it to a \emph{do-style flip} of any
 variable's value as consumed by the dynamics, on 50\% of interleaved steps, and built
-the two-direction \emph{interventional mirror} of the signature: a \emph{goal-role
+the two-direction \emph{interventional mirror} of the value signature: a \emph{goal-role
 probe} (does flipping $X$ change its agent's behaviour, given the agent's policy
 context?) and an \emph{autonomy probe} (does flipping $X$'s own environment change $X$?).
-The interventional verdict --- role effect above floor \emph{and} autonomy effect at
-floor: ``levers the world, unlevered by the world'' --- is the signature restated under
-access. Its construction was itself instructive: the XOR cipher bit three times (an
+The interventional verdict (role effect above floor \emph{and} autonomy effect at
+floor: ``levers the world, unlevered by the world'') is the value signature restated
+under access. Its construction was itself instructive: the XOR cipher bit three times (an
 unconditioned role probe; a saturating autonomy readout; unconditioned autonomy terms)
 and was caught each time by a validation bench on the anchor, where the do-style flip
 had to agree with the embedded operation before use; the fix, each time, was the
 context conditioning the benchmark's own interventional score already employs.
 
 \paragraph{Results.}
-Table~\ref{tab:v3} gives the access-premium table. The fast captured goal --- wired into
-the action but copying its own patch --- was refused in 20/20 seeds (its intake is large
-and visible; the audit also recorded an emergent effect: copying the patch its agent's
-belief copies, it partially cancels the belief and \emph{pacifies its own environment}).
-The slow captured goal --- flipping at a true goal's tempo ($1.77\%$), every flip
-verified to follow a six-step run of its patch --- \textbf{earned the value signature in
-20/20 seeds under both passive tests}, exactly as pre-registered. Our reading at the
-time --- that one step of conditioning cannot see a trigger living in run history ---
-turned out to be too strong. The impostor's environment-intake was in fact above its
+Table~\ref{tab:v3} summarizes the results of this experiment: for each impostor, the
+best passive verdict, the interventional verdict, and the \emph{access premium}, that
+is, what interventional access adds over the best passive method. The fast captured
+goal (wired into the action but copying its own patch) was refused in 20/20 seeds: its
+intake is large and visible. Its audit also recorded an emergent effect: copying the
+patch its agent's belief copies, it partially cancels the belief and \emph{pacifies
+its own environment}.
+The slow captured goal (flipping at a true goal's tempo, $1.77\%$, with every flip
+verified to follow a six-step run of its patch) \textbf{earned the value signature in
+20/20 seeds under both passive tests}. Its environment-intake was above its
 noise floor at lag~1 (net $\approx 0.03$ nats), but its drive-to-intake ratio
-($\approx 14\times$) passed the signature's leak-tolerant clause (\S\ref{sec:sig}),
-which was adopted so that real, leaky value cores are not disqualified; a subsequent
-comparison experiment (v5; Discussion) showed that a strictly gated passive stability
-test refuses this impostor at lag~1. Within the signature family, multi-horizon
+($\approx 14\times$) passed the value signature's leak-tolerant clause
+(Section~\ref{sec:sig}), which was adopted so that real, leaky value cores are not
+disqualified. The vulnerability therefore belongs to the leak-tolerance choice, not to
+passive observation itself: a strictly gated passive stability test refuses this
+impostor at lag~1 (Experiment~5, Section~\ref{sec:further}).\footnote{Our
+pre-registered reading was different: we expected this defeat on the ground that one
+step of conditioning cannot see a trigger living in run history, and at the time took
+the result to show exactly that. The comparison of Experiment~5 falsified that
+reading: the intake leak was measurable at lag~1 all along, and what admitted the
+impostor was the leak-tolerance clause, not passivity.} Within the value-signature
+instrument itself, multi-horizon
 conditioning remains the evidenced remedy (the intake also surfaces above the lag-1
 floor at lag~2 in 20/20 seeds). The yardstick unmasked it in 20/20 (role yes,
 autonomy yes). Fig.~\ref{fig:v3} gives the passive breaking point for the goal role:
-twins are indistinguishable from their goals at $0$--$0.5\%$ noise (as they must be ---
+twins are indistinguishable from their goals at $0$--$0.5\%$ noise (as they must be:
 identical sequences cannot be separated by any passive method), transitional at 1\%,
 and separated at $\geq 2\%$ (19--20/20), with no inversions; the yardstick refuses the
 bit-identical twin at 0\% (a recording levers nothing) while its goal keeps the verdict.
 Interventional access resolves both defeat cases; only the zero-noise twin is,
-after the v5 comparison, known to \emph{require} it.
+after the comparison of Experiment~5, known to \emph{require} it.
 
 \begin{table}[t]
 \centering\small
-\caption{Experiment 3: the access-premium table (20 seeds; passive = any-block).}
+\caption{Experiment 3: what interventional access adds per impostor (the access
+premium); 20 seeds; passive = any-block.}
 \label{tab:v3}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Impostor & Best passive verdict & Yardstick verdict & Premium \\
 \midrule
 Fast captured goal & refused (20/20) & refused (20/20) & none \\
-Slow captured goal & \textbf{signs (20/20)} & refused (20/20) & \textbf{total} \\
+Slow captured goal & \textbf{value signature held (20/20)} & refused (20/20) & \textbf{total} \\
 Twin, 0--0.5\% noise & indistinguishable (19--20/20) & twin refused (20/20) & \textbf{total} \\
 Twin, $\geq 2\%$ noise & separated (19--20/20) & separated & none \\
 \bottomrule
@@ -445,39 +478,39 @@ Twin, $\geq 2\%$ noise & separated (19--20/20) & separated & none \\
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.62\linewidth]{fig_v3_zone_map.png}
-\caption{Experiment 3: separation rate (goal exhibits the signature, twin does not)
-versus twin noise --- the passive breaking point for the goal role lies between 1\% and
-2\%.}
+\caption{Experiment 3: separation rate (the goal exhibits the value signature, the
+twin does not) versus twin noise: the passive breaking point for the goal role lies
+between 1\% and 2\%.}
 \label{fig:v3}
 \end{figure}
 
 \paragraph{The twin channel.}
 In the alias no-core condition the \emph{disconnected} goals still exhibited the
-signature in 20/20 seeds --- correctly: a goal stripped of its behavioural wiring still
+value signature in 20/20 seeds, and correctly so: a goal stripped of its behavioural
+wiring still
 causally drives its own recording, so ``drives without being driven'' genuinely holds
 through the record. The instrument was right and the control's expectation was
 mis-specified for twin-bearing worlds. Philosophically the point is sharp: a value can
-persist in the signature through its records alone.
+persist in the value signature through its records alone.
 
 % =====================================================================
 \section{Discussion}
 % =====================================================================
 
 \paragraph{What was established.}
-The empowerment--plasticity signature locates a planted value structure from passive
-observation, uniquely, across single- and multi-agent worlds, and refuses decoys,
-disconnected goals, scrambles and (with the right conditioning) meters; the block-level
+The value signature locates a planted value structure from passive
+observation across single- and multi-agent worlds, and refuses decoys,
+disconnected goals, scrambles, and (with the right conditioning) meters; the block-level
 any-block convention is the only tested instrument whole at the scale of the UAD
-authors' multi-agent simulator. Its limits are now measured rather than conjectured ---
-history-triggered captured goals defeat the signature's leak-tolerant intake clause
-(not, as we first wrote, lag-1 passivity itself --- their intake leak is measurable and
-a stricter passive gate refuses them); twins below $\approx 1$--$2\%$ noise are
-passively indistinguishable --- and interventional access closes both gaps, with the
+authors' multi-agent simulator. Its limits are now measured rather than conjectured:
+history-triggered captured goals defeat the value signature's leak-tolerant intake
+clause; twins below $\approx 1$--$2\%$ noise are
+passively indistinguishable. Interventional access closes both gaps, with the
 twin gap admitting no passive closure, giving a quantitative form of the access-model
 thesis of \citet{zarncke2025uad}.
-Several findings concern method rather than result: the XOR cipher; the self-penalising
+Several findings concern method rather than result: the XOR cipher; the self-penalizing
 floors; the collapse-detector role of the no-core control; and the value of running
-disagreeing conventions in parallel rather than picking a primary early --- twice, the
+disagreeing conventions in parallel rather than picking a primary early: twice, the
 convention we would have discarded first turned out to carry the mechanism.
 
 \paragraph{Why structure, not behaviour.}
@@ -493,55 +526,66 @@ it. Our results are a first indication that such structural location is possible
 been tested on agents with multiple belief states but not with multiple goal or value
 states; a value structure distributed over several components is beyond it as it stands.
 The grown-keys results suggest one route (deciphering interactions among several
-value-like variables); we conjecture a better one --- use UAD's boundary-detection
+value-like variables); we conjecture a better one: use UAD's boundary-detection
 machinery to identify sub-systems within an agent, then evaluate the empowerment and
 plasticity of those sub-systems rather than of single variables. (2)~\emph{Lag-1
 conditioning together with the leak-tolerant intake clause}, which the slow captured
 goal jointly exploits; multi-horizon conditioning and a stricter stability gate are
-both evidenced remedies (the latter from the v5 comparison) --- what strictness costs
-on genuinely leaky value cores is untested. (3)~\emph{Planted structure.} All worlds are engineered; whether the
-polarisation \emph{emerges} in evolved or learned systems is the question the instrument
+both evidenced remedies (the latter from the comparison of Experiment~5); what
+strictness costs on genuinely leaky value cores is untested. (3)~\emph{Planted structure.} All worlds are engineered; whether the
+polarization \emph{emerges} in evolved or learned systems is the question the instrument
 now makes askable, not one it has answered. (4)~The protocol was soft-blind: the
 implementing system had read the world's source; protection came from the world's
-independent origin, pre-registration, controls and multi-seed sweeps.
+independent origin, pre-registration, controls, and multi-seed sweeps.
 (5)~The relation between this signature and Omohundro's drives is a hypothesis
 supported by recoverability, not a demonstration that empowered-and-stable components
 \emph{function} as values in richer agents.
 
-\paragraph{Subsequent experiment v4: an event-log deployment world.}
-Two further experiments post-date the work reported above and inform the corrections
-woven into this text. v4 pointed the instrument at an event-log deployment simulator
-carrying an injected self-preserving utility: the value's structural footprint there
-is the drive-without-intake of the \emph{actions the utility selects for}
-(regime-graded, and visible in the auditor's log alone), not the outcome state the
-utility rewards --- in event-log worlds the mark of a value is on the choices, not the
+% =====================================================================
+\section{Further work}\label{sec:further}
+% =====================================================================
+
+Two further experiments were conducted after the work reported above and inform some
+corrections woven into this text, as well as suggesting possible lines for future
+inquiry.
+
+\subsection{Experiment 4: an event-log deployment world}
+Experiment 4 used the instrument in a different kind of world: an event-log simulation
+of a deployment pipeline, developed by Gunnar Zarncke, containing agents performing
+different tasks and carrying an injected self-preserving utility. The experiment
+showed that it was possible to deploy the instrument in such an environment. The
+instrument identified the value structure footprint not in the outcome state the
+utility rewards (which was strongly driven by the agents' environment) but in the
+drive-without-intake of the actions the utility selects for (regime-graded, and
+visible in the auditor's log alone); in event-log worlds the mark of a value is on the
+choices, not the
 scoreboard.\footnote{\url{https://github.com/SJ-Beard/deployment-pipeline-value-detect}}
 
-\paragraph{Subsequent experiment v5: an independently derived formalism, compared.}
-v5 ran the signature side by side with a role-sufficiency formalism independently
-derived by another PIBBSS mentor (roles as minimal internal representations sufficient
-for named external targets; interventional at full
-strength).\footnote{\url{https://github.com/SJ-Beard/active-v-passive-value-detect}}
-The comparison converged wherever the formalisms overlap --- including an
-interventional battery identical to our yardstick --- and diverged instructively
-twice, in mirror image: a strict stability gate (theirs) passively unmasks the slow
+\subsection{Experiment 5: an independently derived formalism compared}
+Our final experiment ran our instrument side by side with an interventionist,
+role-sufficiency-based alternative independently derived by Jobst Heitzig (roles as
+minimal internal representations sufficient for named external
+targets).\footnote{\url{https://github.com/SJ-Beard/active-v-passive-value-detect}}
+The comparison converged wherever the formalisms overlap (including an
+interventional battery identical to our yardstick) and diverged instructively
+twice, in mirror image: a strict stability gate (theirs) passively unmasked the slow
 captured goal our leak-tolerant clause admits, while an evidence-only stability
-quantifier (theirs) lets the witness class steal the goal verdict our all-source
+quantifier (theirs) let the witness class steal the goal verdict our all-source
 intake refuses. A new world with the value structure \emph{outside} the agent it
-drives was found by the signature in 20/20 seeds while remaining invisible to any
-internal-only candidate scope; and on observation-only data the sufficiency tests
-cannot be stated at all, while the passive signature runs. The active-vs-passive
-contrast --- what needs a do-operator, what passivity recovers, and what can even be
-asked of data that only watches --- is, on this evidence, the load-bearing difference
+drives was found by the value signature in 20/20 seeds while remaining invisible to
+any internal-only candidate scope; and on observation-only data the sufficiency tests
+cannot be stated at all, while the passive value signature runs. The active-vs-passive
+contrast (what needs a do-operator, what passivity recovers, and what can even be
+asked of data that only watches) is, on this evidence, the load-bearing difference
 between the two routes to the same construct.
 
-\paragraph{Future work.}
+\subsection{Possible lines for future inquiry}
 We identified the following as potentially promising lines of further experimentation.
 \begin{itemize}[leftmargin=1.5em]
 \item \emph{Systems-of-agents environments.} Worlds in which a value structure is
   held by a coalition rather than a single agent. The any-block convention makes no
-  assumption about which agent owns a value --- any block can serve as the key that
-  reveals any candidate's drive --- so the instrument is structurally ready; what is
+  assumption about which agent owns a value (any block can serve as the key that
+  reveals any candidate's drive), so the instrument is structurally ready; what is
   missing are environments that actually plant coalition-held values to recover.
 \item \emph{Multi-horizon conditioning.} The slow captured goal's trigger surfaces
   above the lag-1 floor at lag~2 in 20/20 seeds, so extending the conditioning window
@@ -549,20 +593,20 @@ We identified the following as potentially promising lines of further experiment
   question it opens is how to keep the noise floors procedure-mirrored and honest as
   the window (and with it the state space) grows.
 \item \emph{Sub-system-level scoring.} Score discovered sub-systems rather than
-  single variables --- using the UAD boundary machinery \emph{inside} an agent to
-  propose components, then evaluating each component's empowerment and plasticity ---
+  single variables, using the UAD boundary machinery \emph{inside} an agent to
+  propose components and then evaluating each component's empowerment and plasticity,
   to reach value structures distributed over several variables, which the present
   instrument cannot represent.
 \item \emph{The twin channel as a persistence probe.} A goal stripped of its
-  behavioural wiring still drives its own recording, so the signature survives through
-  records (found in v3's no-core control). Deliberately exploiting this would probe how
+  behavioural wiring still drives its own recording, so the value signature survives through
+  records (found in Experiment~3's no-core control). Deliberately exploiting this would probe how
   long, and through what kinds of record, a value structure remains locatable after it
   stops steering behaviour.
-\item \emph{A synthesis instrument.} Combine the signature's world-directed,
+\item \emph{A synthesis instrument.} Combine the value signature's world-directed,
   all-source intake with the strict stability gate and an explicit uniqueness pressure;
-  the v5 reversals define its requirements, and the open cost question is what
-  strictness loses on genuinely leaky value cores, which the leak-tolerant clause was
-  designed to protect.
+  the reversals of Experiment~5 define its requirements, and the open cost question is
+  what strictness loses on genuinely leaky value cores, which the leak-tolerant clause
+  was designed to protect.
 \end{itemize}
 
 % =====================================================================
@@ -571,17 +615,17 @@ We identified the following as potentially promising lines of further experiment
 The author conceived the hypothesis and framing, made all design decisions, reviewed
 every audit and pre-registration in plain language, and directs the programme. Claude
 (Anthropic), an AI system, wrote all code, ran the experiments and analyses, and drafted
-this manuscript under the author's direction; every decision, deviation and defect is
+this manuscript under the author's direction; every decision, deviation, and defect is
 dated in the project's decisions log. \textbf{This manuscript is, as it stands,
 AI-generated}: it was written by Claude and reviewed and approved by the author, who
 intends to write the account in their own words when time allows. In line with the
-standing convention that AI systems are not listed as authors --- authorship carries a
-responsibility that cannot be delegated to them --- the author takes full responsibility
+standing convention that AI systems are not listed as authors (authorship carries a
+responsibility that cannot be delegated to them), the author takes full responsibility
 for the content. The manuscript is not being submitted for publication.
 
 \section*{Reproducibility}
 All code (\pkg{value\_detect}), world generators, audits, locked pre-registrations,
-verdict tables and figures are archived with fixed seeds; the UAD benchmark code is
+verdict tables, and figures are archived with fixed seeds; the UAD benchmark code is
 imported unmodified. Sweeps ran on a single laptop (v1 $\approx 1$ h; v2 $\approx 12.5$
 h; v3 $\approx 37.5$ h at four workers).
 

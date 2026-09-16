@@ -793,3 +793,19 @@ and "Possible lines for future inquiry"; phrasing points E1–E5; style: Oxford
 commas, splits; table placeholders → n/a); "the signature" → "the value signature"
 throughout, with §2.3 and Experiment 1's title renamed to match. Rebuilt clean:
 12 pages, zero errors/overfull. Further-edit suggestions sent to SJ for round 2.
+
+---
+
+## 2026-09-16 — Paper review round 2 applied (SJ)
+
+SJ's responses to the round-1 suggestions, all applied: contributions preview
+trimmed to one sentence with the four contributions as a numbered list; abstract's
+double-colon sentence takes a comma; jargon glossed and compressed (detector dial and
+lost-mass parentheticals; Granger gloss without "genuinely"); the C3 paragraph heading
+renamed to the goal_progress residual; Experiment 2 gains its orientation sentence;
+"cause of death" formalized to "failure mechanism documented"; world-table and
+Reproducibility labels aligned to Exp.~1/2/3 (the puppet row shortened to fit); and
+all voice changes — the three long sentences split (scale wall, twins, Experiment 5
+close) and the two intuition-first inversions (directed measures; the yardstick, whose
+verdict-slogan now leads the paragraph). 12 pages, zero errors, zero overfull.
+SJ flagged possibly revisiting contribution 2's wording later.

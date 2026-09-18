@@ -57,22 +57,19 @@ hypothesize instead that whatever is empowered and stable thereby \emph{serves a
 system's values, and that this structural property is passively detectable. We
 operationalize the hypothesis, as a \emph{value signature} on directed-information
 scores gated by procedure-mirroring noise floors, and evaluate it in three
-experiments, using worlds built on an existing UAD benchmark. These show that:
+experiments, using worlds built on an existing UAD benchmark. These show the following.
 (i)~In a single-agent world, the value signature identifies a planted goal, and only
 it, when using measurement conventions that can see through the world's XOR-style
-composition;
-(ii)~Across four more complex worlds, including an eight-agent, 49-variable colony
+composition. (ii)~Across four more complex worlds, including an eight-agent, 49-variable colony
 world, only a block-level measurement convention, which fuses discovered agents and
-offers every block as a conditioning ``key'', recovers the planted goals.
-(iii)~Against adversarial impostors, a fast environment-driven ``captured goal'' is
-refused, but a slow, history-triggered captured goal is wrongly identified by the
+offers every block as a conditioning `key', recovers the planted goals. (iii)~Against adversarial impostors, a fast environment-driven `captured goal' is refused, but a slow, history-triggered captured goal is wrongly identified by the
 value signature (a follow-up experiment showed this was due to its leak-tolerant
 intake clause rather than to any limit of passive observation: a strictly gated
 passive stability test refuses the same impostor), but a noiseless goal twin is
 passively indistinguishable in principle and can only be identified with an
 interventional yardstick generalizing the benchmark's goal-flip operation, locating
 the limits of passive detection. We report limitations
-(single-variable values; lag-1 conditioning) and the directions they motivate.
+(single-variable values; lag-1 conditioning) and directions for further work.
 \end{abstract}
 
 % =====================================================================
@@ -114,10 +111,10 @@ the simple systems studied here that part is a single planted goal bit; the same
 structural signature could in principle locate richer value structures in richer systems.
 
 The empowerment--plasticity trade-off \citep{abel2025plasticity} makes the
-hypothesis non-trivial: across a boundary a system cannot be maximally both, so an
-adaptive system has reason to specialize internally: belief-like parts skewed
-towards plasticity, value-like parts towards empowerment, decision-making parts sit
-between.
+hypothesis non-trivial: a system cannot be maximally both across its boundary, so
+adaptive systems have reason to specialize internally: developing belief-like parts
+skewed towards plasticity, value-like parts towards empowerment, and decision-making
+parts sitting between.
 Our claim is that this specialization is passively detectable.
 
 \paragraph{Contributions.}
@@ -127,19 +124,17 @@ This paper contributes four things towards testing this hypothesis.
 procedure-mirroring noise floors and controls, designed so a non-technical
 collaborator could audit every step in plain English.
 \item An instrument for unsupervised value discovery: directed-information scores
-computed under a menu of measurement conventions and gated by those floors. A
-benchmark across four worlds identified a block-level convention (fuse discovered
+computed under a menu of measurement conventions and gated by those floors. Our
+experiments across four worlds found a block-level convention (fuse discovered
 agents; offer every block as a conditioning key) that identifies every planted value at
 a scale where all variable-level conventions fail.
 \item A characterization of the instrument's limits by adversarial impostors, together
 with an interventional yardstick that generalizes the UAD benchmark's goal-flip
-operation and resolves both cases in which passive detection fails: one (the
-zero-noise twin) is provably beyond
-any passive method, while the other, a later comparison showed, is not
-(Section~\ref{sec:further}).
-\item Several mechanism-level findings (an XOR ``cipher'' that hides inputs from
+operation and resolves a case (involving a zero-noise twin) in which passive
+detection fails.
+\item Several mechanism-level findings (an XOR `cipher' that hides inputs from
 under-conditioned measures; the self-penalizing property of procedure-mirroring
-floors; a ``twin channel'' by which a disconnected value persists in the value
+floors; a `twin channel' by which a disconnected value persists in the value
 signature through its own record).
 \end{enumerate}
 
@@ -153,8 +148,8 @@ floors that every score must beat, and the value signature itself.
 \subsection{Directed measures}
 The idea is to measure, for each candidate component, how strongly it pushes on
 everything else and how strongly everything else pushes back on it. Concretely, let
-$X$ be a candidate variable in a multivariate discrete time series and $R$ ``the
-rest'' under some convention. Using the smoothed plug-in conditional mutual information
+$X$ be a candidate variable in a multivariate discrete time series and $R$ `the
+rest' under some convention. Using the smoothed plug-in conditional mutual information
 of the UAD implementation (Laplace $\alpha=0.1$, nats), we define lag-1 directed flows
 of transfer-entropy type \citep{schreiber2000te}:
 \begin{align}
@@ -189,7 +184,7 @@ Clause~(iii) is deliberately leak-tolerant: real components are all affected by 
 environment, so a value must not be disqualified for measurable intake, only for
 failing to be overwhelmingly a driver (the $9\times$ ratio corresponds to polarity
 $\geq 0.8$ and sits well above the $\approx 3$--$4\times$ observed for genuine
-mediators). ``Intake at floor'' is the special case $\net(\I_\vin)=0$.
+mediators). `Intake at floor' is the special case $\net(\I_\vin)=0$.
 
 % =====================================================================
 \section{Experimental design}
@@ -204,12 +199,12 @@ All worlds derive from the \pkg{SyntheticHandleWorld} of the UAD handle benchmar
 belief~$B$ $\to$ action~$A$ $\to$ environment~$E$ $\to$ sensor~$S$ $\to$ $B$, with a
 goal~$G$ entering the policy ($A = B\gplus G$ up to noise) and flipping by its own coin
 at rate $0.015$; plus a distractor~$D$ shadowing $E$, pure noise~$W$, and in the original
-world two perfect ``lookalike'' logs of the sensor and action lines. The conventions of these worlds were built
+world two perfect `lookalike' logs of the sensor and action lines. The conventions of these worlds were built
 by someone else before this project existed and for a different purpose, so were not
 tuned to flatter our measure. Table~\ref{tab:worlds} lists the worlds; each of
 ours ships with an audit (a change-frequency chart, a mechanism table comparing observed
 disagreement rates against those predicted from the designed noise, with agreement to
-$\lesssim 0.1$\%, and a plain-language ``story''), reviewed before any scoring.
+$\lesssim 0.1$\%, and a plain-language `story'), reviewed before any scoring.
 
 \begin{table}[t]
 \centering\small
@@ -264,8 +259,8 @@ scoreable.
 
 \begin{table}[t]
 \centering\small
-\caption{Measurement conventions. ``Own-block'' conditions on the candidate's own agent
-block; ``any-block'' offers every block (and singleton) as a conditioning key.}
+\caption{Measurement conventions. `Own-block' conditions on the candidate's own agent
+block; `any-block' offers every block (and singleton) as a conditioning key.}
 \label{tab:conventions}
 \begin{tabular}{@{}llp{7.6cm}@{}}
 \toprule
@@ -297,7 +292,7 @@ A first pass showed the action's intake reading $\approx 0.005$ nats pairwise wh
 pre-planned fused cross-check read $0.31$. Investigation, prompted by the disagreement
 rule, revealed the mechanism: XOR composition ($A=B\gplus G$) is a perfect cipher:
 each input is invisible to a measure conditioning on too little unless the other input
-(the ``key'') is conditioned on. Measured readings matched hand-derived values to three
+(the `key') is conditioned on. Measured readings matched hand-derived values to three
 decimals; re-timing the world did not help (tested), and a single extra conditioning
 variable restored the goal's drive on the environment from $0.000$ to $0.441$ nats
 (hand-predicted $0.446$). This motivated the key-based conventions and, later, the
@@ -374,7 +369,7 @@ criterion including C3; the block context absorbed even the chance blips seen el
 Fig.~\ref{fig:v2} summarizes the results of this experiment: goal-identification
 rates across the four worlds under every convention.
 \textbf{Any-block identified every planted goal in every world}: the only convention
-that never missed. Mechanistically, ``target block's past plus one key element'' is
+that never missed. Mechanistically, `target block's past plus one key element' is
 two-block conditioning, which decrypts three-way composition and, crucially, does not
 require the goal to belong to a detected agent: since the detector orphans goals, this
 robustness is fitness for the terrain. Own-block, conditioning only on the candidate's
@@ -396,7 +391,7 @@ single systematic thief (an action wire, $6/20\to 2/20$) to ring interference, n
 \centering
 \includegraphics[width=0.78\linewidth]{fig_v2_heatmap.png}
 \caption{Experiment 2: fraction of seeds in which each planted goal exhibits the value
-signature, per convention (columns) and world (rows). ``n/a'' marks recorded
+signature, per convention (columns) and world (rows). `n/a' marks recorded
 infeasibility (fused beyond $\sim 10$ variables; best-key/grown intake at colony
 scale). Any-block is the only column without a miss.}
 \label{fig:v2}
@@ -418,7 +413,7 @@ yardstick alongside.
 
 \paragraph{The yardstick.}
 The idea is to restate the value signature under interventional access: a genuine
-value ``levers the world, unlevered by the world''. The UAD benchmark supplies the
+value `levers the world, unlevered by the world'. The UAD benchmark supplies the
 ingredients. It embeds a \pkg{goal\_flip} operation (a \emph{handle}, not an ideal
 intervention): applied to the true goal it changes the action within the tick; applied to
 anything else it does nothing. We generalized it to a \emph{do-style flip} of any
@@ -499,7 +494,7 @@ between 1\% and 2\%.}
 In the alias no-core condition the \emph{disconnected} goals still exhibited the
 value signature in 20/20 seeds, and correctly so: a goal stripped of its behavioural
 wiring still
-causally drives its own recording, so ``drives without being driven'' genuinely holds
+causally drives its own recording, so `drives without being driven' genuinely holds
 through the record. The instrument was right and the control's expectation was
 mis-specified for twin-bearing worlds. Philosophically the point is sharp: a value can
 persist in the value signature through its records alone.

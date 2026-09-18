@@ -827,3 +827,18 @@ headline sentence, its footnote, the Discussion, and contribution 3's "both case
 which passive detection fails"); "the premium of interventional access" → "the limits
 of passive detection" (Table 3's caption, header and slow-goal cell reframed; the
 access-premium term retired from the paper). 12 pages, clean build.
+
+---
+
+## 2026-09-18 — Paper round 3, part 2 (SJ): abstract close, §1 edits, quotes convention
+
+Applied: abstract closes "and directions for further work"; the empowerment–plasticity
+specialization sentence reworded per SJ; contribution 2 opens "Our experiments across
+four worlds found"; contribution 3 simplified to present knowledge — the yardstick
+"resolves a case (involving a zero-noise twin) in which passive detection fails" (the
+slow-goal case no longer framed as passively unresolvable). **Quotes convention** per
+SJ's style: single quotation marks name things, doubles reserved for actual quoted
+text — 15 of 16 double-quote pairs converted (cipher, twin channel, key, captured
+goal, the rest, Intake at floor, lookalike, story, own-/any-block, n/a, the
+levers-the-world slogan, drives-without-being-driven); only Omohundro's "will be
+precious" keeps doubles. Clean 12-page build.

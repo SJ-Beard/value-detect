@@ -175,14 +175,16 @@ was added after a near-frozen variable was found to pass hair-thin residuals; se
 Section~\ref{sec:v2}). We write $\net(\cdot)=\max(0,\ \text{score}-\text{floor}_{95})$.
 
 \subsection{The value signature}
-\begin{definition}[Value signature]
 A variable $X$ exhibits the value signature if (i)~its drive is above floor,
 (ii)~its total flow $\I_\vin+\I_\vout$ is above floor (it is \emph{rankable}), and
-(iii)~$\net(\I_\vout)>0$ and $\net(\I_\vout)\geq 9\,\net(\I_\vin)$.
-\end{definition}
+(iii)~$\net(\I_\vout)>0$ and exceeds a minimum ratio of $\net(\I_\vin)$ (our
+experiments initially used $9\,\net(\I_\vin)$ but further work indicates a higher
+value performs better, see footnote~\ref{fn:threshold} on
+page~\pageref{fn:threshold}).
+
 Clause~(iii) is deliberately leak-tolerant: real components are all affected by their
 environment, so a value must not be disqualified for measurable intake, only for
-failing to be overwhelmingly a driver (the $9\times$ ratio corresponds to polarity
+failing to be overwhelmingly a driver (a $9\times$ ratio corresponds to polarity
 $\geq 0.8$ and sits well above the $\approx 3$--$4\times$ observed for genuine
 mediators). `Intake at floor' is the special case $\net(\I_\vin)=0$.
 
@@ -444,13 +446,17 @@ noise floor at lag~1 (net $\approx 0.03$ nats), but its drive-to-intake ratio
 (Section~\ref{sec:sig}), which was adopted so that real, leaky value cores are not
 disqualified. The vulnerability therefore belongs to the leak-tolerance choice, not to
 passive observation itself: a strictly gated passive stability test refuses this
-impostor at lag~1 (Experiment~5, Section~\ref{sec:further}).\footnote{Our
+impostor at lag~1 (Experiment~5, Section~\ref{sec:further}).\footnote{\label{fn:threshold}Our
 pre-registered reading was different: we expected this misidentification on the
 ground that one
 step of conditioning cannot see a trigger living in run history, and at the time took
 the result to show exactly that. The comparison of Experiment~5 falsified that
 reading: the intake leak was measurable at lag~1 all along, and what admitted the
-impostor was the leak-tolerance clause, not passivity.} Within the value-signature
+impostor was the leak-tolerance clause, not passivity. Re-evaluating the stored runs
+at higher thresholds confirms this: the impostor's drive-to-intake ratios span
+10.3--15.0 across seeds, so thresholds modestly above this range refuse it in every
+seed, while the lowest ratio any true goal exhibits in any stored run is 125; the
+exact best threshold has not been determined experimentally.} Within the value-signature
 instrument itself, multi-horizon
 conditioning remains the evidenced remedy (the intake also surfaces above the lag-1
 floor at lag~2 in 20/20 seeds). The yardstick unmasked it in 20/20 (role yes,

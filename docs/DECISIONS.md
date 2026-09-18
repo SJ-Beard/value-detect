@@ -842,3 +842,16 @@ text — 15 of 16 double-quote pairs converted (cipher, twin channel, key, captu
 goal, the rest, Intake at floor, lookalike, story, own-/any-block, n/a, the
 levers-the-world slogan, drives-without-being-driven); only Omohundro's "will be
 precious" keeps doubles. Clean 12-page build.
+
+---
+
+## 2026-09-18 — Paper round 3, part 3 (SJ): §2.3 definition per SJ; threshold stated as "a higher value"
+
+SJ's conclusion on the threshold question: since no experiment determined the correct
+value, the definition says "a higher value", not 16. Definition 1 label dropped (only
+definition in the paper); SJ's wording adopted verbatim, with the footnote-1-on-page-8
+pointer typeset as live references (label added on the existing Experiment 3
+footnote); clause commentary now "a 9× ratio". One sentence added to that footnote so
+the pointer is supported (ratio span 10.3–15.0, lowest true-goal ratio 125, "the exact
+best threshold has not been determined experimentally") — flagged to SJ for veto.
+Clean 12-page build; the reference resolves to footnote 1, page 8, as SJ observed.

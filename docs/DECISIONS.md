@@ -809,3 +809,21 @@ all voice changes — the three long sentences split (scale wall, twins, Experim
 close) and the two intuition-first inversions (directed measures; the yardstick, whose
 verdict-slogan now leads the paragraph). 12 pages, zero errors, zero overfull.
 SJ flagged possibly revisiting contribution 2's wording later.
+
+---
+
+## 2026-09-18 — Paper review round 3, part 1 (SJ): abstract simplified; terminology updated
+
+SJ's final-round abstract changes applied: the role list drops "utility functions"
+(SJ: the instrument does not detect utility functions — a utility function is
+constructed from values rather than representing them; the v4 lesson); the results
+portion replaced with SJ's simplified text ((i)–(iii), pairwise and scale-wall clauses
+dropped, "These show that:"). Terminology propagated throughout per SJ: "recovers" →
+"identifies" (where it means the instrument finding a value; the abstract's item (ii)
+keeps SJ's own "recovers", and recovering-a-signal / the detector recovering the body /
+"recoverability" are different senses, left as they were); "defeats the value
+signature" → "is wrongly identified by the value signature" (incl. the Experiment 3
+headline sentence, its footnote, the Discussion, and contribution 3's "both cases in
+which passive detection fails"); "the premium of interventional access" → "the limits
+of passive detection" (Table 3's caption, header and slow-goal cell reframed; the
+access-premium term retired from the paper). 12 pages, clean build.

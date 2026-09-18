@@ -855,3 +855,36 @@ footnote); clause commentary now "a 9× ratio". One sentence added to that footn
 the pointer is supported (ratio span 10.3–15.0, lowest true-goal ratio 125, "the exact
 best threshold has not been determined experimentally") — flagged to SJ for veto.
 Clean 12-page build; the reference resolves to footnote 1, page 8, as SJ observed.
+
+---
+
+## 2026-09-18 — Paper round 3, final part (SJ): full-body edits; SJ signs off
+
+SJ's finishing batch, all applied: worlds table (caption generalized to colony
+worlds; anchor row "one agent with one goal"; slow-meter "goal flipping slowed to
+0.005"; rows reordered anchor → slow-meter → deep-synergy → colony → puppets → alias);
+"each of which came with"; SJ's Conditions-and-controls text (past tense, "removing
+the value signature", "needed to refuse"); "measures disagreed"; SJ's Measurement-
+conventions paragraph plus a new four-alternatives passage briefly defining pairwise /
+fused / fused + best-key / fused + grown keys; "grown keys" → **"fused + grown keys"**
+throughout ("frown" read as typo); detector "recovered"; "This became"; the
+two-defects paragraph cut; **Figure 1 regenerated** from the stored V2 matrix with
+current convention names and "goal-identification rate" title; the goal_flip handle
+gloss disambiguated ("an operation available from within the world, rather than an
+idealized intervention imposed from outside it"); Experiment 3 main text carries the
+threshold evidence per SJ (ratio span 10.3–15.0, threshold 9, lowest true ratio 125;
+"see, Section 8" typo fixed); footnote 1 shortened to SJ's version; §2.3 pointer
+now "see Section 6, although the best threshold is yet to be determined
+experimentally"; "The interventional yardstick, by contrast"; Table 3 recast entirely
+in refused / wrongly-identified terms; Experiment 3's close aligned with contribution
+3 ("resolves both cases; only the zero-noise twin… known to require it" — the
+previously flagged inconsistency); SJ's Discussion limits sentence; methods list
+trimmed to three items; "our original leak-tolerant clause admitted"; the witness
+sentence rephrased without "steal" ("wrongly identified the witness class of causally
+inert meters as goal-like"); the synthesis further-work item rewritten around the
+point of the experiment (plant genuinely leaky values; measure what strictness
+costs); Gunnar Zarncke named for the world conventions, "Zarncke's" replacing both
+"UAD authors'" instances plus the Discussion's simulator mention, Experiment 4 "also
+developed by Zarncke" with the towards-alignment simulator link footnoted. Clean
+12-page build. **SJ: "with that we are done, I now feel happy putting my name to
+this."**

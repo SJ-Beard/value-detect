@@ -62,12 +62,10 @@ experiments, using worlds built on an existing UAD benchmark. These show the fol
 it, when using measurement conventions that can see through the world's XOR-style
 composition. (ii)~Across four more complex worlds, including an eight-agent, 49-variable colony
 world, only a block-level measurement convention, which fuses discovered agents and
-offers every block as a conditioning `key', recovers the planted goals. (iii)~Against adversarial impostors, a fast environment-driven `captured goal' is refused, but a slow, history-triggered captured goal is wrongly identified by the
-value signature (a follow-up experiment showed this was due to its leak-tolerant
-intake clause rather than to any limit of passive observation: a strictly gated
-passive stability test refuses the same impostor), but a noiseless goal twin is
-passively indistinguishable in principle and can only be identified with an
-interventional yardstick generalizing the benchmark's goal-flip operation, locating
+offers every block as a conditioning `key', recovers the planted goals. (iii)~Against adversarial impostors, a fast environment-driven `captured goal' is refused but two others proved more difficult. One, a slow history-triggered captured goal, was wrongly identified at first, although follow-up experiments showed this was due to our choice of parameters
+rather than to any limit of passive observation. The other, a noiseless goal twin, was
+passively indistinguishable in principle and could only be identified with an
+interventional yardstick generalizing the benchmark's goal-flip operation, showing
 the limits of passive detection. We report limitations
 (single-variable values; lag-1 conditioning) and directions for further work.
 \end{abstract}
@@ -76,11 +74,11 @@ the limits of passive detection. We report limitations
 \section{Introduction}
 % =====================================================================
 
-The standard route to an agent's objectives runs through its behaviour: observe
+The standard route to identifying an agent's objectives runs through its behaviour: observe
 choices, infer the utility or reward that rationalizes them
-\citep{ng2000irl,russell1998learning}. This route has well-known difficulties (non-identifiability, dependence on
-rationality assumptions) and one that is rarely
-foregrounded: an agent may \emph{conceal} its objectives, for instance by injecting
+\citep{ng2000irl,russell1998learning}. This route has well-known difficulties, non-identifiability, dependence on
+rationality assumptions, and, one that is rarely
+foregrounded, an agent may \emph{conceal} its objectives, for instance by injecting
 noise into its decisions, so that the behavioural signal is deliberately weakened.
 This paper explores a complementary route. Rather than inferring values from what a
 system does, we look for its value structures in the \emph{informational structure} of
@@ -107,8 +105,8 @@ runs from values to structure. We hypothesize the reverse: whatever component of
 empowered and minimally plastic will, by that fact, \emph{serve as} the system's
 values. This is why we speak of \emph{value} discovery rather than \emph{goal}
 discovery: we are identifying the parts that play the value role, whatever they are. In
-the simple systems studied here that part is a single planted goal bit; the same
-structural signature could in principle locate richer value structures in richer systems.
+the simple systems studied here that part is a single planted goal bit; however, the same
+structural signature could, in principle, locate richer value structures in more complex systems.
 
 The empowerment--plasticity trade-off \citep{abel2025plasticity} makes the
 hypothesis non-trivial: a system cannot be maximally both across its boundary, so
@@ -131,10 +129,10 @@ a scale where all variable-level conventions fail.
 \item A characterization of the instrument's limits by adversarial impostors, together
 with an interventional yardstick that generalizes the UAD benchmark's goal-flip
 operation and resolves a case (involving a zero-noise twin) in which passive
-detection fails.
+detection failed.
 \item Several mechanism-level findings (an XOR `cipher' that hides inputs from
 under-conditioned measures; the self-penalizing property of procedure-mirroring
-floors; a `twin channel' by which a disconnected value persists in the value
+floors; and a `twin channel' by which a disconnected value persists in the value
 signature through its own record).
 \end{enumerate}
 
@@ -165,12 +163,12 @@ through the action and conditioning on a mediator screens off precisely the flow
 interest (verified analytically in Section~\ref{sec:v1}).
 
 \subsection{Floors}
-Every score is compared to its own null distribution: the candidate's column is
+Every score was compared to its own null distribution: the candidate's column was
 circularly shifted against the fixed remainder ($\geq 200$ shifts, pooled across seeds
-where registered), and the \emph{identical} scoring procedure is re-run, including any
-maximization over conditioning sets, so that search-induced bias is priced into the
-floor. A score counts as \emph{above floor} if it exceeds the 95th null percentile
-\emph{and} clears the null mean by $z\geq 3$ null standard deviations (the margin gate
+where registered), and the \emph{identical} scoring procedure was re-run, including any
+maximization over conditioning sets, so that search-induced bias was priced into the
+floor. A score counted as \emph{above floor} if it exceeded the 95th null percentile
+\emph{and} cleared the null mean by $z\geq 3$ null standard deviations (the margin gate
 was added after a near-frozen variable was found to pass hair-thin residuals; see
 Section~\ref{sec:v2}). We write $\net(\cdot)=\max(0,\ \text{score}-\text{floor}_{95})$.
 
@@ -192,7 +190,7 @@ mediators). `Intake at floor' is the special case $\net(\I_\vin)=0$.
 \section{Experimental design}
 % =====================================================================
 
-This section describes the worlds the experiments run in, the conditions and
+This section describes the worlds the experiments ran in, the conditions and
 controls attached to every run, and the menu of measurement conventions under test.
 
 \paragraph{Worlds.}
@@ -201,7 +199,7 @@ All worlds derive from the \pkg{SyntheticHandleWorld} of the UAD handle benchmar
 belief~$B$ $\to$ action~$A$ $\to$ environment~$E$ $\to$ sensor~$S$ $\to$ $B$, with a
 goal~$G$ entering the policy ($A = B\gplus G$ up to noise) and flipping by its own coin
 at rate $0.015$; plus a distractor~$D$ shadowing $E$, pure noise~$W$, and in the original
-world two perfect `lookalike' logs of the sensor and action lines. The conventions of these worlds were built
+world two perfect `lookalike' logs of the sensor and action lines. The benchmark for these worlds was built
 by Gunnar Zarncke before this project existed and for a different purpose, so were not
 tuned to flatter our measure. Table~\ref{tab:worlds} lists the worlds, each of
 which came with an audit (a change-frequency chart, a mechanism table comparing observed
@@ -239,7 +237,7 @@ refuse.
 \paragraph{Pre-registration and discipline.}
 Success criteria (thresholds $\geq 80\%$ of 20 seeds; $\geq 90\%$ for goal-above-belief;
 uniqueness = no non-goal variable holding the value signature in more than 2 of 20 seeds) were
-locked before each sweep; every calibration amendment made before a sweep is dated in a
+locked before each sweep; every calibration amendment made before a sweep was dated in a
 decisions log. Two working rules shaped the analysis: when two requested measures
 disagreed, the disagreement was investigated and mechanistically explained rather than
 averaged; and conventions were run in parallel as co-equal tests rather than a primary
@@ -295,22 +293,22 @@ chain $X\to Y\to Z$ shows $\I(Z_{t+1};X_t\mid Y_t)\approx 0$ while the unconditi
 lag-2 dependence is positive, the mediation exhibit; the Marko--Massey conservation
 identity holds on analytic cases).
 
-\paragraph{The cipher.}
+\paragraph{The need for a cipher.}
 A first pass showed the action's intake reading $\approx 0.005$ nats pairwise while a
 pre-planned fused cross-check read $0.31$. Investigation, prompted by the disagreement
 rule, revealed the mechanism: XOR composition ($A=B\gplus G$) is a perfect cipher:
 each input is invisible to a measure conditioning on too little unless the other input
 (the `key') is conditioned on. Measured readings matched hand-derived values to three
 decimals; re-timing the world did not help (tested), and a single extra conditioning
-variable restored the goal's drive on the environment from $0.000$ to $0.441$ nats
-(hand-predicted $0.446$). This motivated the key-based conventions and, later, the
+variable restored the goal's drive on the environment from $0.000$ to $0.441$ nats. 
+This motivated the key-based conventions and, later, the
 block-level ones.
 
 \paragraph{Results.}
 Table~\ref{tab:v1} summarizes the results of this experiment. Under fused and
 fused+best-key the goal exhibits the value signature in 100\% of seeds, uniquely in
-$\geq 95\%$, and lies above the belief in
-polarity in 100\%; all controls pass; the only intruder anywhere was pure noise $W$ in
+$\geq 95\%$, and had a higher polarity than the belief in
+100\%; all controls pass; the only intruder anywhere was pure noise $W$ in
 one seed in twenty, the false-positive rate the floors are designed to admit. Under
 pairwise the action wires share the value signature in 20/20 seeds (as pre-registered) and,
 with honest floors, the goal's own pairwise signal is indistinguishable from nothing:
@@ -325,11 +323,11 @@ and value-finding are complementary axes.
 \centering\small
 \caption{Experiment 1 (anchor, 20 seeds). Rates are fractions of seeds. Uniqueness =
 nothing but $G$ holds the value signature; shown as-is\,/\,lookalike-free where the two
-configurations differ. C3 = \pkg{goal\_progress} refused; n/a = not run.}
+configurations differ. GP = \pkg{goal\_progress} refused; n/a = not run.}
 \label{tab:v1}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
-Convention & $G$ signature & unique & $G>B$ & controls & C3 refused \\
+Convention & $G$ signature & unique & $G>B$ & controls & GP refused \\
 \midrule
 fused & 1.00 & 0.95 / 1.00 & 1.00 & pass & n/a \\
 fused + best-key & 1.00 & 0.95 & 1.00 & pass & 0.70 \\
@@ -340,7 +338,7 @@ pairwise & 0.05 & 0.00 & 0.05 & pass & 1.00 \\
 
 \paragraph{The \pkg{goal\_progress} residual and the floor standard.}
 Best-key refused \pkg{goal\_progress} in only 70\% of seeds, where the registered
-expectation was refusal outright (the contrast exists solely to be refused). Our first
+expectation was refusal outright (the contrast existed solely to be refused). Our first
 mechanism story blamed slowness: cumulative meters, we reasoned, would have
 autocorrelation-inflated shuffle floors, letting witness-like drive clear the floor
 while intake read as zero. Reading the stored records
@@ -349,9 +347,9 @@ rate $\approx 0.000$) whose every score sat at its own unstable floor, plus init
 transients from an un-burned-in simulator. The repair became the floor standard used in
 every later experiment: the $z$-margin gate of Section~\ref{sec:sig} (a score must
 clear its null mean by three null standard deviations, so hair-thin residuals over an
-unstable floor cannot pass), a burn-in rule (the first 2{,}000 steps of every trace are
-discarded, so a simulator's settling-in transients cannot masquerade as structure), and
-a reproducibility fix for the older simulator (its traces are cross-process
+unstable floor cannot pass), a burn-in rule (the first 2{,}000 steps of every trace were
+discarded, so a simulator's settling-in transients could not masquerade as structure), and
+a reproducibility fix for the older simulator (its traces were cross-process
 reproducible only with a pinned hash seed, without which floors and scores can silently
 come from different worlds). A residual 30\% theft by a genuinely moving
 meter is real Granger flow with no causation (it helps predict without causing
@@ -368,11 +366,11 @@ built for. Two new conventions were first qualified against the full anchor crit
 before entering the benchmark. \emph{Fused + grown keys} exposed its own limit during its justifying unit test:
 greedy growth cannot climb a flat plateau (in pure three-way parity every single key
 has zero marginal gain) while excelling on graded composition (majority rules,
-$+43\%$ over best-key); it passed C3 at 100\%, falsifying our prediction that it would
+$+43\%$ over best-key); it refused GP 100\% of the time, falsifying our prediction it would
 inherit best-key's witness blindness, because \emph{procedure-mirroring floors
 self-penalize search depth}: a deeper maximization must find real structure to outrun
 its own inflated null. The two block-level conventions also qualified (100\% on every
-criterion including C3; the block context absorbed even the chance blips seen elsewhere).
+criterion; the block context absorbed even the chance blips seen elsewhere).
 
 Fig.~\ref{fig:v2} summarizes the results of this experiment: goal-identification
 rates across the four worlds under every convention.
@@ -414,12 +412,12 @@ keys intake at colony scale). Any-block is the only column without a miss.}
 
 Experiments~1--2 planted values and asked whether they could be found; Experiment~3
 planted impostors and asked whether they could fool the surviving conventions
-(any-block primary, own-block diagnostic), in colony-style worlds, with an interventional
-yardstick alongside.
+(any-block primary, own-block diagnostic), in colony-style worlds, with or without an interventional
+yardstick.
 
 \paragraph{The yardstick.}
 The idea is to restate the value signature under interventional access: a genuine
-value `levers the world, unlevered by the world'. The UAD benchmark supplies the
+value `levers the world, unlevered by the world'. The UAD benchmark supplied the
 ingredients. It embeds a \pkg{goal\_flip} operation, a `handle': an operation
 available from within the world, rather than an idealized intervention imposed from
 outside it. Applied to the true goal it changes the action within the tick; applied to
@@ -428,12 +426,12 @@ variable's value as consumed by the dynamics, on 50\% of interleaved steps, and 
 the two-direction \emph{interventional mirror} of the value signature: a \emph{goal-role
 probe} (does flipping $X$ change its agent's behaviour, given the agent's policy
 context?) and an \emph{autonomy probe} (does flipping $X$'s own environment change $X$?).
-The interventional verdict requires a role effect above floor \emph{and} an autonomy
+The interventional verdict required a role effect above floor \emph{and} an autonomy
 effect at floor. Its construction was itself instructive: the XOR cipher bit three times (an
 unconditioned role probe; a saturating autonomy readout; unconditioned autonomy terms)
 and was caught each time by a validation bench on the anchor, where the do-style flip
 had to agree with the embedded operation before use; the fix, each time, was the
-context conditioning the benchmark's own interventional score already employs.
+context conditioning the benchmark's own interventional score already employed.
 
 \paragraph{Results.}
 Table~\ref{tab:v3} summarizes the results of this experiment: for each impostor, the
@@ -445,14 +443,14 @@ patch its agent's belief copies, it partially cancels the belief and \emph{pacif
 its own environment}.
 The slow captured goal (flipping at a true goal's tempo, $1.77\%$, with every flip
 verified to follow a six-step run of its patch) \textbf{was wrongly identified by the
-value signature in 20/20 seeds, under both passive tests}. Its environment-intake was above its
-noise floor at lag~1 (net $\approx 0.03$ nats), but its drive-to-intake ratio passed
+value signature in 20/20 seeds}. Its environment-intake was above its
+noise floor at lag~1 (net $\approx 0.03$ nats); however, its drive-to-intake ratio exceeded
 the value signature's leak-tolerant clause (Section~\ref{sec:sig}). The impostor's
-drive-to-intake ratios span 10.3--15.0 across seeds (our threshold was 9), so
+drive-to-intake ratios spanned 10.3--15.0 (our threshold was 9), so
 thresholds modestly above this range refuse it in every seed, while the lowest ratio
-any true goal exhibits in any stored run is 125. The vulnerability thus belongs to the
-leak-tolerance choice, not to passive observation itself: a strictly gated passive
-stability test refuses this impostor at lag~1 (see Section~\ref{sec:further}).\footnote{Our
+any true goal exhibited was 125. The vulnerability thus belongs to the
+leak-tolerance choice, not to passive observation itself: a stricter gated passive
+test refuses this impostor at lag~1 (see Section~\ref{sec:further}).\footnote{Our
 pre-registered reading was different: we expected this misidentification on the
 ground that one
 step of conditioning cannot see a trigger living in run history, and at the time took
@@ -465,10 +463,9 @@ autonomy yes). Fig.~\ref{fig:v3} gives the passive breaking point for the goal r
 Twins are indistinguishable from their goals at $0$--$0.5\%$ noise, as they must be:
 identical sequences cannot be separated by any passive method. They are transitional
 at 1\% and separated at $\geq 2\%$ (19--20/20), with no inversions. The interventional yardstick, by
-contrast, refuses the bit-identical twin even at 0\% (a recording levers nothing)
-while its goal keeps the verdict.
-Interventional access resolves both cases; only the zero-noise twin, after the
-comparison of Experiment~5, is known to \emph{require} it.
+contrast, refused the bit-identical twin even at 0\% (a recording levers nothing)
+while its goal kept the verdict.
+Interventional access resolves both cases; only the zero-noise twin is known to \emph{require} it.
 
 \begin{table}[t]
 \centering\small
@@ -482,7 +479,7 @@ Impostor & Best passive verdict & Yardstick verdict & Access adds \\
 Fast captured goal & refused (20/20) & refused (20/20) & none \\
 Slow captured goal & \textbf{wrongly identified (20/20)} & refused (20/20) & \textbf{total} \\
 Twin, 0--0.5\% noise & twin wrongly identified (19--20/20) & twin refused (20/20) & \textbf{total} \\
-Twin, $\geq 2\%$ noise & twin refused (19--20/20) & twin refused & none \\
+Twin, $\geq 2\%$ noise & twin refused (19--20/20) & twin refused (20/20) & none \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -513,7 +510,7 @@ persist in the value signature through its records alone.
 The value signature locates a planted value structure from passive
 observation across single- and multi-agent worlds, and refuses decoys,
 disconnected goals, scrambles, and (with the right conditioning) meters; the block-level
-any-block convention is the only tested instrument whole at the scale of Zarncke's
+any-block convention is the only tested instrument that holds at the scale of Zarncke's
 multi-agent simulator. Its limits are now measured rather than conjectured:
 a history-triggered captured goal can only be passively refused if a sufficiently high
 value is given to the value signature's leak-tolerant intake clause; however, twins
@@ -524,7 +521,7 @@ Several findings concern method rather than result: the XOR cipher; the
 collapse-detector role of the no-core control; and the self-penalizing floors.
 
 \paragraph{Why structure, not behaviour.}
-Behavioural inference and structural discovery are complementary, but structure has a
+Behavioural inference and structural discovery are complementary, but structure may have a
 distinctive advantage under adversarial conditions: an agent that conceals its
 objectives by adding decision noise weakens the behavioural signal, yet the component
 that most drives behaviour beneath that noise remains structurally locatable; once
@@ -617,7 +614,7 @@ We identified the following as potentially promising lines of further experiment
 \item \emph{Testing a stricter instrument on genuinely leaky values.} Experiment~5
   showed that a strict stability gate catches the captured goals the leak-tolerant
   clause admits, while our all-source intake refuses the inert meters an evidence-only
-  gate admits; combining the two should give the best instrument yet. The experiment
+  gate admits; combining the two could give the best instrument yet. The experiment
   worth running would plant \emph{genuinely leaky} true values (values with real,
   measurable environmental intake, which the leak-tolerant clause was designed to
   protect) and measure what the stricter setting costs: whether some threshold refuses
@@ -633,16 +630,14 @@ every audit and pre-registration in plain language, and directs the programme. C
 (Anthropic), an AI system, wrote all code, ran the experiments and analyses, and drafted
 this manuscript under the author's direction; every decision, deviation, and defect is
 dated in the project's decisions log. \textbf{This manuscript is, as it stands,
-AI-generated}: it was written by Claude and reviewed and approved by the author, who
-intends to write the account in their own words when time allows. In line with the
-standing convention that AI systems are not listed as authors (authorship carries a
-responsibility that cannot be delegated to them), the author takes full responsibility
+AI-generated}: it was written by Claude and revised and approved by the author, who
+intends to write the account in their own words when time allows. The author takes full responsibility
 for the content. The manuscript is not being submitted for publication.
 
 \section*{Reproducibility}
 All code (\pkg{value\_detect}), world generators, audits, locked pre-registrations,
 verdict tables, and figures are archived with fixed seeds; the UAD benchmark code is
-imported unmodified. Sweeps ran on a single laptop (Experiment~1 $\approx 1$ h; Experiment~2
+imported unmodified. Sweeps ran on a single computer (Experiment~1 $\approx 1$ h; Experiment~2
 $\approx 12.5$ h; Experiment~3 $\approx 37.5$ h at four workers).
 
 \bibliographystyle{plainnat}

@@ -901,3 +901,20 @@ and the auxiliary files now stay in `paper/`; added double-clickable
 `paper/build_paper.command` (pdflatex → bibtex → pdflatex ×2) and a README note
 explaining when a single editor build suffices. SJ's saved .tex was bit-identical to
 the pushed version at the time of the break.
+
+---
+
+## 2026-09-21 — FINAL paper version posted: SJ's line-by-line pass complete
+
+SJ completed their final line-by-line revision of the whole paper (≈50 changed lines:
+abstract item (iii) restructured around "two others proved more difficult"; methods
+moved fully to past tense; C3 renamed GP throughout; the AI statement now "revised and
+approved" with the authorship-convention sentence cut; assorted precision edits —
+"holds at the scale", hedges on the discussion claims, GP-refusal phrasing, table cell
+(20/20) completed). Checked: build clean (12 pages, 0 errors/undefined/overfull), no
+convention regressions, GP rename complete. Three mechanical fixes applied and
+reported (paired appositive commas ×2 in the abstract; exceeded/cleared tense
+harmonization in the floors sentence). Two items flagged to SJ, unchanged: the
+paragraph heading "The need for a cipher." (possibly intended "key"), and the
+title-page note still reading "reviewed and approved" while the statement now says
+"revised and approved". Pushed as the final version.

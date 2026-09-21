@@ -7,6 +7,11 @@ natbib/plainnat, hyperref, booktabs, authblk). Compiled locally with MacTeX
 
 ## To compile
 
+**Easiest: double-click `build_paper.command`** — it runs the full sequence
+(pdflatex → bibtex → pdflatex ×2) so citations always resolve. A single build from an
+editor only works while the `value_discovery.bbl` file from a previous full build is
+present; if citations ever show as [?], run `build_paper.command` once. Command line:
+
 ```bash
 pdflatex value_discovery && bibtex value_discovery && pdflatex value_discovery && pdflatex value_discovery
 ```

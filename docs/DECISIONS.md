@@ -888,3 +888,16 @@ costs); Gunnar Zarncke named for the world conventions, "Zarncke's" replacing bo
 developed by Zarncke" with the towards-alignment simulator link footnoted. Clean
 12-page build. **SJ: "with that we are done, I now feel happy putting my name to
 this."**
+
+---
+
+## 2026-09-21 — Citation-break diagnosed and fixed; one-click paper build for SJ
+
+SJ went to rebuild the paper after minor text edits and every citation broke. Cause:
+my post-build cleanup had been deleting the intermediate bibliography file
+(`value_discovery.bbl`), so SJ's single editor build had nothing to stitch citations
+from — nothing SJ did. Fixed: full sequence rebuilt (0 errors, 0 undefined citations)
+and the auxiliary files now stay in `paper/`; added double-clickable
+`paper/build_paper.command` (pdflatex → bibtex → pdflatex ×2) and a README note
+explaining when a single editor build suffices. SJ's saved .tex was bit-identical to
+the pushed version at the time of the break.

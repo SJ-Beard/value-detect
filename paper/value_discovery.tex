@@ -38,7 +38,7 @@ by their Empowerment--Plasticity Asymmetry}
 \affil[1]{Principles of Intelligence}
 \affil[2]{Centre for the Study of Existential Risk, University of Cambridge}
 
-\date{September 2026 \\ \small Draft (not submitted)}
+\date{October 2026 \\ \small Draft (not submitted)}
 
 \begin{document}
 \maketitle
@@ -338,13 +338,12 @@ pairwise & 0.05 & 0.00 & 0.05 & pass & 1.00 \\
 
 \paragraph{The \pkg{goal\_progress} residual and the floor standard.}
 Best-key refused \pkg{goal\_progress} in only 70\% of seeds, where the registered
-expectation was refusal outright (the contrast existed solely to be refused). Our first
-mechanism story blamed slowness: cumulative meters, we reasoned, would have
-autocorrelation-inflated shuffle floors, letting witness-like drive clear the floor
-while intake read as zero. Reading the stored records
-falsified that story: the thief was a \emph{near-frozen} column (change
-rate $\approx 0.000$) whose every score sat at its own unstable floor, plus initial
-transients from an un-burned-in simulator. The repair became the floor standard used in
+expectation was refusal outright (the contrast existed solely to be refused). At first 
+we thought this was because of slowness: cumulative meters could have autocorrelation-inflated 
+shuffle floors, letting the witness-like drive clear the floor while the intake read as zero.
+However, the stored records indicated that the real reason was a \emph{near-frozen} column (change
+rate $\approx 0.000$) whose every score sat at its own unstable floor, plus initial transients from an 
+un-burned-in simulator. The repair became the floor standard used in
 every later experiment: the $z$-margin gate of Section~\ref{sec:sig} (a score must
 clear its null mean by three null standard deviations, so hair-thin residuals over an
 unstable floor cannot pass), a burn-in rule (the first 2{,}000 steps of every trace were
@@ -391,9 +390,8 @@ interpretation rules converted it into a recorded infeasibility rather than a
 spurious result. The synergy cliff
 was measured on the parity goal (best-key 0\%, fused + grown keys 45\%, any-block
 100\%; the majority
-goal 100\% for all), and a pre-registered contingency (re-running colony failures with
-coupling removed) attributed both own-block's shortfall ($70\%\to 90\%$) and the
-single systematic thief (an action wire, $6/20\to 2/20$) to ring interference, not scale.
+goal 100\% for all), and re-running colony failures with coupling removed (our pre-registered contingency) attributed both own-block's shortfall ($70\%\to 90\%$) and
+the single recurring false positive (an action wire, $6/20\to 2/20$) to ring interference, not scale.
 
 \begin{figure}[t]
 \centering
@@ -622,6 +620,13 @@ We identified the following as potentially promising lines of further experiment
   demands are in unavoidable tension.
 \end{itemize}
 
+\section*{Reproducibility}
+All code, world generators, audits, locked pre-registrations,
+verdict tables, and figures are available, with fixed seeds, from \url{https://github.com/SJ-Beard/value-detect}.
+The UAD benchmark code is
+imported unmodified from \url{https://github.com/GunnarZarncke/agency-detect}. Sweeps ran on a single computer (Experiment~1 $\approx 1$ h; Experiment~2
+$\approx 12.5$ h; Experiment~3 $\approx 37.5$ h at four workers).
+
 % =====================================================================
 \section*{Statement on use of AI}
 % =====================================================================
@@ -633,12 +638,6 @@ dated in the project's decisions log. \textbf{This manuscript is, as it stands,
 AI-generated}: it was written by Claude and revised and approved by the author, who
 intends to write the account in their own words when time allows. The author takes full responsibility
 for the content. The manuscript is not being submitted for publication.
-
-\section*{Reproducibility}
-All code (\pkg{value\_detect}), world generators, audits, locked pre-registrations,
-verdict tables, and figures are archived with fixed seeds; the UAD benchmark code is
-imported unmodified. Sweeps ran on a single computer (Experiment~1 $\approx 1$ h; Experiment~2
-$\approx 12.5$ h; Experiment~3 $\approx 37.5$ h at four workers).
 
 \bibliographystyle{plainnat}
 \bibliography{references}

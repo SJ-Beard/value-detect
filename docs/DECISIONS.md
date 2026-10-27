@@ -918,3 +918,23 @@ harmonization in the floors sentence). Two items flagged to SJ, unchanged: the
 paragraph heading "The need for a cipher." (possibly intended "key"), and the
 title-page note still reading "reviewed and approved" while the statement now says
 "revised and approved". Pushed as the final version.
+
+---
+
+## 2026-10-27 — October paper revisions checked; papers repo created; local layout change
+
+SJ returned with three revisions, all checked and correct (both "thief" phrasings
+replaced — the mechanism-story sentence and "the single recurring false positive";
+Reproducibility now links both repositories via \url{}, keeps the fixed-seeds claim,
+and moves ahead of the AI statement; date → October 2026). One doubled "the" fixed;
+rebuilt clean and pushed (386c955 + this commit).
+
+**New repo: https://github.com/SJ-Beard/papers** (public; name chosen as `papers` since
+SJ did not specify — rename is one command) — a collected-papers repo, this paper in
+`agency-detect-paper/` (source, figures, PDF, build_paper.command, index README). The
+paper now lives in BOTH value-detect (`paper/`, unchanged layout) and papers.
+
+**Local layout change (SJ):** the iCloud master folder `paper/` is now
+`papers/agency detect paper/` (ready for further papers alongside). Build verified in
+the new location; CLAUDE.md pointers updated; the value-detect repo keeps its flat
+`paper/` folder, so syncs map `papers/agency detect paper/` ↔ repo `paper/`.
